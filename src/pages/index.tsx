@@ -1,6 +1,6 @@
 const Home = () => {
   return (
-    <div>Yo Tribos !</div>
+    <div>o Tribos !</div>
   )
 }
 

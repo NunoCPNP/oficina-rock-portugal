@@ -1,7 +1,7 @@
 type Props = {}
 
 const NavBar: React.FC<Props> = () => {
-  return <nav></nav>
+  return <nav>NavBar Component</nav>
 }
 
 export default NavBar
