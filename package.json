@@ -1,6 +1,12 @@
 {
-  "name": "tribos-next-app",
+  "name": "tribbos-next-app",
+  "description": "Tribbos online shop",
   "version": "0.1.0",
+  "author": {
+    "name": "Nuno Pereira",
+    "email": "hello@nunopereira.tech",
+    "url": "http://www.nunopereira.tech"
+  },
   "private": true,
   "scripts": {
     "dev": "next dev",
