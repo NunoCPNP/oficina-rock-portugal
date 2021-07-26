@@ -1,6 +1,6 @@
-const Home = () => {
+const Home: React.FC = () => {
   return (
-    <div>o Tribos !</div>
+    <div>Yo Tribos !</div>
   )
 }
 

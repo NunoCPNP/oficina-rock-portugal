@@ -1,7 +1,11 @@
 import Header from '../modules/Header'
 import Footer from '../modules/Footer'
 
-const DefaultLayout = ({ children }: any) => {
+type Props = {
+  children: JSX.Element
+}
+
+const DefaultLayout: React.FC<Props> = ({ children }) => {
   return (
     <>
       <Header />
