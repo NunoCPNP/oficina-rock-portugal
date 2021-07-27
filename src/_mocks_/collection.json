@@ -1,0 +1,16 @@
+{
+  "collection": [
+    {
+      "catno": "WIGLP317",
+      "country": "Europe",
+      "cover_image": "https://img.discogs.com/o--U1ngvQspKZ3XP64hAiATUycg=/fit-in/600x587/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-16260115-1607177976-7224.jpeg.jpg",
+      "id": 16260115,
+      "master_url": "https://api.discogs.com/masters/593987",
+      "resource_url": "https://api.discogs.com/releases/16260115",
+      "thumb": "https://img.discogs.com/GpjQNwwAjnMp2uJo_QMMYf5i0l8=/fit-in/150x150/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-16260115-1607177976-7224.jpeg.jpg",
+      "title": "Arctic Monkeys - AM",
+      "uri": "/Arctic-Monkeys-AM/release/16260115",
+      "year": "2020"
+    }
+  ]
+}

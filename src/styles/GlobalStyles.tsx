@@ -30,10 +30,51 @@ const GlobalStyles = () => {
           --highestLevel: 100;
         }
 
+        html,
+        body,
+        p,
+        ol,
+        ul,
+        li,
+        dl,
+        dt,
+        dd,
+        blockquote,
+        figure,
+        fieldset,
+        legend,
+        textarea,
+        pre,
+        iframe,
+        hr,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          margin: 0;
+          padding: 0;
+        }
+
+        ul {
+          list-style: none;
+        }
+
+        button,
+        input,
+        select,
+        textarea {
+          margin: 0;
+        }
+
         html {
-          font-size: 62.5%;
           box-sizing: border-box;
+          font-size: 62.5%;
+          font-family: var(--font);
           scroll-behavior: smooth;
+          background-color: var(--richBlack);
+          color: var(--snow);
         }
 
         body {
@@ -41,14 +82,37 @@ const GlobalStyles = () => {
           font-size: var(--baseFontSize);
           font-weight: 400;
           line-height: 1.75;
-          padding: 0;
-          margin: 0;
         }
 
         *,
         *::before,
         *::after {
           box-sizing: inherit;
+        }
+
+        img,
+        video {
+          height: auto;
+          max-width: 100%;
+        }
+
+        iframe {
+          border: 0;
+        }
+
+        table {
+          border-collapse: collapse;
+          border-spacing: 0;
+        }
+
+        td,
+        th {
+          padding: 0;
+        }
+
+        td:not([align]),
+        th:not([align]) {
+          text-align: left;
         }
 
         p {
@@ -91,9 +155,6 @@ const GlobalStyles = () => {
           font-size: var(--heading-6);
         }
 
-        ul {
-          list-style: none;
-        }
       `}
     />
   )
