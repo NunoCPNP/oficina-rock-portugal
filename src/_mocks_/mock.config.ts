@@ -9,6 +9,7 @@ export const isMockEnabled = () => {
 
 export const initializeAxiosMockAdapter = (instance: any) => {
   const mock = new MockAdapter(instance);
+  
   mock.onGet("/collection").reply(() => getCollection());
   mock.onGet(/\/collection\/\d+/).reply((config) => getCollectionItem(config));
 };
@@ -19,7 +20,8 @@ export const getCollection = () => {
 
 export const getCollectionItem = (config: any) => {
   const id = extractIdPathParamFromUrl(config);
-  const item = collection.find((c) => c.id === id);
+  const item = collection.find((i) => i.id === id);
+
   return [200, item];
 };
 
