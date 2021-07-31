@@ -1,4 +1,4 @@
-import { Global, css } from '@emotion/react'
+import { Global, css } from "@emotion/react";
 
 const GlobalStyles = () => {
   return (
@@ -6,14 +6,11 @@ const GlobalStyles = () => {
       styles={css`
         :root {
           /* Colors */
-          --richBlack: #00171f;
-          --eerieBlack: #272727;
-          --snow: #fffcff;
-          --cultured: #fcfafa;
+          --darkLiver: #3e3e4d;
 
           /* Typography */
-          --headingFont: 'Open Sans Condensed';
-          --bodyFont: 'Open Sans Condensed';
+          --headingFont: "Open Sans Condensed";
+          --bodyFont: "Open Sans Condensed";
           --baseFontSize: 1.6rem;
           --smallFontSize: 1.28rem;
           --smallestFontSize: 0.819rem;
@@ -30,134 +27,188 @@ const GlobalStyles = () => {
           --highestLevel: 100;
         }
 
-        html,
-        body,
-        p,
-        ol,
-        ul,
-        li,
-        dl,
-        dt,
-        dd,
-        blockquote,
-        figure,
-        fieldset,
-        legend,
-        textarea,
-        pre,
-        iframe,
-        hr,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-          margin: 0;
-          padding: 0;
+        html {
+          line-height: 1.15;
+          -webkit-text-size-adjust: 100%;
         }
 
-        ul {
-          list-style: none;
+        body {
+          margin: 0;
+        }
+
+        main {
+          display: block;
+        }
+
+        h1 {
+          font-size: 2em;
+          margin: 0.67em 0;
+        }
+
+        hr {
+          box-sizing: content-box;
+          height: 0;
+          overflow: visible;
+        }
+
+        pre {
+          font-family: monospace, monospace;
+          font-size: 1em;
+        }
+
+        a {
+          background-color: transparent;
+        }
+
+        abbr[title] {
+          border-bottom: none;
+          text-decoration: underline;
+          text-decoration: underline dotted;
+        }
+
+        b,
+        strong {
+          font-weight: bolder;
+        }
+
+        code,
+        kbd,
+        samp {
+          font-family: monospace, monospace;
+          font-size: 1em;
+        }
+
+        small {
+          font-size: 80%;
+        }
+
+        sub,
+        sup {
+          font-size: 75%;
+          line-height: 0;
+          position: relative;
+          vertical-align: baseline;
+        }
+
+        sub {
+          bottom: -0.25em;
+        }
+
+        sup {
+          top: -0.5em;
+        }
+
+        img {
+          border-style: none;
         }
 
         button,
         input,
+        optgroup,
         select,
         textarea {
+          font-family: inherit;
+          font-size: 100%;
+          line-height: 1.15;
           margin: 0;
         }
 
-        html {
-          box-sizing: border-box;
-          font-size: 62.5%;
-          font-family: var(--font);
-          scroll-behavior: smooth;
-          background-color: var(--richBlack);
-          color: var(--snow);
+        button,
+        input {
+          overflow: visible;
         }
 
-        body {
-          font-family: var(--bodyFont);
-          font-size: var(--baseFontSize);
-          font-weight: 400;
-          line-height: 1.75;
+        button,
+        select {
+          text-transform: none;
         }
 
-        *,
-        *::before,
-        *::after {
-          box-sizing: inherit;
+        button,
+        [type="button"],
+        [type="reset"],
+        [type="submit"] {
+          -webkit-appearance: button;
         }
 
-        img,
-        video {
-          height: auto;
-          max-width: 100%;
-        }
-
-        iframe {
-          border: 0;
-        }
-
-        table {
-          border-collapse: collapse;
-          border-spacing: 0;
-        }
-
-        td,
-        th {
+        button::-moz-focus-inner,
+        [type="button"]::-moz-focus-inner,
+        [type="reset"]::-moz-focus-inner,
+        [type="submit"]::-moz-focus-inner {
+          border-style: none;
           padding: 0;
         }
 
-        td:not([align]),
-        th:not([align]) {
-          text-align: left;
+        button:-moz-focusring,
+        [type="button"]:-moz-focusring,
+        [type="reset"]:-moz-focusring,
+        [type="submit"]:-moz-focusring {
+          outline: 1px dotted ButtonText;
         }
 
-        p {
-          margin-bottom: 1rem;
+        fieldset {
+          padding: 0.35em 0.75em 0.625em;
         }
 
-        h1,
-        h2,
-        h3,
-        h4,
-        h5 {
-          margin: 3rem 0 1.38rem;
-          font-family: var(---headingFont);
-          font-weight: 400;
-          line-height: 1.3;
+        legend {
+          box-sizing: border-box;
+          color: inherit;
+          display: table;
+          max-width: 100%;
+          padding: 0;
+          white-space: normal;
         }
 
-        h1 {
-          margin-top: 0;
-          font-size: var(--heading-1);
+        progress {
+          vertical-align: baseline;
         }
 
-        h2 {
-          font-size: var(--heading-2);
+        textarea {
+          overflow: auto;
         }
 
-        h3 {
-          font-size: var(--heading-3);
+        [type="checkbox"],
+        [type="radio"] {
+          box-sizing: border-box;
+          padding: 0;
         }
 
-        h4 {
-          font-size: var(--heading-4);
+        [type="number"]::-webkit-inner-spin-button,
+        [type="number"]::-webkit-outer-spin-button {
+          height: auto;
         }
 
-        h5 {
-          font-size: var(--heading-5);
+        [type="search"] {
+          -webkit-appearance: textfield;
+          outline-offset: -2px;
         }
 
-        h6 {
-          font-size: var(--heading-6);
+        [type="search"]::-webkit-search-decoration {
+          -webkit-appearance: none;
         }
 
+        ::-webkit-file-upload-button {
+          -webkit-appearance: button;
+          font: inherit;
+        }
+
+        details {
+          display: block;
+        }
+
+        summary {
+          display: list-item;
+        } 
+
+        template {
+          display: none;
+        }
+
+        [hidden] {
+          display: none;
+        }
       `}
     />
-  )
-}
+  );
+};
 
-export default GlobalStyles
+export default GlobalStyles;
