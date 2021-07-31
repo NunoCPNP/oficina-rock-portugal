@@ -4,9 +4,27 @@ const GlobalStyles = () => {
   return (
     <Global
       styles={css`
+        @font-face {
+          font-family: "Open Sans Condensed";
+          font-style: normal;
+          font-weight: 400;
+          src: url("/OpenSansCondensed-Light.ttf") format("truetype");
+        }
+
+        @font-face {
+          font-family: "Open Sans Condensed";
+          font-style: normal;
+          font-weight: 700;
+          src: url("/OpenSansCondensed-Bold.ttf") format("truetype");
+        }
+
         :root {
           /* Colors */
           --darkLiver: #3e3e4d;
+          --richBlack: #00171f;
+          --eerieBlack: #272727;
+          --snow: #fffcff;
+          --cultured: #fcfafa;
 
           /* Typography */
           --headingFont: "Open Sans Condensed";
@@ -26,6 +44,8 @@ const GlobalStyles = () => {
           --headerLevel: 10;
           --highestLevel: 100;
         }
+
+        /* CSS RESET */
 
         html {
           line-height: 1.15;
@@ -197,7 +217,7 @@ const GlobalStyles = () => {
 
         summary {
           display: list-item;
-        } 
+        }
 
         template {
           display: none;
@@ -205,6 +225,26 @@ const GlobalStyles = () => {
 
         [hidden] {
           display: none;
+        }
+
+        /* CSS CUSTOM */
+
+        html {
+          font-size: 62.5%;
+        }
+
+        body {
+          font-family: var(--bodyFont);
+          font-size: var(--baseFontSize);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          font-family: var(--headingFont);
         }
       `}
     />

@@ -17,17 +17,17 @@ export const LinkContainer = styled.div`
   align-items: center;
 
   ul {
-    display: flex;
+    display: flex;  
+  }
+  
+  li {
+    list-style: none;
+    margin-right: 1.5rem;
+  }
 
-    li {
-      list-style: none;
-      margin-right: 1.5rem;
-    }
-    
-    a {
-      color: inherit;
-      text-decoration: none;
-      text-transform: uppercase;
-    }
+  a {
+    color: inherit;
+    text-decoration: none;
+    text-transform: uppercase;
   }
 `;
