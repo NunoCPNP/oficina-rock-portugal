@@ -1,0 +1,14 @@
+{
+  "greeting": "Hello world",
+  "headerslot": {
+    "1": "Stay Safe, Stay Home",
+    "2": "Covid 19"
+  },
+  "navbar": {
+    "home": "Home",
+    "who": "Who we are",
+    "services": "Services",
+    "contacts": "Contacts",
+    "ctc": "Dog Tranining Course"
+  }
+}

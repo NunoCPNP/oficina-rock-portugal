@@ -1,7 +1,7 @@
 type Props = {}
 
 const Slot: React.FC<Props> = () => {
-  return <div></div>
+  return <div>Slot</div>
 }
 
 export default Slot

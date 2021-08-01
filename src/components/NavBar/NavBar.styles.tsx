@@ -29,5 +29,6 @@ export const LinkContainer = styled.div`
     color: inherit;
     text-decoration: none;
     text-transform: uppercase;
+    font-weight: 700;
   }
 `;

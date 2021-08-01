@@ -18,12 +18,6 @@ const NavBar: React.FC<Props> = ({}) => {
           <li>
             <Link href="/">Home</Link>
           </li>
-          <li>
-            <Link href="/">Loja</Link>
-          </li>
-          <li>
-            <Link href="/">Contactos</Link>
-          </li>
           {currentUser ? (
             <li>
               <Link href="/">Logout</Link>

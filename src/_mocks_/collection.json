@@ -13,8 +13,28 @@
       "price": 20,
       "sizes:": [
         {
-          "size": "",
-          "available": true,
+          "size": "P",
+          "available": false,
+          "quantity": 0
+        },
+        {
+          "size": "M",
+          "available": false,
+          "quantity": 0
+        },
+        {
+          "size": "G",
+          "available": false,
+          "quantity": 0
+        },
+        {
+          "size": "GG",
+          "available": false,
+          "quantity": 0
+        },
+        {
+          "size": "XP",
+          "available": false,
           "quantity": 0
         }
       ]

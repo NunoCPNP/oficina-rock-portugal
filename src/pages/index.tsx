@@ -1,23 +1,11 @@
-import { useEffect } from "react" 
+import useTranslation from 'next-translate/useTranslation'
 
-import { getCollection } from "../services/collection"
+type Props = {};
 
+const Home: React.FC<Props> = ({}) => {
+  const { t } = useTranslation()
 
+  return <div>{t(`home:greeting`)}</div>;
+};
 
-const Home: React.FC = () => {
-  useEffect(() => {
-    const getData = async () => {
-      const response = await getCollection()
-    
-      console.log(response)
-    }
-
-    getData()
-  }, [])
-
-  return (
-    <div>Yo Tribos !</div>
-  )
-}
-
-export default Home
+export default Home;
