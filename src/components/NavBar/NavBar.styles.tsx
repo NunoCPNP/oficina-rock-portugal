@@ -1,10 +1,8 @@
 import styled from "@emotion/styled";
 
 export const HeaderContainer = styled.div`
-  height: 5rem;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 2, 5rem;
 `;
 
 export const LogoContainer = styled.div`
@@ -13,14 +11,13 @@ export const LogoContainer = styled.div`
 `;
 
 export const LinkContainer = styled.div`
-  display: flex;
-  align-items: center;
-
   ul {
     display: flex;  
   }
   
   li {
+    display: inherit;
+    align-items: center;
     list-style: none;
     margin-right: 1.5rem;
   }

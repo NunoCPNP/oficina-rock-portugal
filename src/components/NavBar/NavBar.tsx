@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import CartIcon from "../CartIcon"
+
 import { HeaderContainer, LogoContainer, LinkContainer } from "./NavBar.styles";
 
 type Props = {};
@@ -27,6 +29,7 @@ const NavBar: React.FC<Props> = ({}) => {
               <Link href="/">Login</Link>
             </li>
           )}
+          <CartIcon />
         </ul>
       </LinkContainer>
     </HeaderContainer>
