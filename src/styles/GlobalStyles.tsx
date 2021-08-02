@@ -22,9 +22,7 @@ const GlobalStyles = () => {
           /* Colors */
           --darkLiver: #3e3e4d;
           --richBlack: #00171f;
-          --eerieBlack: #272727;
           --snow: #fffcff;
-          --cultured: #fcfafa;
 
           /* Typography */
           --headingFont: "Open Sans Condensed";
@@ -236,6 +234,8 @@ const GlobalStyles = () => {
         body {
           font-family: var(--bodyFont);
           font-size: var(--baseFontSize);
+          color: var(--richBlack);
+          background-color: var(--snow);
         }
 
         h1,

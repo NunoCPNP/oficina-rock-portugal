@@ -4,7 +4,7 @@ type Props = {};
 
 const Home: React.FC<Props> = ({}) => {
   const { t } = useTranslation('home')
-
+  
   return <div>{t(`greeting`)}</div>;
 };
 
