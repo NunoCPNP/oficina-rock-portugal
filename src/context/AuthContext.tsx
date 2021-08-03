@@ -2,7 +2,7 @@ import { createContext, useState, useEffect } from "react";
 import Router from "next/router";
 import cookie from "js-cookie";
 
-import firebase from "../services/firebase";
+import firebase, { createUserProfileDocument} from "../services/firebase";
 
 const AuthContext = createContext({});
 
@@ -21,11 +21,10 @@ export function AuthProvider({ children }) {
 
   const handleUser = async (currentUser) => {
     if (currentUser) {
-      console.log("CURRENT USER: ", currentUser);
+
+      createUserProfileDocument(currentUser)
 
       const formatedUser = await formatUser(currentUser);
-
-      console.log("FORMATED USER: ", formatedUser)
 
       setUser(formatedUser);
       setSession(true);
