@@ -12,31 +12,41 @@ type Props = {};
 const NavBar: React.FC<Props> = ({}) => {
   const { user, signout } = useAuth();
 
-  console.log(user)
+  console.log(user);
 
   return (
-    <HeaderContainer>
-      <LogoContainer>
-        <Image src="/logo.png" alt="" height={37} width={240} />
-      </LogoContainer>
-      <LinkContainer>
-        <ul>
-          <li>
-            <Link href="/">Home</Link>
-          </li>
-          {user ? (
-            <li onClick={() => signout()}>
-              <Link href="/">Logout</Link>
-            </li>
-          ) : (
+    <>
+      <HeaderContainer>
+        <LogoContainer>
+          <Image src="/logo.png" alt="" height={37} width={240} />
+        </LogoContainer>
+        <LinkContainer>
+          <ul>
             <li>
-              <Link href="/account">Login</Link>
+              <Link href="/">Home</Link>
             </li>
-          )}
-          <CartIcon />
+            {user ? (
+              <li onClick={() => signout()}>
+                <Link href="/">Logout</Link>
+              </li>
+            ) : (
+              <li>
+                <Link href="/account">Login</Link>
+              </li>
+            )}
+            <CartIcon />
+          </ul>
+        </LinkContainer>
+      </HeaderContainer>
+      <LinkContainer small>
+        <ul>
+          <li>Bandas</li>
+          <li>Feminino</li>
+          <li>Masculino</li>
+          <li>Promoções</li>
         </ul>
       </LinkContainer>
-    </HeaderContainer>
+    </>
   );
 };
 
