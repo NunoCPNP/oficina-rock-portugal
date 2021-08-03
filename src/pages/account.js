@@ -3,9 +3,7 @@ import styled from "@emotion/styled";
 import SignIn from "../components/SignIn";
 import SignUp from "../components/SignUp";
 
-type Props = {};
-
-const Account: React.FC<Props> = ({}) => {
+const Account = () => {
   return (
     <SignInAndSignUpContainer>
       <SignIn />

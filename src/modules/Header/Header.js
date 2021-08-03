@@ -3,9 +3,7 @@ import Slot from "../../components/Slot";
 
 import { StyledNav } from "./Header.styles";
 
-type Props = {};
-
-const Header: React.FC<Props> = () => {
+const Header = () => {
   return (
     <header>
       <Slot />

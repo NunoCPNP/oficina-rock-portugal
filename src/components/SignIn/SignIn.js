@@ -11,9 +11,7 @@ import {
   SignInTitle,
 } from "./SignIn.styles";
 
-type Props = {};
-
-const SignIn: React.FC<Props> = ({}) => {
+const SignIn = () => {
   const { signinGoogle } = useAuth();
 
   const [userCredentials, setCredentials] = useState({
@@ -23,13 +21,13 @@ const SignIn: React.FC<Props> = ({}) => {
 
   const { email, password } = userCredentials;
 
-  const handleSubmit = async (event: any) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     console.log("emailSignInStart(email, password)");
   };
 
-  const handleChange = (event: any) => {
+  const handleChange = (event) => {
     const { value, name } = event.target;
 
     setCredentials({ ...userCredentials, [name]: value });

@@ -7,12 +7,8 @@ import useAuth from "../../hooks/useAuth";
 
 import { HeaderContainer, LogoContainer, LinkContainer } from "./NavBar.styles";
 
-type Props = {};
-
-const NavBar: React.FC<Props> = ({}) => {
+const NavBar = () => {
   const { user, signout } = useAuth();
-
-  console.log(user);
 
   return (
     <>

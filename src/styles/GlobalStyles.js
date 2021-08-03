@@ -18,6 +18,7 @@ const GlobalStyles = () => {
           src: url("/OpenSansCondensed-Bold.ttf") format("truetype");
         }
 
+        /* CSS Variables */
         :root {
           /* Colors */
           --darkLiver: #3e3e4d;

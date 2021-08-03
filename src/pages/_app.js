@@ -1,12 +1,10 @@
-import type { AppProps } from "next/app";
-
 import DefaultLayout from "../Layout/Default";
 
 import { AuthProvider } from "../context/AuthContext";
 
 import GlobalStyles from "../styles/GlobalStyles";
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }) {
   return (
     <AuthProvider>
       <DefaultLayout>

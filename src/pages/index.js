@@ -1,8 +1,6 @@
 import useTranslation from 'next-translate/useTranslation'
 
-type Props = {};
-
-const Home: React.FC<Props> = ({}) => {
+const Home = () => {
   const { t } = useTranslation('home')
   
   return <div>{t(`greeting`)}</div>;

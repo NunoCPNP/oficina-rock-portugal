@@ -7,7 +7,7 @@ export const isMockEnabled = () => {
   return process.env.NEXT_PUBLIC_MOCK_ENABLED === "true";
 };
 
-export const initializeAxiosMockAdapter = (instance: any) => {
+export const initializeAxiosMockAdapter = (instance) => {
   const mock = new MockAdapter(instance);
   
   mock.onGet("/collection").reply(() => getCollection());
@@ -18,13 +18,13 @@ export const getCollection = () => {
   return [200, collection];
 };
 
-export const getCollectionItem = (config: any) => {
+export const getCollectionItem = (config) => {
   const id = extractIdPathParamFromUrl(config);
   const item = collection.find((i) => i.id === id);
 
   return [200, item];
 };
 
-const extractIdPathParamFromUrl = (config: any) => {
+const extractIdPathParamFromUrl = (config) => {
   return config.url.split("/").pop();
 };

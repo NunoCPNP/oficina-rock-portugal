@@ -5,9 +5,7 @@ import CustomButton from "../CustomButton";
 
 import { SignUpContainer, SignUpTitle } from "./SignUp.styles";
 
-type Props = {};
-
-const SignUp: React.FC<Props> = () => {
+const SignUp = () => {
   const [userCredentials, setUserCredentials] = useState({
     displayName: "",
     email: "",

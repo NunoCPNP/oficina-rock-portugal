@@ -10,11 +10,7 @@ export const LogoContainer = styled.div`
   align-items: center;
 `;
 
-type LinkContainerProps = {
-  small?: boolean
-} 
-
-export const LinkContainer = styled.div<LinkContainerProps>`
+export const LinkContainer = styled.div`
   ul {
     display: flex;
     padding-inline-start: ${props => props.small && `0rem`}

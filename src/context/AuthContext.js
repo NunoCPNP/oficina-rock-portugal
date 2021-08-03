@@ -1,10 +1,10 @@
-import { createContext, useState, useEffect } from "react";
+import { createContext, useState, useEffect, ReactChild, ReactNode } from "react";
 import Router from "next/router";
 import cookie from "js-cookie";
 
 import firebase, { createUserProfileDocument} from "../services/firebase";
 
-const AuthContext = createContext({});
+const AuthContext = createContext();
 
 const formatUser = async (user) => ({
   uid: user.uid,

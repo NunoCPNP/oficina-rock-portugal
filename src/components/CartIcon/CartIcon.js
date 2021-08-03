@@ -2,9 +2,7 @@ import Image from "next/image"
 
 import { CartContainer, ItemCountContainer } from "./CartIcon.styles";
 
-type Props = {};
-
-const CartIcon: React.FC<Props> = () => {
+const CartIcon= () => {
   const itemCount = 1
 
   return (
