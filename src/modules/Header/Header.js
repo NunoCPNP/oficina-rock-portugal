@@ -1,3 +1,4 @@
+import BottomNavbar from "../../components/BottomNavBar";
 import NavBar from "../../components/NavBar";
 import Slot from "../../components/Slot";
 
@@ -9,6 +10,7 @@ const Header = () => {
       <Slot />
       <StyledNav>
         <NavBar />
+        <BottomNavbar />
       </StyledNav>
     </header>
   );

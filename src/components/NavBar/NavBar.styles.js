@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 export const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  padding: 0 3rem 0 3rem;
 `;
 
 export const LogoContainer = styled.div`
@@ -13,9 +14,8 @@ export const LogoContainer = styled.div`
 export const LinkContainer = styled.div`
   ul {
     display: flex;
-    padding-inline-start: ${props => props.small && `0rem`}
   }
-  
+
   li {
     display: inherit;
     align-items: center;

@@ -1,8 +1,7 @@
-import { createContext, useState, useEffect, ReactChild, ReactNode } from "react";
+import { createContext, useState, useEffect } from "react";
 import Router from "next/router";
-import cookie from "js-cookie";
 
-import firebase, { createUserProfileDocument} from "../services/firebase";
+import firebase, { createUserProfileDocument } from "../services/firebase";
 
 const AuthContext = createContext();
 
@@ -10,7 +9,6 @@ const formatUser = async (user) => ({
   uid: user.uid,
   email: user.email,
   name: user.displayName,
-  token: user.za,
   provider: user.providerData[0].providerId,
   photoUrl: user.photoURL,
 });
@@ -21,30 +19,20 @@ export function AuthProvider({ children }) {
 
   const handleUser = async (currentUser) => {
     if (currentUser) {
+      console.log("GOOGLE AUTH: ", currentUser)
 
-      createUserProfileDocument(currentUser)
+      createUserProfileDocument(currentUser);
 
       const formatedUser = await formatUser(currentUser);
 
       setUser(formatedUser);
-      setSession(true);
 
       return formatedUser.email;
     }
 
     setUser(false);
-    setSession(false);
-    return false;
-  };
 
-  const setSession = (session) => {
-    if (session) {
-      cookie.set("oficinarockpt-auth", session, {
-        expires: 1,
-      });
-    } else {
-      cookie.remove("oficinarockpt-auth");
-    }
+    return false;
   };
 
   const signinGoogle = async () => {
@@ -54,8 +42,9 @@ export function AuthProvider({ children }) {
       const response = await firebase
         .auth()
         .signInWithPopup(new firebase.auth.GoogleAuthProvider());
-        
-      handleUser(response.user);
+
+      await handleUser(response.user);
+      Router.push("/");
     } finally {
       setLoading(false);
     }

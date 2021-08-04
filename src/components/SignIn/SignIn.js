@@ -5,6 +5,8 @@ import CustomButton from "../CustomButton";
 
 import useAuth from "../../hooks/useAuth";
 
+import { auth } from "../../services/firebase";
+
 import {
   ButtonsBarContainer,
   SignInContainer,
@@ -24,7 +26,16 @@ const SignIn = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    console.log("emailSignInStart(email, password)");
+    try {
+      await auth.signInWithEmailAndPassword(email, password);
+      
+      setCredentials({
+        email: "",
+        password: "",
+      });
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const handleChange = (event) => {
