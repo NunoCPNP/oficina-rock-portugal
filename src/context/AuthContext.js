@@ -19,7 +19,6 @@ export function AuthProvider({ children }) {
 
   const handleUser = async (currentUser) => {
     if (currentUser) {
-      console.log("GOOGLE AUTH: ", currentUser)
 
       createUserProfileDocument(currentUser);
 

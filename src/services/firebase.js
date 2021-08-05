@@ -1,4 +1,6 @@
 import firebase from "firebase/app";
+import LogRocket from "logrocket";
+
 import "firebase/auth";
 import "firebase/firestore";
 
@@ -19,6 +21,11 @@ if (typeof window !== undefined && !firebase.apps.length) {
 export const createUserProfileDocument = async (userAuth, additionalData) => {
   if (!userAuth) return;
 
+  LogRocket.identify("mr3fhc/officina-rock", {
+    name: userAuth.displayName,
+    email: userAuth.email,
+  });
+
   const userRef = firestore.doc(`users/${userAuth.uid}`);
 
   const snapShot = await userRef.get();
@@ -32,17 +39,17 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
         displayName,
         email,
         createdAt,
-        ...additionalData
+        ...additionalData,
       });
     } catch (error) {
-      console.log('Error creating user: ', error.message);
+      console.log("Error creating user: ", error.message);
     }
   }
 
   return userRef;
 };
 
-export const auth = firebase.auth()
-export const firestore = firebase.firestore()
+export const auth = firebase.auth();
+export const firestore = firebase.firestore();
 
 export default firebase;

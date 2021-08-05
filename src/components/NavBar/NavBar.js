@@ -15,8 +15,6 @@ const NavBar = () => {
   const { user, signout } = useAuth();
   const { cartDropDown, toggleCartDropDown } = useSettings();
 
-  console.log("USER CONTEXT: ", user);
-
   return (
     <HeaderContainer>
       <LogoContainer>
