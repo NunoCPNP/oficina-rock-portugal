@@ -4,9 +4,7 @@ import {
   CartItemImage,
 } from "./CartItem.styles";
 
-const CartItem = () => {
-  const item = {};
-
+const CartItem = ({ item = {} }) => {
   return (
     <CartItemContainer>
       <CartItemImage src={item.imageUrl} alt="item" />

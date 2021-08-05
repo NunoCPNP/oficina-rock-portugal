@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import useTranslation from "next-translate/useTranslation";
 
 import CartIcon from "../CartIcon";
 import CartDropDown from "../CartDropDown";
@@ -10,6 +11,7 @@ import useSettings from "../../hooks/useSettings";
 import { HeaderContainer, LogoContainer, LinkContainer } from "./NavBar.styles";
 
 const NavBar = () => {
+  const { t } = useTranslation("common");
   const { user, signout } = useAuth();
   const { cartDropDown, toggleCartDropDown } = useSettings();
 
@@ -23,15 +25,15 @@ const NavBar = () => {
       <LinkContainer>
         <ul>
           <li>
-            <Link href="/">Home</Link>
+            <Link href="/">{t(`home`)}</Link>
           </li>
           {user ? (
             <li onClick={() => signout()}>
-              <Link href="/">Logout</Link>
+              <Link href="/">{t(`logout`)}</Link>
             </li>
           ) : (
             <li>
-              <Link href="/account">Login</Link>
+              <Link href="/account">{t(`login`)}</Link>
             </li>
           )}
           <div onClick={() => toggleCartDropDown()}>

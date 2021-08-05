@@ -10,8 +10,8 @@ const Header = () => {
       <Slot />
       <StyledNav>
         <NavBar />
-        <BottomNavbar />
       </StyledNav>
+      <BottomNavbar />
     </header>
   );
 };

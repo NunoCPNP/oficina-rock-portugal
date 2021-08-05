@@ -1,13 +1,20 @@
+import useTranslation from 'next-translate/useTranslation'
+
+import { StyledNavigation } from "./BottomNavBar.styles";
+
 const BottomNavBar = () => {
+  const { t } = useTranslation('common')
+
   return (
-    <div>
+    <StyledNavigation>
       <ul>
-        <li>Bandas</li>
-        <li>Feminino</li>
-        <li>Masculino</li>
-        <li>Promoções</li>
+        <li>{t(`bands`)}</li>
+        <li>{t(`men`)}</li>
+        <li>{t(`women`)}</li>
+        <li>{t(`acessories`)}</li>
+        <li>{t(`promotions`)}</li>
       </ul>
-    </div>
+    </StyledNavigation>
   );
 };
 

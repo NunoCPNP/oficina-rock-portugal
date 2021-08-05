@@ -1,14 +1,12 @@
 {
-  "greeting": "Hello world",
-  "headerslot": {
-    "1": "Stay Safe, Stay Home",
-    "2": "Covid 19"
-  },
-  "navbar": {
-    "home": "Home",
-    "who": "Who we are",
-    "services": "Services",
-    "contacts": "Contacts",
-    "ctc": "Dog Tranining Course"
-  }
+  "bands": "Bands",
+  "men": "Men",
+  "women": "Women",
+  "acessories": "Acessories",
+  "promotions": "Promotions",
+  "cart_empty": "Your cart is empty",
+  "go_to_checkout": "GO TO CHECKOUT",
+  "home": "Home",
+  "login": "Login",
+  "logout": "Logout"
 }
