@@ -1,6 +1,6 @@
-import BottomNavbar from "../../components/BottomNavBar";
-import NavBar from "../../components/NavBar";
-import Slot from "../../components/Slot";
+import BottomNavbar from "@/components/BottomNavBar";
+import NavBar from "@/components/NavBar";
+import Slot from "@/components/Slot";
 
 import { StyledNav } from "./Header.styles";
 
