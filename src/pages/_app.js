@@ -1,7 +1,7 @@
 import DefaultLayout from "../Layout/Default";
 
-import { AuthProvider } from "../context/AuthContext";
-import { SettingsProvider } from "../context/SettingsContext";
+import { AuthProvider } from "@/context/AuthContext";
+import { SettingsProvider } from "@/context/SettingsContext";
 
 import GlobalStyles from "../styles/GlobalStyles";
 

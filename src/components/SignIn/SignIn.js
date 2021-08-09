@@ -1,11 +1,11 @@
 import { useState } from "react";
 
-import FormInput from "../FormInput";
-import CustomButton from "../CustomButton";
+import FormInput from "@/components/FormInput";
+import CustomButton from "@/components/CustomButton";
 
-import useAuth from "../../hooks/useAuth";
+import useAuth from "@/hooks/useAuth";
 
-import { auth } from "../../services/firebase";
+import { auth } from "@/services/firebase";
 
 import {
   ButtonsBarContainer,

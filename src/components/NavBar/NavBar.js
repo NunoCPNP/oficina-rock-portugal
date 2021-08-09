@@ -2,11 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import useTranslation from "next-translate/useTranslation";
 
-import CartIcon from "../CartIcon";
-import CartDropDown from "../CartDropDown";
+import CartIcon from "@/components/CartIcon";
+import CartDropDown from "@/components/CartDropDown";
 
-import useAuth from "../../hooks/useAuth";
-import useSettings from "../../hooks/useSettings";
+import useAuth from "@/hooks/useAuth";
+import useSettings from "@/hooks/useSettings";
 
 import { HeaderContainer, LogoContainer, LinkContainer } from "./NavBar.styles";
 

@@ -1,6 +1,6 @@
 import useTranslation from 'next-translate/useTranslation'
 
-import CartItem from "../CartItem";
+import CartItem from "@/components/CartItem";
 
 import {
   CartDropdownButton,

@@ -1,7 +1,7 @@
 import { createContext, useState, useEffect } from "react";
 import Router from "next/router";
 
-import firebase, { createUserProfileDocument } from "../services/firebase";
+import firebase, { createUserProfileDocument } from "@/services/firebase";
 
 const AuthContext = createContext();
 

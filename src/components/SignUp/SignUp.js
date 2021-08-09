@@ -1,9 +1,9 @@
 import { useState } from "react";
 
-import FormInput from "../FormInput";
-import CustomButton from "../CustomButton";
+import FormInput from "@/components/FormInput";
+import CustomButton from "@/components/CustomButton";
 
-import { auth, createUserProfileDocument } from "../../services/firebase";
+import { auth, createUserProfileDocument } from "@/services/firebase";
 
 import { SignUpContainer, SignUpTitle } from "./SignUp.styles";
 
