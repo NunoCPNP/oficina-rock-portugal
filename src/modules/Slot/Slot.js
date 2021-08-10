@@ -1,5 +1,5 @@
 const Slot = () => {
-  return <div>Slot</div>;
+  return <div></div>;
 };
 
 export default Slot;

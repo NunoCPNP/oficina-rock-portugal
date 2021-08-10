@@ -1,3 +1,5 @@
+import useTranslation from "next-translate/useTranslation";
+
 import {
   StyledSection,
   GridContainer,
@@ -5,20 +7,24 @@ import {
   TextContainer,
 } from "./CTA.styles";
 
-const CTA = () => (
-  <StyledSection>
-    <GridContainer>
-      <ItemContainer>
-        <TextContainer>Men</TextContainer>
-      </ItemContainer>
-      <ItemContainer>
-        <TextContainer>Women</TextContainer>
-      </ItemContainer>
-      <ItemContainer>
-        <TextContainer>Acessories</TextContainer>
-      </ItemContainer>
-    </GridContainer>
-  </StyledSection>
-);
+const CTA = () => {
+  const { t } = useTranslation();
+
+  return (
+    <StyledSection>
+      <GridContainer>
+        <ItemContainer>
+          <TextContainer>{t(`common:men`)}</TextContainer>
+        </ItemContainer>
+        <ItemContainer>
+          <TextContainer>{t(`common:women`)}</TextContainer>
+        </ItemContainer>
+        <ItemContainer>
+          <TextContainer>{t(`common:acessories`)}</TextContainer>
+        </ItemContainer>
+      </GridContainer>
+    </StyledSection>
+  );
+};
 
 export default CTA;
