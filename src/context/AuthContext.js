@@ -9,7 +9,6 @@ const formatUser = async (user) => ({
   uid: user.uid,
   email: user.email,
   name: user.displayName,
-  provider: user.providerData[0].providerId,
   photoUrl: user.photoURL,
 });
 
@@ -51,9 +50,9 @@ export function AuthProvider({ children }) {
 
   const signout = async () => {
     try {
-      Router.push("/");
       await firebase.auth().signOut();
       handleUser(false);
+      Router.push("/");
     } finally {
       setLoading(false);
     }
