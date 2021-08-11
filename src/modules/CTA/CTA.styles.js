@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
 export const StyledSection = styled.section`
-  padding: 4rem;
+  margin: 4rem;
 `
 
 export const GridContainer = styled.div`

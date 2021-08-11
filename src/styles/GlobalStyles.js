@@ -62,11 +62,6 @@ const GlobalStyles = () => {
           display: block;
         }
 
-        h1 {
-          font-size: 2em;
-          margin: 0.67em 0;
-        }
-
         hr {
           box-sizing: content-box;
           height: 0;
@@ -249,6 +244,7 @@ const GlobalStyles = () => {
         h5,
         h6 {
           font-family: var(--headingFont);
+          margin: 0;
         }
       `}
     />

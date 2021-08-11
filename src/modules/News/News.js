@@ -3,22 +3,29 @@ import ProductCard from "@/components/ProductCard";
 
 import useCollection from "@/hooks/useCollection";
 
+import { Container, GridContainer } from "./News.styles";
+
 const News = ({ sectionTitle }) => {
   const { collection } = useCollection();
 
+  const filtedCollection = collection?.filter((item) => item.featured === true);
+
   return (
-    <>
+    <Container>
       <SectionTitle title={sectionTitle} />
-      {collection &&
-        collection.map((item, index) => (
-          <ProductCard
-            key={index}
-            title={item.title}
-            band={item.band}
-            images={item.images}
-          />
-        ))}
-    </>
+      <GridContainer>
+        {filtedCollection &&
+          filtedCollection.map((item) => (
+            <ProductCard
+              key={item.uid}
+              type={item.type}
+              title={item.title}
+              band={item.band}
+              images={item.images}
+            />
+          ))}
+      </GridContainer>
+    </Container>
   );
 };
 

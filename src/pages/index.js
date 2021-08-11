@@ -19,10 +19,10 @@ const Home = ({ collection }) => {
   useEffect(() => setCollection(collection), []);
 
   return (
-    <main>
+    <>
       <CTA />
       <News sectionTitle={t(`news`)} />
-    </main>
+    </>
   );
 };
 
