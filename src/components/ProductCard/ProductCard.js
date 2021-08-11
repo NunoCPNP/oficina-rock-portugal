@@ -1,5 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
+import useTranslation from "next-translate/useTranslation";
 import PropTypes from "prop-types";
+
+import CustomButton from "@/components/CustomButton";
 
 import {
   Container,
@@ -7,15 +11,17 @@ import {
   DescriptionContainer,
 } from "./ProductCard.styles";
 
-const ProductCard = ({ type, title, band, images }) => {
+const ProductCard = ({ type, title, band, images, category, id }) => {
+  const { t } = useTranslation("common");
+
   return (
     <Container>
       <ImageContainer>
         <Image
           src={images[0]}
           alt={`${type} ${band} ${title}`}
-          width="290"
-          height="300"
+          width="234"
+          height="245"
         />
       </ImageContainer>
       <DescriptionContainer>
@@ -23,6 +29,11 @@ const ProductCard = ({ type, title, band, images }) => {
         <h3>{band}</h3>
         <h4>{title}</h4>
       </DescriptionContainer>
+      <CustomButton type="button" inverted>
+        <Link href={`/${category}/${id}`}>
+          {t(`select`)}
+        </Link>
+      </CustomButton>
     </Container>
   );
 };

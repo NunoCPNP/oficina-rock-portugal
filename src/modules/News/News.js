@@ -1,13 +1,11 @@
+import PropTypes from "prop-types";
+
 import SectionTitle from "@/components/SectionTitle";
 import ProductCard from "@/components/ProductCard";
 
-import useCollection from "@/hooks/useCollection";
-
 import { Container, GridContainer } from "./News.styles";
 
-const News = ({ sectionTitle }) => {
-  const { collection } = useCollection();
-
+const News = ({ sectionTitle, collection }) => {
   const filtedCollection = collection?.filter((item) => item.featured === true);
 
   return (
@@ -22,11 +20,18 @@ const News = ({ sectionTitle }) => {
               title={item.title}
               band={item.band}
               images={item.images}
+              id={item.uid}
+              category={item.category}
             />
           ))}
       </GridContainer>
     </Container>
   );
+};
+
+News.propTypes = {
+  sectionTitle: PropTypes.string.isRequired,
+  collection: PropTypes.array.isRequired,
 };
 
 export default News;

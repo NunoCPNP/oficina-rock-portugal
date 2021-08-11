@@ -7,7 +7,9 @@ export const Container = styled.div`
 `;
 
 export const ImageContainer = styled.div`
-  margin-bottom: 1rem;
+  img {
+    border-radius: 5px;
+  }
 `;
 
 export const DescriptionContainer = styled.div`
@@ -15,7 +17,8 @@ export const DescriptionContainer = styled.div`
   flex-direction: column;
   align-items: center;
   text-transform: uppercase;
-  
+  margin: 2rem;
+
   span {
     font-size: var(--smallFontSize);
     margin: 0.3rem;

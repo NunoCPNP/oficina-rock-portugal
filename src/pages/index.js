@@ -1,9 +1,6 @@
 import LogRocket from "logrocket";
 import useTranslation from "next-translate/useTranslation"
-import { useEffect } from "react";
 import { firestore } from "@/services/firebase";
-
-import useCollection from "@/hooks/useCollection";
 
 import CTA from "@/modules/CTA";
 import News from "@/modules/News";
@@ -13,15 +10,12 @@ if (typeof window !== "undefined") {
 }
 
 const Home = ({ collection }) => {
-  const { setCollection } = useCollection();
   const { t } = useTranslation('home')
-
-  useEffect(() => setCollection(collection), []);
 
   return (
     <>
       <CTA />
-      <News sectionTitle={t(`news`)} />
+      <News sectionTitle={t(`news`)} collection={collection} />
     </>
   );
 };

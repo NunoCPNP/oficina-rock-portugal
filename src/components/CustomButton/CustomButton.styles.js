@@ -58,4 +58,9 @@ export const CustomButtonContainer = styled.button`
   justify-content: center;
 
   ${getButtonStyles}
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 `;

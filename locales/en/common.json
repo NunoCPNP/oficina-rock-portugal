@@ -8,5 +8,6 @@
   "go_to_checkout": "GO TO CHECKOUT",
   "home": "Home",
   "login": "Login",
-  "logout": "Logout"
+  "logout": "Logout",
+  "select": "Select"
 }
