@@ -1,7 +1,42 @@
-import { StyledFooter } from "./Footer.styles"
+import useTranslation from "next-translate/useTranslation";
+
+import { StyledFooter, GridContainer, GridItem } from "./Footer.styles";
 
 const Footer = () => {
-  return <StyledFooter></StyledFooter>
-}
+  const { t } = useTranslation('common')
 
-export default Footer
+  return (
+    <StyledFooter>
+      <GridContainer>
+        <GridItem>
+          <div>
+            <h4>Quem Somos</h4>
+          </div>
+          <div>
+            <h4>Politicas de Privacidade</h4>
+          </div>
+          <div>
+            <h4>Politicas de Devolução e Reembolso</h4>
+          </div>
+          <div>
+            <h4>Trocas e Devoluções</h4>
+          </div>
+          <div>
+            <h4>Dúvidas Frequentes</h4>
+          </div>
+        </GridItem>
+        <GridItem>
+          <h3>Contactos</h3>
+        </GridItem>
+        <GridItem>
+          <h3>Métodos de Pagamento</h3>
+        </GridItem>
+        <GridItem>
+          <h3>Newsletter</h3>
+        </GridItem>
+      </GridContainer>
+    </StyledFooter>
+  );
+};
+
+export default Footer;
