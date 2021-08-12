@@ -13,14 +13,32 @@ const CTA = () => {
   return (
     <StyledSection>
       <GridContainer>
-        <ItemContainer>
-          <TextContainer>{t(`common:men`)}</TextContainer>
+        <ItemContainer
+          style={{
+            backgroundImage:
+              "url('The-Clash-London-calling-t-shirt-site_grande.webp')",
+          }}
+        >
+          <TextContainer>
+            <h2>{t(`common:men`)}</h2>
+          </TextContainer>
         </ItemContainer>
-        <ItemContainer>
-          <TextContainer>{t(`common:women`)}</TextContainer>
+        <ItemContainer
+          style={{ backgroundImage: "url('il_340x270.2320330733_o5gr.avif')" }}
+        >
+          <TextContainer>
+            <h2>{t(`common:women`)}</h2>
+          </TextContainer>
         </ItemContainer>
-        <ItemContainer>
-          <TextContainer>{t(`common:acessories`)}</TextContainer>
+        <ItemContainer
+          style={{
+            backgroundImage:
+              "url('Men-hip-hop-loose-t-shirt-2019-summer-Half-sleeve-T-shirt-Casual-tshirt-streetwear-2019.webp')",
+          }}
+        >
+          <TextContainer>
+            <h2>{t(`common:acessories`)}</h2>
+          </TextContainer>
         </ItemContainer>
       </GridContainer>
     </StyledSection>
