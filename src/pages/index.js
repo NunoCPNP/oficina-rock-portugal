@@ -1,26 +1,28 @@
 import LogRocket from "logrocket";
-import useTranslation from "next-translate/useTranslation"
+import useTranslation from "next-translate/useTranslation";
 import { firestore } from "@/services/firebase";
 
 import CTA from "@/modules/CTA";
-import News from "@/modules/News";
+import Collection from "@/modules/Collection";
+import SectionTitle from "@/components/SectionTitle";
 
 if (typeof window !== "undefined") {
   LogRocket.init("mr3fhc/officina-rock");
 }
 
 const Home = ({ collection }) => {
-  const { t } = useTranslation('home')
+  const { t } = useTranslation("home");
 
   return (
     <>
       <CTA />
-      <News sectionTitle={t(`news`)} collection={collection} />
+      <SectionTitle title={t(`news`)} />
+      <Collection collection={collection} filter="featured" />
     </>
   );
 };
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps() {
   const collection = [];
 
   const collectionRef = firestore.collection(`collection`);

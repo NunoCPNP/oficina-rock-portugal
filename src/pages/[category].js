@@ -1,11 +1,37 @@
 import { useRouter } from "next/router";
+import useTranslation from "next-translate/useTranslation";
 
-const Category = () => {
-  const router = useRouter();
+import { firestore } from "@/services/firebase";
 
-  console.log("ROUTER: ", router);
+import Collection from "@/modules/Collection";
+import SectionTitle from "@/components/SectionTitle";
 
-  return <div>Hi from category</div>
+const Category = ({ collection }) => {
+  const { query } = useRouter();
+  const { t } = useTranslation()
+
+  return (
+    <>
+      <SectionTitle title={t(`${query.category} `)} />
+      <Collection collection={collection} filter="category" filterValue={query.category} />
+    </>
+  );
+};
+
+export async function getServerSideProps() {
+  const collection = [];
+
+  const collectionRef = firestore.collection(`collection`);
+
+  const snapShot = await collectionRef.get();
+
+  snapShot.forEach((document) => collection.push(document.data()));
+
+  return {
+    props: {
+      collection,
+    },
+  };
 }
 
-export default Category
+export default Category;

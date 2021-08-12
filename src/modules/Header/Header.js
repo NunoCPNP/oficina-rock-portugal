@@ -2,17 +2,17 @@ import BottomNavbar from "@/components/BottomNavBar";
 import NavBar from "@/components/NavBar";
 import Slot from "@/modules/Slot";
 
-import { StyledNav } from "./Header.styles";
+import { Container, StyledNav } from "./Header.styles";
 
 const Header = () => {
   return (
-    <header>
+    <Container>
       <Slot />
       <StyledNav>
         <NavBar />
       </StyledNav>
       <BottomNavbar />
-    </header>
+    </Container>
   );
 };
 
