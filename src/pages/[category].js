@@ -1,11 +1,11 @@
 import { useRouter } from "next/router";
 
-const Id = () => {
+const Category = () => {
   const router = useRouter();
 
   console.log("ROUTER: ", router);
 
-  return <div>Hi from category/id</div>;
-};
+  return <div>Hi from category</div>
+}
 
-export default Id;
+export default Category

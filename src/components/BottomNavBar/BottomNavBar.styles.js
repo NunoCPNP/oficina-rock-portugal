@@ -16,5 +16,10 @@ export const StyledNavigation = styled.div`
   li {
     list-style: none;
     padding-right: 1.5rem;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
   }
 `
