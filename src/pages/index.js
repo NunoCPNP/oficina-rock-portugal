@@ -17,7 +17,7 @@ const Home = ({ collection }) => {
     <>
       <CTA />
       <SectionTitle title={t(`news`)} />
-      <Collection collection={collection} filter="featured" />
+      <Collection collection={collection} />
     </>
   );
 };
@@ -25,7 +25,7 @@ const Home = ({ collection }) => {
 export async function getServerSideProps() {
   const collection = [];
 
-  const collectionRef = firestore.collection(`collection`);
+  const collectionRef = firestore.collection(`collection`).where("featured", "==", true);
 
   const snapShot = await collectionRef.get();
 

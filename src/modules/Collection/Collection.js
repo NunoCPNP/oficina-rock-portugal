@@ -1,27 +1,14 @@
-import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
 import ProductCard from "@/components/ProductCard";
 
 import { Container, GridContainer } from "./Collection.styles";
 
-const Collection = ({ collection, filter, filterValue }) => {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    if (filter === "featured") {
-      setData(collection?.filter((item) => item.featured === true));
-    }
-
-    if(filter === "category") {
-      setData(collection?.filter((item) => item.category === filterValue))
-    }
-  }, [filter, collection])
-
+const Collection = ({ collection }) => {
   return (
     <Container>
       <GridContainer>
-        {data.map((item) => (
+        {collection.length > 0 ? collection.map((item) => (
           <ProductCard
             key={item.uid}
             type={item.type}
@@ -31,7 +18,7 @@ const Collection = ({ collection, filter, filterValue }) => {
             id={item.uid}
             category={item.category}
           />
-        ))}
+        )) : <div>Oops</div>}
       </GridContainer>
     </Container>
   );

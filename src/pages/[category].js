@@ -13,15 +13,15 @@ const Category = ({ collection }) => {
   return (
     <>
       <SectionTitle title={t(`${query.category} `)} />
-      <Collection collection={collection} filter="category" filterValue={query.category} />
+      <Collection collection={collection} />
     </>
   );
 };
 
-export async function getServerSideProps() {
+export async function getServerSideProps(context) {
   const collection = [];
 
-  const collectionRef = firestore.collection(`collection`);
+  const collectionRef = firestore.collection(`collection`).where("category", "==", context.query.category);
 
   const snapShot = await collectionRef.get();
 
@@ -33,5 +33,5 @@ export async function getServerSideProps() {
     },
   };
 }
-
+ 
 export default Category;
