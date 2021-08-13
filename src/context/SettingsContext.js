@@ -1,26 +1,35 @@
-import { createContext, useState } from "react";
+import { createContext, useReducer } from "react";
 
-const SettingsContext = createContext();
+export const SettingsStateContext = createContext();
+export const SettingsDispatchContext = createContext();
 
-export function SettingsProvider({ children }) {
-  const [cartDropDown, setCartDropDown] = useState(false);
+const initialState = {
+  cartDropdown: false,
+};
 
-  const toggleCartDropDown = () => {
-    setCartDropDown(!cartDropDown);
-  };
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "TOGGLE_CART": {
+      return {
+        ...state,
+        cartDropDown: !state.cartDropDown,
+      };
+    }
+
+    default: {
+      return state;
+    }
+  }
+};
+
+export const SettingsProvider = ({ children }) => {
+  const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
-    <SettingsContext.Provider
-      value={{
-        cartDropDown,
-        toggleCartDropDown,
-      }}
-    >
-      {children}
-    </SettingsContext.Provider>
+    <SettingsStateContext.Provider value={state}>
+      <SettingsDispatchContext.Provider value={dispatch}>
+        {children}
+      </SettingsDispatchContext.Provider>
+    </SettingsStateContext.Provider>
   );
-}
-
-export const SettingsConsumer = SettingsContext.Consumer;
-
-export default SettingsContext;
+};

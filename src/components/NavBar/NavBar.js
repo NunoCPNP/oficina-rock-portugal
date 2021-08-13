@@ -13,7 +13,7 @@ import { HeaderContainer, LogoContainer, LinkContainer } from "./NavBar.styles";
 const NavBar = () => {
   const { t } = useTranslation("common");
   const { user, signout } = useAuth();
-  const { cartDropDown, toggleCartDropDown } = useSettings();
+  const [state, dispatch] = useSettings();
 
   return (
     <HeaderContainer>
@@ -34,12 +34,12 @@ const NavBar = () => {
               <Link href="/account">{t(`login`)}</Link>
             </li>
           )}
-          <div onClick={() => toggleCartDropDown()}>
+          <div onClick={() => dispatch({ type: "TOGGLE_CART" })}>
             <CartIcon />
           </div>
         </ul>
       </LinkContainer>
-      {!cartDropDown ? null : <CartDropDown />}
+      {!state.cartDropDown ? null : <CartDropDown />}
     </HeaderContainer>
   );
 };
