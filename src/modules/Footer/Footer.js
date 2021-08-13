@@ -6,7 +6,7 @@ const Footer = () => {
   const { t } = useTranslation('common')
 
   return (
-    <StyledFooter>
+    <StyledFooter data-testid="footer">
       <GridContainer>
         <GridItem>
           <div>
