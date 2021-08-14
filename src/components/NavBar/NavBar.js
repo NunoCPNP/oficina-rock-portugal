@@ -3,17 +3,16 @@ import Link from "next/link";
 import useTranslation from "next-translate/useTranslation";
 
 import CartIcon from "@/components/CartIcon";
-import CartDropDown from "@/components/CartDropDown";
 
 import useAuth from "@/hooks/useAuth";
-import useSettings from "@/hooks/useSettings";
+import { useSettingsDispatch } from "@/hooks/useSettings";
 
 import { HeaderContainer, LogoContainer, LinkContainer } from "./NavBar.styles";
 
 const NavBar = () => {
   const { t } = useTranslation("common");
   const { user, signout } = useAuth();
-  const [state, dispatch] = useSettings();
+  const dispatch = useSettingsDispatch();
 
   return (
     <HeaderContainer>
@@ -39,7 +38,6 @@ const NavBar = () => {
           </div>
         </ul>
       </LinkContainer>
-      {!state.cartOpen ? null : <CartDropDown />}
     </HeaderContainer>
   );
 };
