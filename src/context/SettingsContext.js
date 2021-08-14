@@ -4,7 +4,8 @@ export const SettingsStateContext = createContext();
 export const SettingsDispatchContext = createContext();
 
 const initialState = {
-  cartDropdown: false,
+  cartOpen: false,
+  gdprOpen: true,
 };
 
 const reducer = (state, action) => {
@@ -12,7 +13,14 @@ const reducer = (state, action) => {
     case "TOGGLE_CART": {
       return {
         ...state,
-        cartDropDown: !state.cartDropDown,
+        cartOpen: !state.cartOpen,
+      };
+    }
+
+    case "TOGGLE_GDPR": {
+      return {
+        ...state,
+        gdprOpen: !state.gdprOpen,
       };
     }
 

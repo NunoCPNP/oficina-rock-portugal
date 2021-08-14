@@ -39,7 +39,7 @@ const NavBar = () => {
           </div>
         </ul>
       </LinkContainer>
-      {!state.cartDropDown ? null : <CartDropDown />}
+      {!state.cartOpen ? null : <CartDropDown />}
     </HeaderContainer>
   );
 };

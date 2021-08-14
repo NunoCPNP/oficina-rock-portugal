@@ -9,5 +9,7 @@
   "home": "Home",
   "login": "Login",
   "logout": "Logout",
-  "select": "Select"
+  "select": "Select",
+  "gdpr": "We use cookies to enhance your user experience and improve the quality of our website.",
+  "accept": "Accept"
 }
