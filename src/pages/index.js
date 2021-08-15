@@ -3,7 +3,7 @@ import useTranslation from "next-translate/useTranslation";
 import { firestore } from "@/services/firebase";
 
 import CTA from "@/modules/CTA";
-import Collection from "@/modules/Collection";
+import ProductList from "@/modules/ProductList";
 import SectionTitle from "@/components/SectionTitle";
 
 if (typeof window !== "undefined") {
@@ -17,7 +17,7 @@ const Home = ({ collection }) => {
     <>
       <CTA />
       <SectionTitle title={t(`news`)} />
-      <Collection collection={collection} />
+      <ProductList collection={collection} />
     </>
   );
 };

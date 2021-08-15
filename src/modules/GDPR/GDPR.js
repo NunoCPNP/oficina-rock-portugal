@@ -1,4 +1,6 @@
 import useTranslation from "next-translate/useTranslation";
+import cookie from "cookie-cutter";
+import { useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 
 import CustomButton from "@/components/CustomButton";
@@ -10,6 +12,12 @@ import { Container, TextContainer, ButtonContainer } from "./GDPR.style";
 const GDPR = () => {
   const { t } = useTranslation("common");
   const [state, dispatch] = useSettings();
+
+  useEffect(() => {
+    if (cookie.get("OFICINA_ROCK_GDPR") && state.gdprOpen) {
+      dispatch({ type: "TOGGLE_GDPR" });
+    }
+  }, [state, dispatch]);
 
   return (
     <AnimatePresence>
@@ -23,7 +31,10 @@ const GDPR = () => {
           <ButtonContainer>
             <CustomButton
               inverted
-              onClick={() => dispatch({ type: "TOGGLE_GDPR" })}
+              onClick={() => {
+                cookie.set("OFICINA_ROCK_GDPR", true);
+                dispatch({ type: "TOGGLE_GDPR" });
+              }}
             >
               {t(`accept`)}
             </CustomButton>

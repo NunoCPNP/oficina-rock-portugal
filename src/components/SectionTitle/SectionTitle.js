@@ -1,8 +1,11 @@
-import { Container } from "./SectionTitle.styles";
+import { Container, SubTitle } from "./SectionTitle.styles";
 
-const SectionTitle = ({ title }) => {
+const SectionTitle = ({ title, section, offset }) => {
+  console.log(offset)
+  
   return (
-    <Container>
+    <Container offset={offset}>
+      {section && <SubTitle>{section}</SubTitle>}
       <h2>{title}</h2>
     </Container>
   );

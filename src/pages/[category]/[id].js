@@ -1,11 +1,33 @@
-import { useRouter } from "next/router";
+import { firestore } from "@/services/firebase";
 
-const Id = () => {
-  const router = useRouter();
+import SectionTitle from "@/components/SectionTitle";
+import ProductDetail from "@/modules/ProductDetail";
 
-  console.log("ROUTER: ", router);
-
-  return <div>Hi from category/id</div>;
+const Product = ({ data }) => {
+  return (
+    <>
+      <SectionTitle
+        title={`${data.band} - ${data.title}`}
+        section={`${data.type}`}
+        offset="4rem"
+      />
+      <ProductDetail data={data} />
+    </>
+  );
 };
 
-export default Id;
+export default Product;
+
+export async function getServerSideProps(context) {
+  const collectionRef = firestore
+    .collection("collection")
+    .doc(`${context.query.id}`);
+
+  const snapShot = await collectionRef.get();
+
+  return {
+    props: {
+      data: snapShot.data(),
+    },
+  };
+}

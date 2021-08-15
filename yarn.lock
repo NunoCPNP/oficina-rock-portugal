@@ -2007,6 +2007,11 @@ convert-source-map@^1.4.0, convert-source-map@^1.5.0, convert-source-map@^1.6.0,
   dependencies:
     safe-buffer "~5.1.1"
 
+cookie-cutter@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/cookie-cutter/-/cookie-cutter-0.2.0.tgz#5988f598b68c060a00ec8524ad6e6aa193e72244"
+  integrity sha1-WYj1mLaMBgoA7IUkrW5qoZPnIkQ=
+
 core-js-pure@^3.16.0:
   version "3.16.0"
   resolved "https://registry.yarnpkg.com/core-js-pure/-/core-js-pure-3.16.0.tgz#218e07add3f1844e53fab195c47871fc5ba18de8"
@@ -4821,6 +4826,11 @@ react-dom@17.0.2:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     scheduler "^0.20.2"
+
+react-icons@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.2.0.tgz#6dda80c8a8f338ff96a1851424d63083282630d0"
+  integrity sha512-rmzEDFt+AVXRzD7zDE21gcxyBizD/3NqjbX6cmViAgdqfJ2UiLer8927/QhhrXQV7dEj/1EGuOTPp7JnLYVJKQ==
 
 react-is@17.0.2, react-is@^17.0.1:
   version "17.0.2"

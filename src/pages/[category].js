@@ -3,17 +3,17 @@ import useTranslation from "next-translate/useTranslation";
 
 import { firestore } from "@/services/firebase";
 
-import Collection from "@/modules/Collection";
+import ProductList from "@/modules/ProductList";
 import SectionTitle from "@/components/SectionTitle";
 
 const Category = ({ collection }) => {
   const { query } = useRouter();
-  const { t } = useTranslation()
+  const { t } = useTranslation();
 
   return (
     <>
-      <SectionTitle title={t(`${query.category} `)} />
-      <Collection collection={collection} />
+      <SectionTitle title={t(`${query.category}`)} offset="4rem" />
+      <ProductList collection={collection} />
     </>
   );
 };
@@ -21,7 +21,9 @@ const Category = ({ collection }) => {
 export async function getServerSideProps(context) {
   const collection = [];
 
-  const collectionRef = firestore.collection(`collection`).where("category", "==", context.query.category);
+  const collectionRef = firestore
+    .collection(`collection`)
+    .where("category", "==", context.query.category);
 
   const snapShot = await collectionRef.get();
 
@@ -33,5 +35,5 @@ export async function getServerSideProps(context) {
     },
   };
 }
- 
+
 export default Category;
