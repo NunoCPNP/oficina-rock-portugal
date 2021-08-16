@@ -1,7 +1,13 @@
-const ProductDetail = ({ data }) => {
-  console.log("PRODUCT DATA: ", data);
+import SizeSelector from "@/components/SizeSelector";
 
-  return <div></div>;
+const ProductDetail = ({ data }) => {
+  console.log("PRODUCTDETAIL DATA: ", data);
+
+  return (
+    <>
+      <SizeSelector data={data.sizes} />
+    </>
+  );
 };
 
 export default ProductDetail;

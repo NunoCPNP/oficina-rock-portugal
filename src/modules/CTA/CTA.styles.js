@@ -16,6 +16,7 @@ export const ItemContainer = styled.div`
   height: 30rem;
   background-size: cover;
   background-repeat: no-repeat;
+  cursor: pointer;
 `;
 
 export const TextContainer = styled.div`
