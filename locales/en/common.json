@@ -11,5 +11,6 @@
   "logout": "Logout",
   "select": "Select",
   "gdpr": "We use cookies to enhance your user experience and improve the quality of our website.",
-  "accept": "Accept"
+  "accept": "Accept",
+  "empty_category": "Oops, no items in this category !"
 }

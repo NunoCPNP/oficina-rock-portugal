@@ -1,10 +1,12 @@
 import PropTypes from "prop-types";
+import useTranslation from "next-translate/useTranslation";
 
 import ProductCard from "@/components/ProductCard";
 
-import { Container, GridContainer } from "./ProductList.styles";
+import { Container, GridContainer, Empty } from "./ProductList.styles";
 
 const ProductList = ({ collection }) => {
+  const { t } = useTranslation('common')
   return (
     <Container>
       <GridContainer>
@@ -21,7 +23,7 @@ const ProductList = ({ collection }) => {
             />
           ))
         ) : (
-          <div>Oops</div>
+          <Empty>{t(`empty_category`)}</Empty>
         )}
       </GridContainer>
     </Container>

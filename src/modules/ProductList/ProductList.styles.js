@@ -9,3 +9,8 @@ export const GridContainer = styled.div`
   grid-template-columns:1fr 1fr 1fr 1fr;
   grid-gap: 2rem;
 `
+
+export const Empty = styled.div`
+  text-transform: uppercase;
+  font-weight: 700;
+`
