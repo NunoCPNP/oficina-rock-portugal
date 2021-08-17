@@ -1,8 +1,6 @@
 import { Container, Size } from "./SizeSelector.styles";
 
 const SizeSelector = ({ data }) => {
-  console.log("SIZESELECTOR DATA: ", data);
-
   return (
     <Container>
       {data.map((size) => (
