@@ -22,6 +22,3 @@ jobs:
 
       - name: Running tests ...
         run: yarn test
-
-      - name: Triggering Deploy ...
-        run: curl -POST ${{ secrets.VERCEL_MASTER_RELEASE }}
