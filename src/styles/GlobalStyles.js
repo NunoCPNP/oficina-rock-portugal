@@ -9,7 +9,8 @@ const GlobalStyles = () => {
           font-style: normal;
           font-weight: 400;
           src: url("/OpenSansCondensed-Light.ttf") format("truetype");
-          font-display: block;
+          /* font-display: block; */
+          font-display: swap;
         }
 
         @font-face {
@@ -17,7 +18,8 @@ const GlobalStyles = () => {
           font-style: normal;
           font-weight: 700;
           src: url("/OpenSansCondensed-Bold.ttf") format("truetype");
-          font-display: block;
+          /* font-display: block; */
+          font-display: swap;
         }
 
         /* CSS Variables */
