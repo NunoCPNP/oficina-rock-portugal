@@ -1,5 +1,4 @@
 import firebase from "firebase/app";
-import LogRocket from "logrocket";
 
 import "firebase/auth";
 import "firebase/firestore";
@@ -20,11 +19,6 @@ if (typeof window !== undefined && !firebase.apps.length) {
 
 export const createUserProfileDocument = async (userAuth, additionalData) => {
   if (!userAuth) return;
-
-  LogRocket.identify("mr3fhc/officina-rock", {
-    name: userAuth.displayName,
-    email: userAuth.email,
-  });
 
   const userRef = firestore.doc(`users/${userAuth.uid}`);
 

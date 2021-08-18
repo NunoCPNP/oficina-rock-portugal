@@ -18,8 +18,6 @@ const ProductCard = ({ type, title, band, images, category, id }) => {
     <Container>
       <ImageContainer>
         <Image
-          placeholder="blur"
-          blurDataURL="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPk4OSsBwAA1gCbrc9BMAAAAABJRU5ErkJggg=="
           src={images[0]}
           alt={`${type} ${band} ${title}`}
           width="234"

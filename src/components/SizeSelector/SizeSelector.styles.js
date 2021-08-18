@@ -1,30 +1,24 @@
-import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 
 export const Container = styled.div`
   display: flex;
-`;
-
-const SizeWithStock = css`
-  background-color: var(--darkLiver);
-  color: var(--snow);
-`;
-
-const SizeOutOfStock = css`
-  opacity: 0.4;
+  flex-direction: column;
+  margin-bottom: 2rem;
 `
 
-const getSizeStyles = (props) => {
-  if (props.quantity > 0) {
-    return SizeWithStock;
-  }
+export const SizesContainer = styled.div`
+  display: flex;
+`;
 
-  return SizeOutOfStock
-};
+export const Title = styled.div`
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+`
 
 export const Size = styled.div`
+  cursor: pointer;
   border: 1px solid var(--darkLiver);
-  padding: 1rem;
-
-  ${getSizeStyles}
+  padding: 0.9rem;
+  background-color: ${(props) => props.selected && "var(--darkLiver)"};
+  color: ${(props) => props.selected && "var(--snow)"};
 `;

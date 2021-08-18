@@ -1,14 +1,9 @@
-import LogRocket from "logrocket";
 import useTranslation from "next-translate/useTranslation";
 import { firestore } from "@/services/firebase";
 
 import CTA from "@/modules/CTA";
 import ProductList from "@/modules/ProductList";
 import SectionTitle from "@/components/SectionTitle";
-
-if (typeof window !== "undefined") {
-  LogRocket.init("mr3fhc/officina-rock");
-}
 
 const Home = ({ collection }) => {
   const { t } = useTranslation("home");

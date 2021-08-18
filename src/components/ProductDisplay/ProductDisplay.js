@@ -9,13 +9,13 @@ import {
   SelectedImage,
 } from "./ProductDisplay.styles";
 
-const ProductDisplay = ({ data = [] }) => {
+const ProductDisplay = ({ images = [] }) => {
   const [selectedImage, setSelectedImage] = useState(0);
 
   return (
     <Container>
       <ImageSelector>
-        {data.map((image, index) => (
+        {images.map((image, index) => (
           <ImageThumb key={index}>
             <Image
               src={image}
@@ -23,22 +23,27 @@ const ProductDisplay = ({ data = [] }) => {
               width="80"
               height="80"
               onClick={() => setSelectedImage(index)}
-              placeholder="blur"
-              blurDataURL="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPk4OSsBwAA1gCbrc9BMAAAAABJRU5ErkJggg=="
               quality="75"
+              selected={index === selectedImage}
             />
           </ImageThumb>
         ))}
       </ImageSelector>
       <SelectedImage>
-        <Image src={data[selectedImage]} alt="" width="395" height="410" />
+        <Image
+          src={images[selectedImage]}
+          alt=""
+          width="395"
+          height="410"
+          quality="75"
+        />
       </SelectedImage>
     </Container>
   );
 };
 
 ProductDisplay.propTypes = {
-  data: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  images: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
 };
 
 export default ProductDisplay;

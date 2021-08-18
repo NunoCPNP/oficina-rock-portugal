@@ -12,7 +12,7 @@ export const ImageSelector = styled.div`
 export const ImageThumb = styled.div`
   margin-bottom: 1rem;
   cursor: pointer;
-
+  
   img {
     border-radius: .5rem;
   }

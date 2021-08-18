@@ -1,13 +1,54 @@
-import { Container, Size } from "./SizeSelector.styles";
+import { useEffect } from "react";
 
-const SizeSelector = ({ data }) => {
+import useProduct from "@/hooks/useProduct";
+
+import { Container, SizesContainer, Title, Size } from "./SizeSelector.styles";
+
+const SizeSelector = ({ product }) => {
+  const [state, dispatch] = useProduct();
+
+  const { currentProduct } = state;
+
+  useEffect(() => {
+    const inStock = product.sizes.filter((item) => item.quantity > 0)[0];
+
+    dispatch({
+      type: "SELECT_CURRENT_PRODUCT",
+      payload: {
+        uid: product.uid,
+        size: inStock.size,
+        price: inStock.price,
+      },
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <Container>
-      {data.map((size) => (
-        <Size key={size.size} quantity={size.quantity}>
-          {size.size}
-        </Size>
-      ))}
+      <Title>Size Selector</Title>
+      <SizesContainer>
+        {product.sizes.map((size) => {
+          const selected = currentProduct.size === size.size;
+
+          return (
+            <Size
+              key={size.size}
+              selected={selected}
+              onClick={() =>
+                dispatch({
+                  type: "CHANGE_CURRENT_PRODUCT_SIZE",
+                  payload: {
+                    size: size.size,
+                    price: size.price,
+                  },
+                })
+              }
+            >
+              {size.size}
+            </Size>
+          );
+        })}
+      </SizesContainer>
     </Container>
   );
 };

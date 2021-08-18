@@ -1,18 +1,18 @@
+import Price from "@/components/Price";
 import ProductDisplay from "@/components/ProductDisplay";
 import SizeSelector from "@/components/SizeSelector";
 
 import { Container } from "./ProductDetail.styles";
 
 const ProductDetail = ({ data }) => {
-  console.log("PRODUCTDETAIL DATA: ", data);
-
   return (
     <Container>
       <div>
-        <ProductDisplay data={data.images}/>
+        <ProductDisplay images={data.images}/>
       </div>
       <div>
-        <SizeSelector data={data.sizes} />
+        <SizeSelector product={data} />
+        <Price />
       </div>
     </Container>
   );
