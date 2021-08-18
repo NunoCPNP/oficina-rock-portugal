@@ -23,8 +23,6 @@ const ProductDisplay = ({ data = [] }) => {
               width="80"
               height="80"
               onClick={() => setSelectedImage(index)}
-              placeholder="blur"
-              blurDataURL="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII="
             />
           </ImageThumb>
         ))}
@@ -35,8 +33,6 @@ const ProductDisplay = ({ data = [] }) => {
           alt=""
           width="395"
           height="410"
-          placeholder="blur"
-          blurDataURL="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII="
         />
       </SelectedImage>
     </Container>
