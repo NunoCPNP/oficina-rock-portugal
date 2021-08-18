@@ -6,6 +6,7 @@ export const Container = styled.div`
   font-size: var(--heading-3);
   font-weight: 700;
   color: var(--darkLiver);
+  margin-bottom: 2rem;
 
   span {
     font-size: var(--heading-5);

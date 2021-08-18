@@ -18,6 +18,7 @@ const SizeSelector = ({ product }) => {
         uid: product.uid,
         size: inStock.size,
         price: inStock.price,
+        quantityAvailable: inStock.quantity
       },
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -40,6 +41,7 @@ const SizeSelector = ({ product }) => {
                   payload: {
                     size: size.size,
                     price: size.price,
+                    quantityAvailable: size.quantity
                   },
                 })
               }

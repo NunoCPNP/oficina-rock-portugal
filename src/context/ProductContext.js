@@ -8,6 +8,8 @@ const initialState = {
     uid: null,
     size: null,
     price: null,
+    quantityAvailable: null,
+    quantitySelected: null,
   },
   shoppingBag: [],
 };
@@ -27,6 +29,16 @@ const reducer = (state, action) => {
         currentProduct: {
           ...state.currentProduct,
           ...action.payload,
+        },
+      };
+    }
+
+    case "CHANGE_SELECTED_QUANTITY": {
+      return {
+        ...state,
+        currentProduct: {
+          ...state.currentProduct,
+          quantitySelected: action.payload,
         },
       };
     }
