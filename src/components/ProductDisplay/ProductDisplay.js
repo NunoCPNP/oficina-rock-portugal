@@ -23,17 +23,15 @@ const ProductDisplay = ({ data = [] }) => {
               width="80"
               height="80"
               onClick={() => setSelectedImage(index)}
+              placeholder="blur"
+              blurDataURL="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPk4OSsBwAA1gCbrc9BMAAAAABJRU5ErkJggg=="
+              quality="75"
             />
           </ImageThumb>
         ))}
       </ImageSelector>
       <SelectedImage>
-        <Image
-          src={data[selectedImage]}
-          alt=""
-          width="395"
-          height="410"
-        />
+        <Image src={data[selectedImage]} alt="" width="395" height="410" />
       </SelectedImage>
     </Container>
   );
