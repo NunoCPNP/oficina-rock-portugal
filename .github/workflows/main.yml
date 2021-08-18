@@ -23,11 +23,10 @@ jobs:
       - name: Running tests ...
         run: yarn test
 
-      - name: deploy to vercel ...
+      - name: Deploy to vercel ...
         uses: amondnet/vercel-action@v20
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          # github-token: ${{ secrets.GITHUB_TOKEN }}
           vercel-args: "--prod"
           vercel-org-id: ${{ secrets.ORG_ID}}
           vercel-project-id: ${{ secrets.PROJECT_ID }}
