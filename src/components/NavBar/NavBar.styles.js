@@ -20,6 +20,9 @@ export const LinkContainer = styled.div`
     display: inherit;
     align-items: center;
     list-style: none;
+  }
+  
+  li:not(:last-child) {
     margin-right: 1.5rem;
   }
 

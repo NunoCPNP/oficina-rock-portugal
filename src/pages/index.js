@@ -6,7 +6,7 @@ import ProductList from "@/modules/ProductList";
 import SectionTitle from "@/components/SectionTitle";
 
 const Home = ({ collection }) => {
-  const { t } = useTranslation("home");
+  const { t } = useTranslation("common");
 
   return (
     <>

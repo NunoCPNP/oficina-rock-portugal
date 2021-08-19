@@ -33,9 +33,9 @@ const NavBar = () => {
               <Link href="/account">{t(`login`)}</Link>
             </li>
           )}
-          <div onClick={() => dispatch({ type: "TOGGLE_CART" })}>
+          <li onClick={() => dispatch({ type: "TOGGLE_CART" })}>
             <CartIcon />
-          </div>
+          </li>
         </ul>
       </LinkContainer>
     </HeaderContainer>

@@ -22,5 +22,8 @@
   "description-line-3": "High quality Silk Screen stamping",
   "description-line-4": "All t-shirts have a label on the inside with the correct washing procedure",
   "size-selector": "Size selector",
-  "quantity-selector": "Quantity selector"
+  "quantity-selector": "Quantity selector",
+  "vat-included": "( VAT Included )",
+  "price": "Price",
+  "hi": "Hi"
 }

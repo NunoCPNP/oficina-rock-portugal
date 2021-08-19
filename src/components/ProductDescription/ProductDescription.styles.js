@@ -11,5 +11,5 @@ export const Title = styled.div`
 `;
 
 export const Line = styled.div`
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.7rem;
 `;
