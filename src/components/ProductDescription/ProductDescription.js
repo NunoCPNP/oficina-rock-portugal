@@ -1,14 +1,19 @@
 import useTranslation from "next-translate/useTranslation";
 
+import { Container, Line, Title } from "./ProductDescription.styles";
+
 const ProductDescription = ({ description }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation("common");
 
   return (
-    <div>
-      {description.map((line, index) => (
-        <div key={index}>{t(`${line}`)}</div>
-      ))}
-    </div>
+    <Container>
+      <Title>{t(`product-description`)}</Title>
+      <div>
+        {description.map((line, index) => (
+          <Line key={index}>{t(`${line}`)}</Line>
+        ))}
+      </div>
+    </Container>
   );
 };
 

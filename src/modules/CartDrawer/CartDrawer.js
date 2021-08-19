@@ -21,10 +21,10 @@ const CartDrawer = () => {
           exit={{ x: 300, opacity: 0 }}
         >
           <CartContainer>
-            <div>{t(`cart_empty`)}</div>
+            <div>{t(`cart-empty`)}</div>
           </CartContainer>
           <ButtonContainer>
-            <CustomButton inverted>{t(`go_to_checkout`)}</CustomButton>
+            <CustomButton inverted>{t(`go-to-checkout`)}</CustomButton>
           </ButtonContainer>
         </Container>
       )}

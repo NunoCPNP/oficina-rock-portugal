@@ -3,8 +3,8 @@ import styled from "@emotion/styled";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: 2rem;
-`
+  margin-bottom: 3rem;
+`;
 
 export const SizesContainer = styled.div`
   display: flex;
@@ -12,8 +12,9 @@ export const SizesContainer = styled.div`
 
 export const Title = styled.div`
   text-transform: uppercase;
-  padding-bottom: 1rem;
-`
+  font-weight: 700;
+  padding-bottom: 1.5rem;
+`;
 
 export const Size = styled.div`
   cursor: pointer;

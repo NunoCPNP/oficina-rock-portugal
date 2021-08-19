@@ -1,4 +1,5 @@
 import Price from "@/components/Price";
+import CustomButton from "@/components/CustomButton";
 import ProductDescription from "@/components/ProductDescription";
 import ProductDisplay from "@/components/ProductDisplay";
 import QuantitySelector from "@/components/QuantitySelector";
@@ -7,8 +8,6 @@ import SizeSelector from "@/components/SizeSelector";
 import { Container } from "./ProductDetail.styles";
 
 const ProductDetail = ({ data }) => {
-  console.log("ProductDetail -->", data);
-
   return (
     <Container>
       <div>
@@ -16,9 +15,12 @@ const ProductDetail = ({ data }) => {
       </div>
       <div>
         <SizeSelector product={data} />
-        <Price />
         <QuantitySelector />
+        <Price />
         <ProductDescription description={data.description} />
+        <div>
+          <CustomButton inverted>Add to Bag</CustomButton>
+        </div>
       </div>
     </Container>
   );

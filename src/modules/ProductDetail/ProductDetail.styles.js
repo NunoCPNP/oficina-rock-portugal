@@ -5,4 +5,4 @@ export const Container = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 2rem;
-`
+`;

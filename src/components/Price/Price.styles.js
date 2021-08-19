@@ -6,11 +6,17 @@ export const Container = styled.div`
   font-size: var(--heading-3);
   font-weight: 700;
   color: var(--darkLiver);
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 
   span {
     font-size: var(--heading-5);
     font-weight: 400;
     padding-left: 1rem;
   }
+`;
+
+export const Title = styled.div`
+  text-transform: uppercase;
+  font-weight: 700;
+  padding-bottom: 1.5rem;
 `;

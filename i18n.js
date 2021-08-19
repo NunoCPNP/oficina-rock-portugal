@@ -1,9 +1,7 @@
 module.exports = {
-  locales: ["pt-pt", "en"],
-  defaultLocale: "pt-pt",
+  locales: ["pt", "en"],
+  defaultLocale: "pt",
   pages: {
     "*": ["common"],
-    "/": ["home"],
-    "/account": ["account"]
   },
 };
