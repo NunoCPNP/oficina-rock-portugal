@@ -3,10 +3,15 @@ import useTranslation from "next-translate/useTranslation";
 
 import useProduct from "@/hooks/useProduct";
 
-import { Container, OutOfStock, Selector, Title } from "./QuantitySelector.styles";
+import {
+  Container,
+  OutOfStock,
+  Selector,
+  Title,
+} from "./QuantitySelector.styles";
 
 const QuantitySelector = () => {
-  const { t } = useTranslation('common')
+  const { t } = useTranslation("common");
   const [{ currentProduct }, dispatch] = useProduct();
 
   console.log(currentProduct);
@@ -23,9 +28,23 @@ const QuantitySelector = () => {
         </OutOfStock>
       ) : (
         <Selector>
-          <AiFillCaretLeft />
-          <div>{currentProduct.quantityAvailable}</div>
-          <AiFillCaretRight />
+          <AiFillCaretLeft
+            onClick={() => {
+              dispatch({
+                type: "CHANGE_SELECTED_QUANTITY",
+                payload: currentProduct.quantitySelected - 1,
+              });
+            }}
+          />
+          <div>{currentProduct.quantitySelected}</div>
+          <AiFillCaretRight
+            onClick={() =>
+              dispatch({
+                type: "CHANGE_SELECTED_QUANTITY",
+                payload: currentProduct.quantitySelected + 1,
+              })
+            }
+          />
         </Selector>
       )}
     </Container>

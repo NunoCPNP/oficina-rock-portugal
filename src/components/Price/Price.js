@@ -8,11 +8,13 @@ const Price = () => {
   const { t } = useTranslation('common');
   const { currentProduct } = useProductState();
 
+  const price = currentProduct.price * currentProduct.quantitySelected
+
   return (
     <>
       <Title>{t(`price`)}</Title>
       <Container>
-        <div>{`${currentProduct.price} €`}</div>
+        <div>{`${price} €`}</div>
         <span>{t(`vat-included`)}</span>
       </Container>
     </>

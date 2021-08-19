@@ -28,10 +28,17 @@ export const OutOfStock = styled.div`
 `;
 
 export const Selector = styled.div`
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  font-size: var(--heading-3);
+  border: 1px solid var(--darkLiver);
+  padding: 0.9rem;
 
   div {
-    padding: 0 0.5rem 0 0.5rem;
+    padding: 0 1rem;
+  }
+
+  svg {
+    cursor: pointer;
   }
 `;
