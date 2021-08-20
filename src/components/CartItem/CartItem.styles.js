@@ -1,21 +1,21 @@
 import styled from "@emotion/styled";
 
-export const CartItemContainer = styled.div`
-  width: 100%;
-  display: flex;
-  height: 80px;
-  margin-bottom: 15px;
+export const Container = styled.div`
+  display: grid;
+  grid-template-columns: auto 10rem auto auto;
+  grid-gap: 2rem;
+  align-items: center;
+  margin-bottom: 1rem;
 `;
 
-export const CartItemImage = styled.img`
-  width: 30%;
+export const ImageContainer = styled.div`
+  img {
+    border-radius: 0.5rem;
+  }
 `;
 
-export const ItemDetailsContainer = styled.div`
-  width: 70%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 10px 20px;
+export const DetailsContainer = styled.div`
+  span {
+    font-size: var(--heading-5);
+  }
 `;

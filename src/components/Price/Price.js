@@ -5,10 +5,14 @@ import { useProductState } from "@/hooks/useProduct";
 import { Container, Title } from "./Price.styles";
 
 const Price = () => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation("common");
   const { currentProduct } = useProductState();
 
-  const price = currentProduct.price * currentProduct.quantitySelected
+  const price =
+    currentProduct.price *
+    (currentProduct.quantitySelected === 0
+      ? 1
+      : currentProduct.quantitySelected);
 
   return (
     <>

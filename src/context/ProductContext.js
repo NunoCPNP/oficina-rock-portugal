@@ -8,6 +8,10 @@ export const ProductDispatchContext = createContext();
 const initialState = {
   currentProduct: {
     uid: null,
+    type: null,
+    band: null,
+    title: null,
+    image: null,
     size: null,
     price: null,
     quantityAvailable: null,

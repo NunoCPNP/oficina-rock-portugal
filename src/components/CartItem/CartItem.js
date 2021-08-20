@@ -1,23 +1,24 @@
-import {
-  CartItemContainer,
-  ItemDetailsContainer,
-  CartItemImage,
-} from "./CartItem.styles";
+import Image from "next/image";
+
+import { Container, ImageContainer, DetailsContainer } from "./CartItem.styles";
 
 const CartItem = ({ item = {} }) => {
+  console.log("--> ", item);
 
   return (
-    <CartItemContainer>
-      {/* <CartItemImage src={item.imageUrl} alt="" /> */}
-      <CartItemImage src="/20210514165502_4735995265_DZ.jpg" alt="" />
-      <ItemDetailsContainer>
-        {/* <span>{item.name}</span> */}
-        <span>teste</span>
-        <span>
-          {item.quantitySelected} x ${item.price}
-        </span>
-      </ItemDetailsContainer>
-    </CartItemContainer>
+    <Container>
+      <ImageContainer>
+        <Image src={item.image} alt="" width="50" height="50" />
+      </ImageContainer>
+      <DetailsContainer>
+        <div>
+          <span>{item.type}</span>
+          <div>{item.band}</div>
+        </div>
+      </DetailsContainer>
+      <div>{item.quantitySelected}</div>
+      <div>{item.price * item.quantitySelected} €</div>
+    </Container>
   );
 };
 

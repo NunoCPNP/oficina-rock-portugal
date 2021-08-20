@@ -15,9 +15,12 @@ export const Container = styled(motion.div)`
 `;
 
 export const CartContainer = styled.div`
-  padding-top: 12rem;
-  display: flex;
+  padding-top: 10rem;
+  display: inherit;
   justify-content: center;
 `;
 
-export const ButtonContainer = styled.div``;
+export const ButtonContainer = styled.div`
+display: inherit;
+  justify-content: center;
+`;
