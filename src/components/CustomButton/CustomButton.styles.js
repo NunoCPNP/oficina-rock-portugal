@@ -36,7 +36,18 @@ const googleSignInStyles = css`
   }
 `;
 
+const disabledStyles = css`
+  background-color: var(--snow);
+  color: var(--richBlack);
+  border: 1px solid var(--richBlack);
+  cursor: not-allowed;
+`
+
 const getButtonStyles = (props) => {
+  if(props.disable) {
+    return disabledStyles;
+  }
+
   if (props.isGoogleSignIn) {
     return googleSignInStyles;
   }
