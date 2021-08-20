@@ -1,14 +1,18 @@
 import styled from "@emotion/styled";
 
+import SEO from "@/components/SEO";
 import SignIn from "@/components/SignIn";
 import SignUp from "@/components/SignUp";
 
 const Account = () => {
   return (
-    <SignInAndSignUpContainer>
-      <SignIn />
-      <SignUp />
-    </SignInAndSignUpContainer>
+    <>
+      <SEO title="Oficina Rock PT" description="" />
+      <SignInAndSignUpContainer>
+        <SignIn />
+        <SignUp />
+      </SignInAndSignUpContainer>
+    </>
   );
 };
 

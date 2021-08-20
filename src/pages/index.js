@@ -1,6 +1,7 @@
 import useTranslation from "next-translate/useTranslation";
 import { firestore } from "@/services/firebase";
 
+import SEO from "@/components/SEO";
 import CTA from "@/modules/CTA";
 import ProductList from "@/modules/ProductList";
 import SectionTitle from "@/components/SectionTitle";
@@ -10,6 +11,7 @@ const Home = ({ collection }) => {
 
   return (
     <>
+      <SEO title="Oficina Rock PT" description="" />
       <CTA />
       <SectionTitle title={t(`news`)} />
       <ProductList collection={collection} />
@@ -20,7 +22,9 @@ const Home = ({ collection }) => {
 export async function getServerSideProps() {
   const collection = [];
 
-  const collectionRef = firestore.collection(`collection`).where("featured", "==", true);
+  const collectionRef = firestore
+    .collection(`collection`)
+    .where("featured", "==", true);
 
   const snapShot = await collectionRef.get();
 

@@ -1,11 +1,13 @@
 import { firestore } from "@/services/firebase";
 
+import SEO from "@/components/SEO";
 import SectionTitle from "@/components/SectionTitle";
 import ProductDetail from "@/modules/ProductDetail";
 
 const Product = ({ data }) => {
   return (
     <>
+      <SEO title="Oficina Rock PT" description="" />
       <SectionTitle
         title={`${data.band} - ${data.title}`}
         section={`${data.type}`}

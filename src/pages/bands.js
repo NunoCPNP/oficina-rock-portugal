@@ -1,5 +1,12 @@
-const Bands = () => {
-  return <div>Bands</div>
-}
+import SEO from "@/components/SEO";
 
-export default Bands
+const Bands = () => {
+  return (
+    <>
+      <SEO title="Oficina Rock PT" description="" />
+      <div>Bands</div>
+    </>
+  );
+};
+
+export default Bands;
