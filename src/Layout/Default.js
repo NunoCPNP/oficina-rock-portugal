@@ -1,9 +1,7 @@
 import styled from "@emotion/styled";
+import dynamic from "next/dynamic";
 
 import Header from "@/modules/Header";
-import Footer from "@/modules/Footer";
-import GDPR from "@/modules/GDPR";
-import CartDrawer from "@/modules/CartDrawer";
 
 const Main = styled.main`
   max-width: 130rem;
@@ -11,14 +9,18 @@ const Main = styled.main`
   padding-top: 11rem;
 `;
 
+const DynamicFooter = dynamic(() => import("@/modules/Footer"));
+const DynamicCartDrawer = dynamic(() => import("@/modules/CartDrawer"));
+const DynamicGDPR = dynamic(() => import("@/modules/GDPR"));
+
 const DefaultLayout = ({ children }) => {
   return (
     <>
       <Header />
       <Main>{children}</Main>
-      <Footer />
-      <CartDrawer />
-      <GDPR />
+      <DynamicFooter />
+      <DynamicCartDrawer />
+      <DynamicGDPR />
     </>
   );
 };
