@@ -18,7 +18,7 @@ const CTA = () => {
         <ItemContainer
           style={{
             backgroundImage:
-              "url('The-Clash-London-calling-t-shirt-site_grande.webp')",
+              "url('men.webp')",
           }}
           onClick={() => router.push("/men")}
         >
@@ -27,7 +27,7 @@ const CTA = () => {
           </TextContainer>
         </ItemContainer>
         <ItemContainer
-          style={{ backgroundImage: "url('il_340x270.2320330733_o5gr.avif')" }}
+          style={{ backgroundImage: "url('women.webp')" }}
           onClick={() => router.push("/women")}
         >
           <TextContainer>
@@ -37,7 +37,7 @@ const CTA = () => {
         <ItemContainer
           style={{
             backgroundImage:
-              "url('Men-hip-hop-loose-t-shirt-2019-summer-Half-sleeve-T-shirt-Casual-tshirt-streetwear-2019.webp')",
+              "url('acessories.webp')",
           }}
           onClick={() => router.push("/acessories")}
         >

@@ -17,7 +17,7 @@ const NavBar = () => {
   return (
     <HeaderContainer>
       <LogoContainer>
-        <Image src="/logo.png" alt="" height={37} width={240} />
+        <Image src="/logo.webp" alt="Oficina Rock PT Logo" height={37} width={240} />
       </LogoContainer>
       <LinkContainer>
         <ul>
