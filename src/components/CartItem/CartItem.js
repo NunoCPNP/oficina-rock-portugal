@@ -3,8 +3,6 @@ import Image from "next/image";
 import { Container, ImageContainer, DetailsContainer } from "./CartItem.styles";
 
 const CartItem = ({ item = {} }) => {
-  console.log("--> ", item);
-
   return (
     <Container>
       <ImageContainer>

@@ -27,12 +27,9 @@ const CartDrawer = () => {
           <CartContainer>
             {shoppingBag.length > 0 ? (
               <div>
-                {shoppingBag.map((item, index) => {
-                  console.log(item)
-                  return (
-                    <CartItem key={index} item={item}/>
-                  )
-                })}
+                {shoppingBag.map((item, index) => (
+                  <CartItem key={index} item={item} />
+                ))}
               </div>
             ) : (
               <div>{t(`cart-empty`)}</div>

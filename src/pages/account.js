@@ -1,26 +1,26 @@
-import styled from "@emotion/styled";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 
 import SEO from "@/components/SEO";
-import SignIn from "@/components/SignIn";
-import SignUp from "@/components/SignUp";
+
+import useAuth from "@/hooks/useAuth";
 
 const Account = () => {
+  const router = useRouter();
+  const { user } = useAuth();
+
+  useEffect(() => {
+    if (!user) {
+      router.push("/login");
+    }
+  }, [user]);
+
   return (
     <>
       <SEO title="Oficina Rock PT" description="" />
-      <SignInAndSignUpContainer>
-        <SignIn />
-        <SignUp />
-      </SignInAndSignUpContainer>
+      <div>My Account</div>
     </>
   );
 };
-
-const SignInAndSignUpContainer = styled.div`
-  width: 85rem;
-  display: flex;
-  justify-content: space-between;
-  margin: 3rem auto;
-`;
 
 export default Account;

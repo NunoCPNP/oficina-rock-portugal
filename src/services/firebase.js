@@ -35,6 +35,7 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
         email,
         photoURL,
         createdAt,
+        isAdmin: false,
         ...additionalData,
       });
     } catch (error) {

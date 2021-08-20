@@ -17,7 +17,12 @@ const NavBar = () => {
   return (
     <HeaderContainer>
       <LogoContainer>
-        <Image src="/logo.webp" alt="Oficina Rock PT Logo" height={37} width={240} />
+        <Image
+          src="/logo.webp"
+          alt="Oficina Rock PT Logo"
+          height={37}
+          width={240}
+        />
       </LogoContainer>
       <LinkContainer>
         <ul>
@@ -25,12 +30,17 @@ const NavBar = () => {
             <Link href="/">{t(`home`)}</Link>
           </li>
           {user ? (
-            <li onClick={() => signout()}>
-              <Link href="/">{t(`logout`)}</Link>
-            </li>
+            <>
+              <li>
+                <Link href="/account">{t(`my-account`)}</Link>
+              </li>
+              <li onClick={() => signout()}>
+                <Link href="/">{t(`logout`)}</Link>
+              </li>
+            </>
           ) : (
             <li>
-              <Link href="/account">{t(`login`)}</Link>
+              <Link href="/login">{t(`login`)}</Link>
             </li>
           )}
           <li onClick={() => dispatch({ type: "TOGGLE_CART" })}>
