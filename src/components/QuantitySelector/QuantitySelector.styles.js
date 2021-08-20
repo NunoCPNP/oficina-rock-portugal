@@ -32,7 +32,7 @@ export const Selector = styled.div`
   align-items: center;
   font-size: var(--heading-3);
   border: 1px solid var(--darkLiver);
-  padding: 0.9rem;
+  padding: 0.75rem 0.9rem;
 
   div {
     padding: 0 1rem;

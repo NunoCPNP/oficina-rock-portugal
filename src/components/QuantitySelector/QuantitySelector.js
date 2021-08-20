@@ -14,8 +14,6 @@ const QuantitySelector = () => {
   const { t } = useTranslation("common");
   const [{ currentProduct }, dispatch] = useProduct();
 
-  console.log(currentProduct);
-
   return (
     <Container>
       <Title>{t(`quantity-selector`)}</Title>
@@ -30,17 +28,19 @@ const QuantitySelector = () => {
         <Selector>
           <AiFillCaretLeft
             onClick={() => {
-              dispatch({
-                type: "CHANGE_SELECTED_QUANTITY",
-                payload: currentProduct.quantitySelected - 1,
-              });
+              if (currentProduct.quantitySelected > 1) {
+                dispatch({
+                  type: "CHANGE_CURRENT_PRODUCT_QUANTITY",
+                  payload: currentProduct.quantitySelected - 1,
+                });
+              }
             }}
           />
           <div>{currentProduct.quantitySelected}</div>
           <AiFillCaretRight
             onClick={() =>
               dispatch({
-                type: "CHANGE_SELECTED_QUANTITY",
+                type: "CHANGE_CURRENT_PRODUCT_QUANTITY",
                 payload: currentProduct.quantitySelected + 1,
               })
             }

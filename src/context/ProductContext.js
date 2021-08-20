@@ -1,5 +1,7 @@
 import { createContext, useReducer } from "react";
 
+import { reducer } from "./ProductContext.reducer";
+
 export const ProductStateContext = createContext();
 export const ProductDispatchContext = createContext();
 
@@ -12,41 +14,6 @@ const initialState = {
     quantitySelected: null,
   },
   shoppingBag: [],
-};
-
-const reducer = (state, action) => {
-  switch (action.type) {
-    case "SELECT_CURRENT_PRODUCT": {
-      return {
-        ...state,
-        currentProduct: { ...action.payload },
-      };
-    }
-
-    case "CHANGE_CURRENT_PRODUCT_SIZE": {
-      return {
-        ...state,
-        currentProduct: {
-          ...state.currentProduct,
-          ...action.payload,
-        },
-      };
-    }
-
-    case "CHANGE_SELECTED_QUANTITY": {
-      return {
-        ...state,
-        currentProduct: {
-          ...state.currentProduct,
-          quantitySelected: action.payload,
-        },
-      };
-    }
-
-    default: {
-      return state;
-    }
-  }
 };
 
 export const ProductProvider = ({ children }) => {
