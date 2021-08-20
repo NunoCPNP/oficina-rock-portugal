@@ -21,7 +21,7 @@ const NavBar = () => {
           src="/logo.webp"
           alt="Oficina Rock PT Logo"
           height={37}
-          width={240}
+          width={295}
         />
       </LogoContainer>
       <LinkContainer>

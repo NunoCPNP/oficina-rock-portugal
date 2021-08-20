@@ -22,10 +22,10 @@ const SizeSelector = ({ product }) => {
         band: product.band,
         title: product.title,
         image: product.images[0],
-        size: inStock.size,
-        price: inStock.price,
-        quantityAvailable: inStock.quantity,
-        quantitySelected: inStock.quantity > 0 ? 1 : 0,
+        size: inStock ? inStock.size : product.sizes[0].size,
+        price: inStock ? inStock.price : product.sizes[0].price,
+        quantityAvailable: inStock ? inStock.quantity : 0,
+        quantitySelected: inStock ? (inStock.quantity > 0 ? 1 : 0) : 0,
       },
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps

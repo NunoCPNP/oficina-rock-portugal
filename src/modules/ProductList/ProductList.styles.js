@@ -13,4 +13,5 @@ export const GridContainer = styled.div`
 export const Empty = styled.div`
   text-transform: uppercase;
   font-weight: 700;
+  grid-column: 1 / 5;
 `
