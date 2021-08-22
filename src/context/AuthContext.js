@@ -18,14 +18,11 @@ export function AuthProvider({ children }) {
 
   const handleUser = async (currentUser) => {
     if (currentUser) {
-
       createUserProfileDocument(currentUser);
-
       const formatedUser = await formatUser(currentUser);
-
       setUser(formatedUser);
-
-      return formatedUser.email;
+      
+      return formatedUser;
     }
 
     setUser(false);
@@ -51,6 +48,7 @@ export function AuthProvider({ children }) {
   const signout = async () => {
     try {
       await firebase.auth().signOut();
+
       handleUser(false);
       Router.push("/");
     } finally {
