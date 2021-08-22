@@ -1,16 +1,12 @@
 import { createContext, useState, useEffect } from "react";
 import Router from "next/router";
 
-import firebase, { createUserProfileDocument } from "@/services/firebase";
+import firebase, {
+  firestore,
+  createUserProfileDocument,
+} from "@/services/firebase";
 
 const AuthContext = createContext();
-
-const formatUser = async (user) => ({
-  uid: user.uid,
-  email: user.email,
-  name: user.displayName,
-  photoUrl: user.photoURL,
-});
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
@@ -18,11 +14,15 @@ export function AuthProvider({ children }) {
 
   const handleUser = async (currentUser) => {
     if (currentUser) {
-      createUserProfileDocument(currentUser);
-      const formatedUser = await formatUser(currentUser);
-      setUser(formatedUser);
-      
-      return formatedUser;
+      await createUserProfileDocument(currentUser);
+
+      const collectionRef = firestore.collection("users").doc(currentUser.uid);
+
+      const snapShot = await collectionRef.get();
+
+      setUser(snapShot.data());
+
+      return snapShot.data();
     }
 
     setUser(false);
@@ -50,6 +50,7 @@ export function AuthProvider({ children }) {
       await firebase.auth().signOut();
 
       handleUser(false);
+
       Router.push("/");
     } finally {
       setLoading(false);

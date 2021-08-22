@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Router from "next/router";
 
 import FormInput from "@/components/FormInput";
 import CustomButton from "@/components/CustomButton";
@@ -28,11 +29,13 @@ const SignIn = () => {
 
     try {
       await auth.signInWithEmailAndPassword(email, password);
-      
+
       setCredentials({
         email: "",
         password: "",
       });
+
+      Router.push("/");
     } catch (error) {
       console.log(error);
     }

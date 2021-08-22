@@ -14,6 +14,13 @@ export const reducer = (state, action) => {
       };
     }
 
+    case "TOGGLE_LOADING": {
+      return {
+        ...state,
+        isLoading: !state.isLoading,
+      };
+    }
+
     default: {
       return state;
     }

@@ -8,6 +8,7 @@ export const SettingsDispatchContext = createContext();
 const initialState = {
   cartOpen: false,
   gdprOpen: true,
+  isLoading: false
 };
 
 export const SettingsProvider = ({ children }) => {
