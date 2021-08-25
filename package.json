@@ -15,7 +15,11 @@
     "lint": "next lint",
     "test": "jest --env=jsdom",
     "test:watch": "jest --watch --env=jsdom",
-    "test:coverage": "jest --coverage --env=jsdom"
+    "test:coverage": "jest --coverage --env=jsdom",
+    "cy:open-only": "cypress open",
+    "cy:run-only": "cypress run",
+    "cy:open": "start-server-and-test dev 3000 cy:open-only",
+    "cy:run": "start-server-and-test dev 3000 cy:run-only"
   },
   "dependencies": {
     "@emotion/react": "^11.4.0",
@@ -35,8 +39,10 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
     "@types/jest": "^27.0.1",
+    "cypress": "^8.3.0",
     "eslint": "7.32.0",
     "eslint-config-next": "11.0.1",
-    "jest": "^27.0.6"
+    "jest": "^27.0.6",
+    "start-server-and-test": "^1.13.1"
   }
 }
