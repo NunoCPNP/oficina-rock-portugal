@@ -26,6 +26,6 @@ module.exports = {
   },
   setupFilesAfterEnv: ["./jest.setup.js"],
   testMatch: ["**/?(*.)+(spec|test).[jt]s?(x)"],
-  testPathIgnorePatterns: ["/.next/", "/node_modules/", "/coverage/"],
+  testPathIgnorePatterns: ["/.next/", "/node_modules/", "/coverage/", "/cypress/"],
   snapshotSerializers: ["@emotion/jest/serializer"],
 };
