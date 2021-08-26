@@ -6,7 +6,7 @@ import ProductCard from "@/components/ProductCard";
 import { Container, GridContainer, Empty } from "./ProductList.styles";
 
 const ProductList = ({ collection }) => {
-  const { t } = useTranslation('common')
+  const { t } = useTranslation("common");
   return (
     <Container>
       <GridContainer>

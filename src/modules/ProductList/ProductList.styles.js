@@ -7,7 +7,7 @@ export const Container = styled.section`
 export const GridContainer = styled.div`
   display: grid;
   grid-template-columns:1fr 1fr 1fr 1fr;
-  grid-gap: 2rem;
+  grid-gap: 4rem;
 `
 
 export const Empty = styled.div`

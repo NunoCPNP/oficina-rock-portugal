@@ -4,7 +4,10 @@ import Router from "next/router";
 import FormInput from "@/components/FormInput";
 import CustomButton from "@/components/CustomButton";
 
+import Loader from "@/modules/Loader";
+
 import useAuth from "@/hooks/useAuth";
+import useSettings from "@/hooks/useSettings";
 
 import { auth } from "@/services/firebase";
 
@@ -12,10 +15,12 @@ import {
   ButtonsBarContainer,
   SignInContainer,
   SignInTitle,
+  LoaderContainer
 } from "./SignIn.styles";
 
 const SignIn = () => {
   const { signinGoogle } = useAuth();
+  const [{ isLoading }, dispatch] = useSettings();
 
   const [userCredentials, setCredentials] = useState({
     email: "",
@@ -26,6 +31,8 @@ const SignIn = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+    dispatch({ type: "TOGGLE_LOADING" });
 
     try {
       await auth.signInWithEmailAndPassword(email, password);
@@ -39,6 +46,8 @@ const SignIn = () => {
     } catch (error) {
       console.log(error);
     }
+
+    dispatch({ type: "TOGGLE_LOADING" });
   };
 
   const handleChange = (event) => {
@@ -47,7 +56,11 @@ const SignIn = () => {
     setCredentials({ ...userCredentials, [name]: value });
   };
 
-  return (
+  return isLoading ? (
+    <LoaderContainer>
+      <Loader />
+    </LoaderContainer>
+  ) :(
     <SignInContainer>
       <SignInTitle>I already have an account</SignInTitle>
       <span>Sign in with your email and password</span>

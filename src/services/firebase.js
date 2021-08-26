@@ -35,6 +35,19 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
         email,
         photoURL,
         createdAt,
+        phoneNumber: null,
+        deliveryAddress: {
+          street: null,
+          city: null,
+          postalCode: null,
+          country: null,
+        },
+        billingAddress: {
+          street: null,
+          city: null,
+          postalCode: null,
+          country: null,
+        },
         isAdmin: false,
         ...additionalData,
       });
