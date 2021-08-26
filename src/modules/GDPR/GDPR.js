@@ -23,6 +23,7 @@ const GDPR = () => {
     <AnimatePresence>
       {state.gdprOpen && (
         <Container
+          data-cy="gdpr"
           initial={{ y: 200 }}
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 200, opacity: 0 }}
@@ -31,6 +32,7 @@ const GDPR = () => {
           <ButtonContainer>
             <CustomButton
               inverted
+              data-cy="gdpr-button"
               onClick={() => {
                 cookie.set("OFICINA_ROCK_GDPR", true);
                 dispatch({ type: "TOGGLE_GDPR" });
