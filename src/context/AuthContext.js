@@ -1,5 +1,4 @@
 import { createContext, useState, useEffect } from "react";
-import { toast } from "react-toastify";
 import Router from "next/router";
 
 import firebase, {
