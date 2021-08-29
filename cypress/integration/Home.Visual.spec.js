@@ -10,7 +10,6 @@ describe("Home Page Visual Tests", function () {
   sizes.forEach((size) => {
     it(`Should match ${size} image snapshot`, function () {
       cy.get("header").invoke("css", "position", "absolute");
-
       cy.get('[data-cy=gdpr-button]').click()
 
       cy.matchImageSnapshot(`Homepage-Visual-Test-${size}`, {

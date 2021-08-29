@@ -1,7 +1,7 @@
 {
-  "name": "tribbos-next-app",
-  "description": "Tribbos online shop",
-  "version": "0.1.0",
+  "name": "oficina-rock-portugal",
+  "description": "Oficina Rock Portugal Online Shop",
+  "version": "0.5.0",
   "author": {
     "name": "Nuno Pereira",
     "email": "hello@nunopereira.tech",
@@ -32,8 +32,7 @@
     "next-translate": "^1.0.7",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-icons": "^4.2.0",
-    "react-toastify": "^8.0.1"
+    "react-icons": "^4.2.0"
   },
   "devDependencies": {
     "@emotion/jest": "^11.3.0",

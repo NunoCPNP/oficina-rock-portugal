@@ -47,6 +47,8 @@ const GlobalStyles = () => {
           /* z-index */
           --headerLevel: 10;
           --highestLevel: 100;
+
+          --toastify-color-success: #07bc0c;
         }
 
         /* CSS RESET */

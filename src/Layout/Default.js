@@ -11,6 +11,7 @@ const DynamicHeader = dynamic(() => import("@/modules/Header"));
 const DynamicFooter = dynamic(() => import("@/modules/Footer"));
 const DynamicCartDrawer = dynamic(() => import("@/modules/CartDrawer"));
 const DynamicGDPR = dynamic(() => import("@/modules/GDPR"));
+const DynamicToast = dynamic(() => import("@/modules/Toast"));
 
 const DefaultLayout = ({ children }) => {
   return (
@@ -20,6 +21,7 @@ const DefaultLayout = ({ children }) => {
       <DynamicFooter />
       <DynamicCartDrawer />
       <DynamicGDPR />
+      <DynamicToast />
     </>
   );
 };

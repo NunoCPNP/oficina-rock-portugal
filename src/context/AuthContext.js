@@ -1,4 +1,5 @@
 import { createContext, useState, useEffect } from "react";
+import { toast } from "react-toastify";
 import Router from "next/router";
 
 import firebase, {
@@ -10,7 +11,6 @@ const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true);
 
   const handleUser = async (currentUser) => {
     if (currentUser) {
@@ -32,16 +32,15 @@ export function AuthProvider({ children }) {
 
   const signinGoogle = async () => {
     try {
-      setLoading(true);
-
       const response = await firebase
         .auth()
         .signInWithPopup(new firebase.auth.GoogleAuthProvider());
 
       await handleUser(response.user);
+
       Router.push("/");
-    } finally {
-      setLoading(false);
+    } catch(error) {
+      console.log(error);
     }
   };
 
@@ -52,8 +51,8 @@ export function AuthProvider({ children }) {
       handleUser(false);
 
       Router.push("/");
-    } finally {
-      setLoading(false);
+    } catch(error) {
+      console.log(error)
     }
   };
 
@@ -66,7 +65,6 @@ export function AuthProvider({ children }) {
     <AuthContext.Provider
       value={{
         user,
-        loading,
         signinGoogle,
         signout,
       }}
