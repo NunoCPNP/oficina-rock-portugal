@@ -4,9 +4,6 @@ const { withSentryConfig } = require("@sentry/nextjs");
 moduleExports = {
   reactStrictMode: true,
   ...nextTranslate(),
-  images: {
-    domains: ["static.oficinarock.com.br"],
-  },
 };
 
 const SentryWebpackPluginOptions = {

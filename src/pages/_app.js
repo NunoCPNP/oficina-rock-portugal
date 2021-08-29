@@ -6,6 +6,12 @@ import { ProductProvider } from "@/context/ProductContext";
 
 import GlobalStyles from "../styles/GlobalStyles";
 
+export function reportWebVitals(metric) {
+  if (metric.label === 'custom') {
+    console.log(metric)
+  }
+}
+
 function MyApp({ Component, pageProps }) {
   return (
     <SettingsProvider>

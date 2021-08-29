@@ -4,25 +4,6 @@ const GlobalStyles = () => {
   return (
     <Global
       styles={css`
-        @font-face {
-          font-family: "Open Sans Condensed";
-          font-style: normal;
-          font-weight: 400;
-          src: url("/OpenSansCondensed-Light.ttf") format("truetype");
-          /* font-display: block; */
-          font-display: swap;
-        }
-
-        @font-face {
-          font-family: "Open Sans Condensed";
-          font-style: normal;
-          font-weight: 700;
-          src: url("/OpenSansCondensed-Bold.ttf") format("truetype");
-          /* font-display: block; */
-          font-display: swap;
-        }
-
-        /* CSS Variables */
         :root {
           /* Colors */
           --darkLiver: #3e3e4d;
@@ -47,8 +28,6 @@ const GlobalStyles = () => {
           /* z-index */
           --headerLevel: 10;
           --highestLevel: 100;
-
-          --toastify-color-success: #07bc0c;
         }
 
         /* CSS RESET */
