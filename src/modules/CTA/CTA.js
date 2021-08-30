@@ -10,7 +10,7 @@ import {
 
 const CTA = () => {
   const router = useRouter();
-  const { t } = useTranslation();
+  const { t } = useTranslation('common');
 
   return (
     <StyledSection>

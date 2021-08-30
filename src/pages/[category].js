@@ -9,7 +9,7 @@ import SectionTitle from "@/components/SectionTitle";
 
 const Category = ({ collection }) => {
   const { query } = useRouter();
-  const { t } = useTranslation();
+  const { t } = useTranslation('common');
 
   return (
     <>
