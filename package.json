@@ -23,6 +23,11 @@
     "cy:open": "start-server-and-test dev 3000 cy:open-only",
     "cy:run": "start-server-and-test dev 3000 cy:run-only"
   },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "lint --fix"
+    ]
+  },
   "dependencies": {
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
@@ -50,6 +55,7 @@
     "eslint-plugin-prettier": "^3.4.1",
     "husky": "^7.0.2",
     "jest": "^27.0.6",
+    "lint-staged": "^11.1.2",
     "prettier": "^2.3.2",
     "start-server-and-test": "^1.13.1",
     "stylelint": "^13.13.1",
