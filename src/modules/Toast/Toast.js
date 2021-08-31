@@ -1,3 +1,3 @@
-const Toast = () => <div></div>;
+const Toast = () => <div>Hey from Toast</div>
 
-export default Toast;
+export default Toast
