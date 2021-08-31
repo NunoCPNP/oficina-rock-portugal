@@ -1,24 +1,21 @@
-import { useContext } from "react";
+import { useContext } from 'react'
 
-import {
-  SettingsStateContext,
-  SettingsDispatchContext,
-} from "@/context/SettingsContext";
+import { SettingsStateContext, SettingsDispatchContext } from '@/context/SettingsContext'
 
 export const useSettingsState = () => {
-  const context = useContext(SettingsStateContext);
+  const context = useContext(SettingsStateContext)
 
-  return context;
-};
+  return context
+}
 
 export const useSettingsDispatch = () => {
-  const context = useContext(SettingsDispatchContext);
+  const context = useContext(SettingsDispatchContext)
 
-  return context;
-};
+  return context
+}
 
 const useSettings = () => {
-  return [useSettingsState(), useSettingsDispatch()];
-};
+  return [useSettingsState(), useSettingsDispatch()]
+}
 
-export default useSettings;
+export default useSettings

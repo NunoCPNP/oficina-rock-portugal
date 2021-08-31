@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled'
 
 export const Container = styled.div`
   display: inline-block;
@@ -21,4 +21,4 @@ export const Container = styled.div`
       -webkit-transform: rotate(360deg);
     }
   }
-`;
+`

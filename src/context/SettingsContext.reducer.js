@@ -1,27 +1,27 @@
 export const reducer = (state, action) => {
   switch (action.type) {
-    case "TOGGLE_CART": {
+    case 'TOGGLE_CART': {
       return {
         ...state,
         cartOpen: !state.cartOpen,
-      };
+      }
     }
 
-    case "TOGGLE_GDPR": {
+    case 'TOGGLE_GDPR': {
       return {
         ...state,
         gdprOpen: !state.gdprOpen,
-      };
+      }
     }
 
-    case "TOGGLE_LOADING": {
+    case 'TOGGLE_LOADING': {
       return {
         ...state,
         isLoading: !state.isLoading,
-      };
+      }
     }
 
-    case "ENABLE_TOAST": {
+    case 'ENABLE_TOAST': {
       return {
         ...state,
         toast: {
@@ -29,10 +29,10 @@ export const reducer = (state, action) => {
           type: action.payload.type,
           message: action.payload.message,
         },
-      };
+      }
     }
 
-    case "DISABLE_TOAST": {
+    case 'DISABLE_TOAST': {
       return {
         ...state,
         toast: {
@@ -40,11 +40,11 @@ export const reducer = (state, action) => {
           type: null,
           message: null,
         },
-      };
+      }
     }
 
     default: {
-      return state;
+      return state
     }
   }
-};
+}

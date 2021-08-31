@@ -1,7 +1,7 @@
-import firebase from "firebase/app";
+import firebase from 'firebase/app'
 
-import "firebase/auth";
-import "firebase/firestore";
+import 'firebase/auth'
+import 'firebase/firestore'
 
 export const config = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_PUBLIC_API_KEY,
@@ -11,22 +11,22 @@ export const config = {
   messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
   measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
-};
+}
 
 if (typeof window !== undefined && !firebase.apps.length) {
-  firebase.initializeApp(config);
+  firebase.initializeApp(config)
 }
 
 export const createUserProfileDocument = async (userAuth, additionalData) => {
-  if (!userAuth) return;
+  if (!userAuth) return
 
-  const userRef = firestore.doc(`users/${userAuth.uid}`);
+  const userRef = firestore.doc(`users/${userAuth.uid}`)
 
-  const snapShot = await userRef.get();
+  const snapShot = await userRef.get()
 
   if (!snapShot.exists) {
-    const { displayName, email, uid, photoURL } = userAuth;
-    const createdAt = new Date();
+    const { displayName, email, uid, photoURL } = userAuth
+    const createdAt = new Date()
 
     try {
       await userRef.set({
@@ -50,16 +50,16 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
         },
         isAdmin: false,
         ...additionalData,
-      });
+      })
     } catch (error) {
-      console.log("Error creating user: ", error.message);
+      console.log('Error creating user: ', error.message)
     }
   }
 
-  return userRef;
-};
+  return userRef
+}
 
-export const auth = firebase.auth();
-export const firestore = firebase.firestore();
+export const auth = firebase.auth()
+export const firestore = firebase.firestore()
 
-export default firebase;
+export default firebase

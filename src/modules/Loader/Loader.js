@@ -1,5 +1,5 @@
-import { Container } from "./Loader.styles";
+import { Container } from './Loader.styles'
 
-const Loader = () => <Container />;
+const Loader = () => <Container />
 
-export default Loader;
+export default Loader

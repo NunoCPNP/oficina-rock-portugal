@@ -1,8 +1,8 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled'
 
 export const StyledFooter = styled.footer`
   background-color: var(--ghostWhite);
-`;
+`
 
 export const GridContainer = styled.div`
   max-width: 140rem;
@@ -11,13 +11,11 @@ export const GridContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 2rem;
-`;
+`
 
 export const GridItem = styled.div`
-  h3 {}
-
-  h4{
+  h4 {
     font-weight: 400;
     padding-bottom: 1rem;
   }
-`;
+`

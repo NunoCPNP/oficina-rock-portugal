@@ -1,41 +1,36 @@
-import useTranslation from "next-translate/useTranslation";
-import cookie from "cookie-cutter";
-import { useEffect } from "react";
-import { AnimatePresence } from "framer-motion";
+import useTranslation from 'next-translate/useTranslation'
+import cookie from 'cookie-cutter'
+import { useEffect } from 'react'
+import { AnimatePresence } from 'framer-motion'
 
-import CustomButton from "@/components/CustomButton";
+import CustomButton from '@/components/CustomButton'
 
-import useSettings from "@/hooks/useSettings";
+import useSettings from '@/hooks/useSettings'
 
-import { Container, TextContainer, ButtonContainer } from "./GDPR.style";
+import { Container, TextContainer, ButtonContainer } from './GDPR.style'
 
 const GDPR = () => {
-  const { t } = useTranslation("common");
-  const [state, dispatch] = useSettings();
+  const { t } = useTranslation('common')
+  const [state, dispatch] = useSettings()
 
   useEffect(() => {
-    if (cookie.get("OFICINA_ROCK_GDPR") && state.gdprOpen) {
-      dispatch({ type: "TOGGLE_GDPR" });
+    if (cookie.get('OFICINA_ROCK_GDPR') && state.gdprOpen) {
+      dispatch({ type: 'TOGGLE_GDPR' })
     }
-  }, [state, dispatch]);
+  }, [state, dispatch])
 
   return (
     <AnimatePresence>
       {state.gdprOpen && (
-        <Container
-          data-cy="gdpr"
-          initial={{ y: 200 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: 200, opacity: 0 }}
-        >
+        <Container data-cy="gdpr" initial={{ y: 200 }} animate={{ y: 0, opacity: 1 }} exit={{ y: 200, opacity: 0 }}>
           <TextContainer>{t(`gdpr`)}</TextContainer>
           <ButtonContainer>
             <CustomButton
               inverted
               data-cy="gdpr-button"
               onClick={() => {
-                cookie.set("OFICINA_ROCK_GDPR", true);
-                dispatch({ type: "TOGGLE_GDPR" });
+                cookie.set('OFICINA_ROCK_GDPR', true)
+                dispatch({ type: 'TOGGLE_GDPR' })
               }}
             >
               {t(`accept`)}
@@ -44,7 +39,7 @@ const GDPR = () => {
         </Container>
       )}
     </AnimatePresence>
-  );
-};
+  )
+}
 
-export default GDPR;
+export default GDPR

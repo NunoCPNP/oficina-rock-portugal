@@ -1,5 +1,5 @@
-import styled from "@emotion/styled";
-import { motion } from "framer-motion";
+import styled from '@emotion/styled'
+import { motion } from 'framer-motion'
 
 export const Container = styled(motion.div)`
   background-color: var(--darkLiver);
@@ -12,15 +12,15 @@ export const Container = styled(motion.div)`
   flex-direction: column;
   justify-content: space-between;
   padding: 4rem 9rem 4rem 4rem;
-`;
+`
 
 export const CartContainer = styled.div`
   padding-top: 10rem;
   display: inherit;
   justify-content: center;
-`;
+`
 
 export const ButtonContainer = styled.div`
-display: inherit;
+  display: inherit;
   justify-content: center;
-`;
+`

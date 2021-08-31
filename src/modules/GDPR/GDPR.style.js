@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled'
 import { motion } from 'framer-motion'
 
 export const Container = styled(motion.div)`
@@ -13,7 +13,7 @@ export const Container = styled(motion.div)`
   justify-content: space-between;
   align-items: center;
   padding: 3rem 3rem 7.6rem 3rem;
-`;
+`
 
 export const TextContainer = styled.div`
   text-transform: uppercase;
@@ -22,4 +22,4 @@ export const TextContainer = styled.div`
 
 export const ButtonContainer = styled.div`
   padding-left: 4rem;
-`;
+`

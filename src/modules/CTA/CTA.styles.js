@@ -1,14 +1,14 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled'
 
 export const StyledSection = styled.section`
   margin: 4rem;
-`;
+`
 
 export const GridContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 2rem;
-`;
+`
 
 export const ItemContainer = styled.div`
   position: relative;
@@ -17,7 +17,7 @@ export const ItemContainer = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   cursor: pointer;
-`;
+`
 
 export const TextContainer = styled.div`
   position: absolute;
@@ -27,4 +27,4 @@ export const TextContainer = styled.div`
   text-transform: uppercase;
   background-color: var(--darkLiver);
   padding: 0.3rem 1rem 0.3rem 1rem;
-`;
+`

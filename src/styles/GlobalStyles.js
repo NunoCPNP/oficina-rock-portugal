@@ -1,4 +1,4 @@
-import { Global, css } from "@emotion/react";
+import { Global, css } from '@emotion/react'
 
 const GlobalStyles = () => {
   return (
@@ -12,8 +12,8 @@ const GlobalStyles = () => {
           --snow: #fffcff;
 
           /* Typography */
-          --headingFont: "Open Sans Condensed";
-          --bodyFont: "Open Sans Condensed";
+          --headingFont: 'Open Sans Condensed';
+          --bodyFont: 'Open Sans Condensed';
           --baseFontSize: 1.6rem;
           --smallFontSize: 1.28rem;
           --smallestFontSize: 0.819rem;
@@ -52,7 +52,7 @@ const GlobalStyles = () => {
         }
 
         pre {
-          font-family: monospace, monospace;
+          font-family: monospace;
           font-size: 1em;
         }
 
@@ -74,7 +74,7 @@ const GlobalStyles = () => {
         code,
         kbd,
         samp {
-          font-family: monospace, monospace;
+          font-family: monospace;
           font-size: 1em;
         }
 
@@ -124,24 +124,24 @@ const GlobalStyles = () => {
         }
 
         button,
-        [type="button"],
-        [type="reset"],
-        [type="submit"] {
+        [type='button'],
+        [type='reset'],
+        [type='submit'] {
           -webkit-appearance: button;
         }
 
         button::-moz-focus-inner,
-        [type="button"]::-moz-focus-inner,
-        [type="reset"]::-moz-focus-inner,
-        [type="submit"]::-moz-focus-inner {
+        [type='button']::-moz-focus-inner,
+        [type='reset']::-moz-focus-inner,
+        [type='submit']::-moz-focus-inner {
           border-style: none;
           padding: 0;
         }
 
         button:-moz-focusring,
-        [type="button"]:-moz-focusring,
-        [type="reset"]:-moz-focusring,
-        [type="submit"]:-moz-focusring {
+        [type='button']:-moz-focusring,
+        [type='reset']:-moz-focusring,
+        [type='submit']:-moz-focusring {
           outline: 1px dotted ButtonText;
         }
 
@@ -166,23 +166,23 @@ const GlobalStyles = () => {
           overflow: auto;
         }
 
-        [type="checkbox"],
-        [type="radio"] {
+        [type='checkbox'],
+        [type='radio'] {
           box-sizing: border-box;
           padding: 0;
         }
 
-        [type="number"]::-webkit-inner-spin-button,
-        [type="number"]::-webkit-outer-spin-button {
+        [type='number']::-webkit-inner-spin-button,
+        [type='number']::-webkit-outer-spin-button {
           height: auto;
         }
 
-        [type="search"] {
+        [type='search'] {
           -webkit-appearance: textfield;
           outline-offset: -2px;
         }
 
-        [type="search"]::-webkit-search-decoration {
+        [type='search']::-webkit-search-decoration {
           -webkit-appearance: none;
         }
 
@@ -231,7 +231,7 @@ const GlobalStyles = () => {
         }
       `}
     />
-  );
-};
+  )
+}
 
-export default GlobalStyles;
+export default GlobalStyles

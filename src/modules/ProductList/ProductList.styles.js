@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled'
 
 export const Container = styled.section`
   margin: 4rem;
@@ -6,7 +6,7 @@ export const Container = styled.section`
 
 export const GridContainer = styled.div`
   display: grid;
-  grid-template-columns:1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 4rem;
 `
 

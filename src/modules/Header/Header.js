@@ -1,8 +1,8 @@
-import BottomNavbar from "@/components/BottomNavBar";
-import NavBar from "@/components/NavBar";
-import Slot from "@/modules/Slot";
+import BottomNavbar from '@/components/BottomNavBar'
+import NavBar from '@/components/NavBar'
+import Slot from '@/modules/Slot'
 
-import { Container, StyledNav } from "./Header.styles";
+import { Container, StyledNav } from './Header.styles'
 
 const Header = () => {
   return (
@@ -13,7 +13,7 @@ const Header = () => {
       </StyledNav>
       <BottomNavbar />
     </Container>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

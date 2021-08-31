@@ -1,12 +1,12 @@
-import PropTypes from "prop-types";
-import useTranslation from "next-translate/useTranslation";
+import PropTypes from 'prop-types'
+import useTranslation from 'next-translate/useTranslation'
 
-import ProductCard from "@/components/ProductCard";
+import ProductCard from '@/components/ProductCard'
 
-import { Container, GridContainer, Empty } from "./ProductList.styles";
+import { Container, GridContainer, Empty } from './ProductList.styles'
 
 const ProductList = ({ collection }) => {
-  const { t } = useTranslation("common");
+  const { t } = useTranslation('common')
   return (
     <Container>
       <GridContainer>
@@ -27,11 +27,11 @@ const ProductList = ({ collection }) => {
         )}
       </GridContainer>
     </Container>
-  );
-};
+  )
+}
 
 ProductList.propTypes = {
   collection: PropTypes.array.isRequired,
-};
+}
 
-export default ProductList;
+export default ProductList

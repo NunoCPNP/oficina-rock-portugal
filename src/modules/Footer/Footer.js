@@ -1,6 +1,6 @@
-import useTranslation from "next-translate/useTranslation";
+import useTranslation from 'next-translate/useTranslation'
 
-import { StyledFooter, GridContainer, GridItem } from "./Footer.styles";
+import { StyledFooter, GridContainer, GridItem } from './Footer.styles'
 
 const Footer = () => {
   const { t } = useTranslation('common')
@@ -36,7 +36,7 @@ const Footer = () => {
         </GridItem>
       </GridContainer>
     </StyledFooter>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
