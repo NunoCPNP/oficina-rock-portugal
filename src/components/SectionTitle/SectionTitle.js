@@ -1,4 +1,4 @@
-import { Container, SubTitle } from "./SectionTitle.styles";
+import { Container, SubTitle } from './SectionTitle.styles'
 
 const SectionTitle = ({ title, section, offset }) => {
   return (
@@ -6,7 +6,7 @@ const SectionTitle = ({ title, section, offset }) => {
       {section && <SubTitle>{section}</SubTitle>}
       <h2>{title}</h2>
     </Container>
-  );
-};
+  )
+}
 
-export default SectionTitle;
+export default SectionTitle

@@ -1,4 +1,4 @@
-import SEO from "@/components/SEO";
+import SEO from '@/components/SEO'
 
 const Bands = () => {
   return (
@@ -6,7 +6,7 @@ const Bands = () => {
       <SEO title="Oficina Rock PT" description="" />
       <div>Bands</div>
     </>
-  );
-};
+  )
+}
 
-export default Bands;
+export default Bands

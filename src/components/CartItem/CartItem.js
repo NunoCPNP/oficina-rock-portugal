@@ -1,6 +1,6 @@
-import Image from "next/image";
+import Image from 'next/image'
 
-import { Container, ImageContainer, DetailsContainer } from "./CartItem.styles";
+import { Container, ImageContainer, DetailsContainer } from './CartItem.styles'
 
 const CartItem = ({ item = {} }) => {
   return (
@@ -17,7 +17,7 @@ const CartItem = ({ item = {} }) => {
       <div>{item.quantitySelected}</div>
       <div>{item.price * item.quantitySelected} €</div>
     </Container>
-  );
-};
+  )
+}
 
-export default CartItem;
+export default CartItem

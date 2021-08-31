@@ -1,22 +1,22 @@
-import styled from "@emotion/styled";
-import { css } from "@emotion/react";
+import styled from '@emotion/styled'
+import { css } from '@emotion/react'
 
-const subColor = "grey";
+const subColor = 'grey'
 
 const shrinkLabelStyles = css`
   top: -14px;
   font-size: 12px;
   color: var(--richBlack);
-`;
+`
 
 export const GroupContainer = styled.div`
   position: relative;
   margin: 45px 0;
 
-  input[type="password"] {
+  input[type='password'] {
     letter-spacing: 0.3em;
   }
-`;
+`
 
 export const FormInputContainer = styled.input`
   background: none;
@@ -38,7 +38,7 @@ export const FormInputContainer = styled.input`
   &:focus ~ label {
     ${shrinkLabelStyles}
   }
-`;
+`
 
 export const FormInputLabel = styled.label`
   color: ${subColor};
@@ -53,4 +53,4 @@ export const FormInputLabel = styled.label`
   &.shrink {
     ${shrinkLabelStyles}
   }
-`;
+`

@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled'
 
 export const StyledNavigation = styled.div`
   display: flex;
@@ -7,7 +7,7 @@ export const StyledNavigation = styled.div`
   background: var(--darkLiver);
   color: var(--snow);
   box-shadow: 0 0 10px 0 rgb(0 0 0 / 30%);
-`;
+`
 
 export const LinkContainer = styled.div`
   display: flex;
@@ -34,4 +34,4 @@ export const LinkContainer = styled.div`
       }
     }
   }
-`;
+`

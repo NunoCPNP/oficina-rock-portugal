@@ -1,9 +1,9 @@
-import useTranslation from "next-translate/useTranslation";
+import useTranslation from 'next-translate/useTranslation'
 
-import { Container, Line, Title } from "./ProductDescription.styles";
+import { Container, Line, Title } from './ProductDescription.styles'
 
 const ProductDescription = ({ description }) => {
-  const { t } = useTranslation("common");
+  const { t } = useTranslation('common')
 
   return (
     <Container>
@@ -14,7 +14,7 @@ const ProductDescription = ({ description }) => {
         ))}
       </div>
     </Container>
-  );
-};
+  )
+}
 
-export default ProductDescription;
+export default ProductDescription

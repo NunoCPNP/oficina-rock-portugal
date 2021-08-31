@@ -1,5 +1,5 @@
-import styled from "@emotion/styled";
-import { css } from "@emotion/react";
+import styled from '@emotion/styled'
+import { css } from '@emotion/react'
 
 const buttonStyles = css`
   background-color: var(--richBlack);
@@ -11,7 +11,7 @@ const buttonStyles = css`
     color: var(--richBlack);
     border: 1px solid var(--richBlack);
   }
-`;
+`
 
 const invertedButtonStyles = css`
   background-color: var(--snow);
@@ -23,7 +23,7 @@ const invertedButtonStyles = css`
     color: var(--snow);
     border: none;
   }
-`;
+`
 
 const googleSignInStyles = css`
   background-color: var(--darkLiver);
@@ -34,7 +34,7 @@ const googleSignInStyles = css`
     background-color: var(--snow);
     color: var(--richBlack);
   }
-`;
+`
 
 const disabledStyles = css`
   background-color: var(--snow);
@@ -44,16 +44,16 @@ const disabledStyles = css`
 `
 
 const getButtonStyles = (props) => {
-  if(props.disable) {
-    return disabledStyles;
+  if (props.disable) {
+    return disabledStyles
   }
 
   if (props.isGoogleSignIn) {
-    return googleSignInStyles;
+    return googleSignInStyles
   }
 
-  return props.inverted ? invertedButtonStyles : buttonStyles;
-};
+  return props.inverted ? invertedButtonStyles : buttonStyles
+}
 
 export const CustomButtonContainer = styled.button`
   min-width: 16.5rem;
@@ -74,4 +74,4 @@ export const CustomButtonContainer = styled.button`
     text-decoration: none;
     color: inherit;
   }
-`;
+`

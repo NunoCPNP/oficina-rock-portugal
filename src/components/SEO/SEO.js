@@ -1,4 +1,4 @@
-import NextHead from "next/head";
+import NextHead from 'next/head'
 
 const Head = ({ title, description, children }) => {
   return (
@@ -16,7 +16,7 @@ const Head = ({ title, description, children }) => {
         {children}
       </NextHead>
     </>
-  );
-};
+  )
+}
 
-export default Head;
+export default Head

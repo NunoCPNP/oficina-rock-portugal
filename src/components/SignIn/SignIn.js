@@ -1,79 +1,67 @@
-import { useState } from "react";
-import Router from "next/router";
+import { useState } from 'react'
+import Router from 'next/router'
 
-import FormInput from "@/components/FormInput";
-import CustomButton from "@/components/CustomButton";
+import FormInput from '@/components/FormInput'
+import CustomButton from '@/components/CustomButton'
 
-import Loader from "@/modules/Loader";
+import Loader from '@/modules/Loader'
 
-import useAuth from "@/hooks/useAuth";
-import useSettings from "@/hooks/useSettings";
+import useAuth from '@/hooks/useAuth'
+import useSettings from '@/hooks/useSettings'
 
-import { auth } from "@/services/firebase";
+import { auth } from '@/services/firebase'
 
-import {
-  ButtonsBarContainer,
-  SignInContainer,
-  SignInTitle,
-  LoaderContainer
-} from "./SignIn.styles";
+import { ButtonsBarContainer, SignInContainer, SignInTitle, LoaderContainer } from './SignIn.styles'
 
 const SignIn = () => {
-  const { signinGoogle } = useAuth();
-  const [{ isLoading }, dispatch] = useSettings();
+  const { signinGoogle } = useAuth()
+  const [{ isLoading }, dispatch] = useSettings()
 
   const [userCredentials, setCredentials] = useState({
-    email: "",
-    password: "",
-  });
+    email: '',
+    password: '',
+  })
 
-  const { email, password } = userCredentials;
+  const { email, password } = userCredentials
 
   const handleSubmit = async (event) => {
-    event.preventDefault();
+    event.preventDefault()
 
-    dispatch({ type: "TOGGLE_LOADING" });
+    dispatch({ type: 'TOGGLE_LOADING' })
 
     try {
-      await auth.signInWithEmailAndPassword(email, password);
+      await auth.signInWithEmailAndPassword(email, password)
 
       setCredentials({
-        email: "",
-        password: "",
-      });
+        email: '',
+        password: '',
+      })
 
-      Router.push("/");
+      Router.push('/')
     } catch (error) {
-      console.log(error);
+      console.log(error)
     }
 
-    dispatch({ type: "TOGGLE_LOADING" });
-  };
+    dispatch({ type: 'TOGGLE_LOADING' })
+  }
 
   const handleChange = (event) => {
-    const { value, name } = event.target;
+    const { value, name } = event.target
 
-    setCredentials({ ...userCredentials, [name]: value });
-  };
+    setCredentials({ ...userCredentials, [name]: value })
+  }
 
   return isLoading ? (
     <LoaderContainer>
       <Loader />
     </LoaderContainer>
-  ) :(
+  ) : (
     <SignInContainer>
       <SignInTitle>I already have an account</SignInTitle>
       <span>Sign in with your email and password</span>
 
       <form onSubmit={handleSubmit}>
-        <FormInput
-          name="email"
-          type="email"
-          handleChange={handleChange}
-          value={email}
-          label="email"
-          required
-        />
+        <FormInput name="email" type="email" handleChange={handleChange} value={email} label="email" required />
         <FormInput
           name="password"
           type="password"
@@ -84,17 +72,13 @@ const SignIn = () => {
         />
         <ButtonsBarContainer>
           <CustomButton type="submit"> Sign in </CustomButton>
-          <CustomButton
-            type="button"
-            onClick={() => signinGoogle()}
-            isGoogleSignIn
-          >
+          <CustomButton type="button" onClick={() => signinGoogle()} isGoogleSignIn>
             Sign in with Google
           </CustomButton>
         </ButtonsBarContainer>
       </form>
     </SignInContainer>
-  );
-};
+  )
+}
 
-export default SignIn;
+export default SignIn

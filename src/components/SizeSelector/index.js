@@ -1,1 +1,1 @@
-export { default } from "./SizeSelector";
+export { default } from './SizeSelector'

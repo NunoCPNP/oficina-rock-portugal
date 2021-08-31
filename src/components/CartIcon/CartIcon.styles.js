@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled'
 
 export const CartContainer = styled.div`
   width: 2.5rem;
@@ -8,11 +8,11 @@ export const CartContainer = styled.div`
   align-items: center;
   justify-content: center;
   cursor: pointer;
-`;
+`
 
 export const ItemCountContainer = styled.span`
   position: absolute;
   font-size: 1rem;
   font-weight: bold;
   bottom: 0.3rem;
-`;
+`

@@ -1,68 +1,65 @@
-import { useState } from "react";
-import Router from "next/router";
+import { useState } from 'react'
+import Router from 'next/router'
 
-import FormInput from "@/components/FormInput";
-import CustomButton from "@/components/CustomButton";
+import FormInput from '@/components/FormInput'
+import CustomButton from '@/components/CustomButton'
 
-import Loader from "@/modules/Loader";
+import Loader from '@/modules/Loader'
 
-import useSettings from "@/hooks/useSettings";
+import useSettings from '@/hooks/useSettings'
 
-import { auth, createUserProfileDocument } from "@/services/firebase";
+import { auth, createUserProfileDocument } from '@/services/firebase'
 
-import { SignUpContainer, SignUpTitle, LoaderContainer } from "./SignUp.styles";
+import { SignUpContainer, SignUpTitle, LoaderContainer } from './SignUp.styles'
 
 const SignUp = () => {
-  const [{ isLoading }, dispatch] = useSettings();
+  const [{ isLoading }, dispatch] = useSettings()
 
   const [userCredentials, setUserCredentials] = useState({
-    displayName: "",
-    email: "",
-    password: "",
-    confirmPassword: "",
-  });
+    displayName: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+  })
 
-  const { displayName, email, password, confirmPassword } = userCredentials;
+  const { displayName, email, password, confirmPassword } = userCredentials
 
   const handleSubmit = async (event) => {
-    event.preventDefault();
+    event.preventDefault()
 
     if (password !== confirmPassword) {
-      alert("passwords don't match");
+      alert("passwords don't match")
 
-      return;
+      return
     }
 
-    dispatch({ type: "TOGGLE_LOADING" });
+    dispatch({ type: 'TOGGLE_LOADING' })
 
     try {
-      const { user } = await auth.createUserWithEmailAndPassword(
-        email,
-        password
-      );
+      const { user } = await auth.createUserWithEmailAndPassword(email, password)
 
-      await createUserProfileDocument(user, { displayName });
+      await createUserProfileDocument(user, { displayName })
 
       setUserCredentials({
-        displayName: "",
-        email: "",
-        password: "",
-        confirmPassword: "",
-      });
+        displayName: '',
+        email: '',
+        password: '',
+        confirmPassword: '',
+      })
 
-      Router.push("/");
+      Router.push('/')
     } catch (error) {
-      console.error(error);
+      console.error(error)
     }
 
-    dispatch({ type: "TOGGLE_LOADING" });
-  };
+    dispatch({ type: 'TOGGLE_LOADING' })
+  }
 
   const handleChange = (event) => {
-    const { name, value } = event.target;
+    const { name, value } = event.target
 
-    setUserCredentials({ ...userCredentials, [name]: value });
-  };
+    setUserCredentials({ ...userCredentials, [name]: value })
+  }
 
   return isLoading ? (
     <LoaderContainer>
@@ -81,22 +78,8 @@ const SignUp = () => {
           label="Display Name"
           required
         />
-        <FormInput
-          type="email"
-          name="email"
-          value={email}
-          onChange={handleChange}
-          label="Email"
-          required
-        />
-        <FormInput
-          type="password"
-          name="password"
-          value={password}
-          onChange={handleChange}
-          label="Password"
-          required
-        />
+        <FormInput type="email" name="email" value={email} onChange={handleChange} label="Email" required />
+        <FormInput type="password" name="password" value={password} onChange={handleChange} label="Password" required />
         <FormInput
           type="password"
           name="confirmPassword"
@@ -108,7 +91,7 @@ const SignUp = () => {
         <CustomButton type="submit">SIGN UP</CustomButton>
       </form>
     </SignUpContainer>
-  );
-};
+  )
+}
 
-export default SignUp;
+export default SignUp

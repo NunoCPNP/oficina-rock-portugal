@@ -1,16 +1,11 @@
-import { useState } from "react";
-import Image from "next/image";
-import PropTypes from "prop-types";
+import { useState } from 'react'
+import Image from 'next/image'
+import PropTypes from 'prop-types'
 
-import {
-  Container,
-  ImageSelector,
-  ImageThumb,
-  SelectedImage,
-} from "./ProductDisplay.styles";
+import { Container, ImageSelector, ImageThumb, SelectedImage } from './ProductDisplay.styles'
 
 const ProductDisplay = ({ images = [] }) => {
-  const [selectedImage, setSelectedImage] = useState(0);
+  const [selectedImage, setSelectedImage] = useState(0)
 
   return (
     <Container>
@@ -30,20 +25,14 @@ const ProductDisplay = ({ images = [] }) => {
         ))}
       </ImageSelector>
       <SelectedImage>
-        <Image
-          src={images[selectedImage]}
-          alt=""
-          width="395"
-          height="410"
-          quality="75"
-        />
+        <Image src={images[selectedImage]} alt="" width="395" height="410" quality="75" />
       </SelectedImage>
     </Container>
-  );
-};
+  )
+}
 
 ProductDisplay.propTypes = {
   images: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
-};
+}
 
-export default ProductDisplay;
+export default ProductDisplay

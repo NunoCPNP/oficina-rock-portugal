@@ -1,16 +1,16 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled'
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`;
+`
 
 export const ImageContainer = styled.div`
   img {
     border-radius: 5px;
   }
-`;
+`
 
 export const DescriptionContainer = styled.div`
   display: flex;
@@ -32,4 +32,4 @@ export const DescriptionContainer = styled.div`
     margin: 0.3rem;
     font-weight: 400;
   }
-`;
+`

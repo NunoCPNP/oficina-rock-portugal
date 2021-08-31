@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled'
 
 export const Container = styled.div`
   padding-top: 0.2rem;
@@ -8,4 +8,4 @@ export const Container = styled.div`
       border-bottom: none !important;
     }
   }
-`;
+`

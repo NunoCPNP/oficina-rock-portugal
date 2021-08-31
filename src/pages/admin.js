@@ -1,19 +1,19 @@
-import { useEffect } from "react";
-import { useRouter } from "next/router";
+import { useEffect } from 'react'
+import { useRouter } from 'next/router'
 
-import SEO from "@/components/SEO";
+import SEO from '@/components/SEO'
 
-import useAuth from "@/hooks/useAuth";
+import useAuth from '@/hooks/useAuth'
 
 const Admin = () => {
-  const router = useRouter();
-  const { user } = useAuth();
+  const router = useRouter()
+  const { user } = useAuth()
 
   console.log(user)
 
   useEffect(() => {
     if (!user) {
-      router.push("/");
+      router.push('/')
     }
   }, [user])
 
@@ -22,7 +22,7 @@ const Admin = () => {
       <SEO title="Oficina Rock PT" description="" />
       <div>My Account</div>
     </>
-  );
-};
+  )
+}
 
-export default Admin;
+export default Admin
