@@ -19,6 +19,9 @@ jobs:
 
       - name: Running linters ...
         run: yarn lint
+      
+      - name: Running CSS linters ...
+        run: yarn lint:css
 
       - name: Running tests ...
         run: yarn test

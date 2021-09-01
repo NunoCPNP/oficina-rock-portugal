@@ -34,11 +34,16 @@ const GlobalStyles = () => {
 
         html {
           line-height: 1.15;
-          -webkit-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+          font-size: 62.5%;
         }
 
         body {
           margin: 0;
+          font-family: var(--bodyFont);
+          font-size: var(--baseFontSize);
+          color: var(--richBlack);
+          background-color: var(--snow);
         }
 
         main {
@@ -127,7 +132,7 @@ const GlobalStyles = () => {
         [type='button'],
         [type='reset'],
         [type='submit'] {
-          -webkit-appearance: button;
+          appearance: button;
         }
 
         button::-moz-focus-inner,
@@ -178,18 +183,18 @@ const GlobalStyles = () => {
         }
 
         [type='search'] {
-          -webkit-appearance: textfield;
+          appearance: textfield;
           outline-offset: -2px;
         }
 
         [type='search']::-webkit-search-decoration {
-          -webkit-appearance: none;
+          appearance: none;
         }
 
-        ::-webkit-file-upload-button {
-          -webkit-appearance: button;
+        /* ::-webkit-file-upload-button {
+          appearance: button;
           font: inherit;
-        }
+        } */
 
         details {
           display: block;
@@ -208,17 +213,6 @@ const GlobalStyles = () => {
         }
 
         /* CSS CUSTOM */
-
-        html {
-          font-size: 62.5%;
-        }
-
-        body {
-          font-family: var(--bodyFont);
-          font-size: var(--baseFontSize);
-          color: var(--richBlack);
-          background-color: var(--snow);
-        }
 
         h1,
         h2,

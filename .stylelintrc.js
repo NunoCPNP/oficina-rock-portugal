@@ -1,8 +1,4 @@
 module.exports = {
-  extends: ['stylelint-config-standard'],
-  rules: {
-    'no-empty-source': null,
-    'declaration-empty-line-before': null,
-    'no-missing-end-of-source-newline': null,
-  },
+  processors: ['stylelint-processor-styled-components'],
+  extends: ['stylelint-config-recommended', 'stylelint-config-styled-components'],
 }
