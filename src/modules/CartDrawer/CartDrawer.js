@@ -6,7 +6,7 @@ import CustomButton from '@/components/CustomButton'
 import CartItem from '@/components/CartItem'
 
 import { useSettingsState } from '@/hooks/useSettings'
-import useProduct from '@/hooks/useProduct'
+import { useProductState } from '@/hooks/useProduct'
 
 import { Container, CartContainer, ButtonContainer } from './CartDrawer.styles'
 
@@ -14,7 +14,7 @@ const CartDrawer = () => {
   const router = useRouter()
   const { t } = useTranslation('common')
   const { cartOpen } = useSettingsState()
-  const [{ shoppingBag }, dispatch] = useProduct()
+  const { shoppingBag } = useProductState()
 
   return (
     <AnimatePresence>

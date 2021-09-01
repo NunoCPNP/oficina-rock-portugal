@@ -10,9 +10,9 @@ const initialState = {
   gdprOpen: true,
   isLoading: false,
   toast: {
-    show: false,
-    type: null,
-    message: null,
+    show: true,
+    type: 'Info', // Info, Warning, Error
+    message: 'Welcome back Nuno',
   },
 }
 
