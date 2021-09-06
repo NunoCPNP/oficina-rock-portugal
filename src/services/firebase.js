@@ -25,7 +25,8 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
   const snapShot = await userRef.get()
 
   if (!snapShot.exists) {
-    const { displayName, email, uid, photoURL } = userAuth
+    const { displayName, email, uid, photoURL, providerData } = userAuth
+
     const createdAt = new Date()
 
     try {
@@ -35,6 +36,7 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
         email,
         photoURL,
         createdAt,
+        providerId: providerData[0].providerId,
         phoneNumber: null,
         deliveryAddress: {
           street: null,
@@ -42,6 +44,7 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
           postalCode: null,
           country: null,
         },
+        deliverySameAsBilling: true,
         billingAddress: {
           street: null,
           city: null,

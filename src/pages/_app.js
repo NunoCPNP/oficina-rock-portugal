@@ -16,7 +16,7 @@ const sendAnalytics = ({ name, value }) => {
       fetch(url, { method: 'POST', keepalive: true })
     }
   } else {
-    console.warn('The Analytcs feature is disabled')
+    console.warn('The Analytics feature is disabled')
   }
 }
 
