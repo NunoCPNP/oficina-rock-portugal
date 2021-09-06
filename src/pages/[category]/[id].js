@@ -7,7 +7,7 @@ import ProductDetail from '@/modules/ProductDetail'
 const Product = ({ data }) => {
   return (
     <>
-      <SEO title="Oficina Rock PT" description="" />
+      <SEO title="Oficina Rock Portugal" description="" />
       <SectionTitle title={`${data.band} - ${data.title}`} section={`${data.type}`} offset="4rem" />
       <ProductDetail data={data} />
     </>

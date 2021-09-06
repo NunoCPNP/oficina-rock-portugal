@@ -17,7 +17,14 @@ const LanguageSelector = () => {
 
         return (
           <Link key={locale} href={router.asPath} locale={locale}>
-            <a onClick={() => cookieCutter.set('NEXT_LOCALE', locale)}>
+            <a
+              onClick={() => {
+                var expiryDate = new Date()
+                expiryDate.setMonth(expiryDate.getMonth() + 1)
+
+                cookieCutter.set('NEXT_LOCALE', locale)
+              }}
+            >
               <Image
                 src={`/${locale}.svg`}
                 alt={`Switch language to ${locale.toUpperCase()}`}

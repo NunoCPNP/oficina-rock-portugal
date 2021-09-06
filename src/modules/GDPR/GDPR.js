@@ -29,7 +29,10 @@ const GDPR = () => {
               inverted
               data-cy="gdpr-button"
               onClick={() => {
-                cookie.set('OFICINA_ROCK_GDPR', true)
+                var expiryDate = new Date()
+                expiryDate.setMonth(expiryDate.getMonth() + 1)
+
+                cookie.set('OFICINA_ROCK_GDPR', true, { expires: expiryDate })
                 dispatch({ type: 'TOGGLE_GDPR' })
               }}
             >

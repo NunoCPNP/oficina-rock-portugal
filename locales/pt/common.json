@@ -27,5 +27,8 @@
   "price": "Preço",
   "hi": "Olá",
   "add-to-bag": "Adicionar ao carrinho",
-  "my-account": "Minha conta"
+  "my-account": "Minha conta",
+  "account-settings": "Definições da conta",
+  "name": "Nome",
+  "email": "E-Mail"
 }

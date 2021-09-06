@@ -19,7 +19,7 @@ const Admin = () => {
 
   return (
     <>
-      <SEO title="Oficina Rock PT" description="" />
+      <SEO title="Oficina Rock Portugal" description="" />
       <div>My Account</div>
     </>
   )

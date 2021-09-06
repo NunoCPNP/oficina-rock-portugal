@@ -3,7 +3,7 @@ import SEO from '@/components/SEO'
 const Bands = () => {
   return (
     <>
-      <SEO title="Oficina Rock PT" description="" />
+      <SEO title="Oficina Rock Portugal" description="" />
       <div>Bands</div>
     </>
   )

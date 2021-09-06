@@ -1,17 +1,36 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import styled from '@emotion/styled'
 import useTranslation from 'next-translate/useTranslation'
 
 import SEO from '@/components/SEO'
 import FormInput from '@/components/FormInput'
+import SectionTitle from '@/components/SectionTitle'
+import FormCheckBox from '@/components/FormCheckBox'
 
 import useAuth from '@/hooks/useAuth'
 
 const Account = () => {
   const router = useRouter()
-  const { t } = useTranslation()
+  const { t } = useTranslation('common')
   const { user } = useAuth()
+
+  const [state, setState] = useState({
+    phoneNumber: '',
+    deliveryAddress: {
+      city: '',
+      country: '',
+      postalCode: '',
+      street: '',
+    },
+    deliverySameAsBilling: true,
+    billingAddress: {
+      city: '',
+      country: '',
+      postalCode: '',
+      street: '',
+    },
+  })
 
   useEffect(() => {
     if (!user) {
@@ -22,16 +41,86 @@ const Account = () => {
   console.log(user)
 
   return (
-    user && (
-      <AccountContainer>
-        <div>
-          <SEO title="Oficina Rock PT" description="" />
-          <FormInput disabled name="name" type="name" value={user.displayName} handleChange={() => null} label="name" />
-          <FormInput disabled name="email" type="email" value={user.email} handleChange={() => null} label="email" />
-        </div>
-        <div></div>
-      </AccountContainer>
-    )
+    <>
+      <SEO title="Oficina Rock Portugal" description="" />
+      <SectionTitle title={t(`account-settings`)} offset="4rem" />
+      {user && (
+        <AccountContainer>
+          <div>
+            <div>Dados Pessoais</div>
+            <FormInput disabled name="name" type="text" value={user.displayName} label={t(`name`)} />
+            <FormInput disabled name="email" type="email" value={user.email} label={t(`email`)} />
+          </div>
+          <div>
+            <div>
+              <div>Morada de Envio</div>
+              <FormInput name="rua" type="text" value={user.deliveryAddress.street} onChange={() => null} label="Rua" />
+              <FormInput
+                name="postalCode"
+                type="text"
+                value={user.deliveryAddress.postalCode}
+                onChange={() => null}
+                label="Código Postal"
+              />
+              <FormInput
+                name="city"
+                type="text"
+                value={user.deliveryAddress.city}
+                onChange={() => null}
+                label="Cidade"
+              />
+              <FormInput
+                name="country"
+                type="text"
+                value={user.deliveryAddress.country}
+                onChange={() => null}
+                label="Pais"
+              />
+            </div>
+            <FormCheckBox
+              name="sameaddress"
+              type="checkbox"
+              checked={user.deliverySameAsBilling}
+              onChange={() => null}
+              label="Mesma morada para Envio e Facturação"
+            />
+            {!user.deliverySameAsBilling && (
+              <>
+                <div>Morada de Facturação</div>
+                <FormInput
+                  name="rua"
+                  type="text"
+                  value={user.deliveryAddress.street}
+                  onChange={() => null}
+                  label="Rua"
+                />
+                <FormInput
+                  name="postalCode"
+                  type="text"
+                  value={user.deliveryAddress.postalCode}
+                  onChange={() => null}
+                  label="Código Postal"
+                />
+                <FormInput
+                  name="city"
+                  type="text"
+                  value={user.deliveryAddress.city}
+                  onChange={() => null}
+                  label="Cidade"
+                />
+                <FormInput
+                  name="country"
+                  type="text"
+                  value={user.deliveryAddress.country}
+                  onChange={() => null}
+                  label="Pais"
+                />
+              </>
+            )}
+          </div>
+        </AccountContainer>
+      )}
+    </>
   )
 }
 

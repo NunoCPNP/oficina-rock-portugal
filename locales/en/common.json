@@ -27,5 +27,8 @@
   "price": "Price",
   "hi": "Hi",
   "add-to-bag": "Add to bag",
-  "my-account": "My Account"
+  "my-account": "My Account",
+  "account-settings": "Account Settings",
+  "name": "Name",
+  "email": "E-Mail"
 }

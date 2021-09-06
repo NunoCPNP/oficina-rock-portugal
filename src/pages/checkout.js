@@ -2,7 +2,7 @@ import SEO from '@/components/SEO'
 
 const CheckOut = () => (
   <>
-    <SEO title="Oficina Rock PT" description="" />
+    <SEO title="Oficina Rock Portugal" description="" />
     <div>CheckOut</div>
   </>
 )
