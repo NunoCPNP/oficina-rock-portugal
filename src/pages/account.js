@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import styled from '@emotion/styled'
 import useTranslation from 'next-translate/useTranslation'
@@ -13,32 +13,14 @@ import useAuth from '@/hooks/useAuth'
 const Account = () => {
   const router = useRouter()
   const { t } = useTranslation('common')
-  const { user } = useAuth()
-
-  const [state, setState] = useState({
-    phoneNumber: '',
-    deliveryAddress: {
-      city: '',
-      country: '',
-      postalCode: '',
-      street: '',
-    },
-    deliverySameAsBilling: true,
-    billingAddress: {
-      city: '',
-      country: '',
-      postalCode: '',
-      street: '',
-    },
-  })
+  const { user, setUser } = useAuth()
 
   useEffect(() => {
     if (!user) {
       router.push('/login')
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user])
-
-  console.log(user)
 
   return (
     <>
@@ -47,33 +29,83 @@ const Account = () => {
       {user && (
         <AccountContainer>
           <div>
-            <div>Dados Pessoais</div>
+            <SectionTitle title="Dados Pessoais" sub />
             <FormInput disabled name="name" type="text" value={user.displayName} label={t(`name`)} />
             <FormInput disabled name="email" type="email" value={user.email} label={t(`email`)} />
+            <FormInput
+              name="phone"
+              type="tel"
+              value={user.phoneNumber}
+              onChange={(e) =>
+                setUser({
+                  ...user,
+                  phoneNumber: e.target.value,
+                })
+              }
+              label="Phone Number"
+            />
           </div>
           <div>
             <div>
-              <div>Morada de Envio</div>
-              <FormInput name="rua" type="text" value={user.deliveryAddress.street} onChange={() => null} label="Rua" />
+              <SectionTitle title="Morada de Envio" sub />
+              <FormInput
+                name="rua"
+                type="text"
+                value={user.deliveryAddress.street}
+                onChange={(e) =>
+                  setUser({
+                    ...user,
+                    deliveryAddress: {
+                      ...user.deliveryAddress,
+                      street: e.target.value,
+                    },
+                  })
+                }
+                label="Rua"
+              />
               <FormInput
                 name="postalCode"
                 type="text"
                 value={user.deliveryAddress.postalCode}
-                onChange={() => null}
+                onChange={(e) =>
+                  setUser({
+                    ...user,
+                    deliveryAddress: {
+                      ...user.deliveryAddress,
+                      postalCode: e.target.value,
+                    },
+                  })
+                }
                 label="Código Postal"
               />
               <FormInput
                 name="city"
                 type="text"
                 value={user.deliveryAddress.city}
-                onChange={() => null}
+                onChange={(e) => {
+                  setUser({
+                    ...user,
+                    deliveryAddress: {
+                      ...user.deliveryAddress,
+                      city: e.target.value,
+                    },
+                  })
+                }}
                 label="Cidade"
               />
               <FormInput
                 name="country"
                 type="text"
                 value={user.deliveryAddress.country}
-                onChange={() => null}
+                onChange={(e) => {
+                  setUser({
+                    ...user,
+                    deliveryAddress: {
+                      ...user.deliveryAddress,
+                      country: e.target.value,
+                    },
+                  })
+                }}
                 label="Pais"
               />
             </div>
@@ -81,38 +113,75 @@ const Account = () => {
               name="sameaddress"
               type="checkbox"
               checked={user.deliverySameAsBilling}
-              onChange={() => null}
+              onChange={() =>
+                setUser({
+                  ...user,
+                  deliverySameAsBilling: !user.deliverySameAsBilling,
+                })
+              }
               label="Mesma morada para Envio e Facturação"
             />
             {!user.deliverySameAsBilling && (
               <>
-                <div>Morada de Facturação</div>
+                <SectionTitle title="Morada de Facturação" sub />
                 <FormInput
                   name="rua"
                   type="text"
-                  value={user.deliveryAddress.street}
-                  onChange={() => null}
+                  value={user.billingAddress.street}
+                  onChange={(e) => {
+                    setUser({
+                      ...user,
+                      billingAddress: {
+                        ...user.billingAddress,
+                        street: e.target.value,
+                      },
+                    })
+                  }}
                   label="Rua"
                 />
                 <FormInput
                   name="postalCode"
                   type="text"
-                  value={user.deliveryAddress.postalCode}
-                  onChange={() => null}
+                  value={user.billingAddress.postalCode}
+                  onChange={(e) => {
+                    setUser({
+                      ...user,
+                      billingAddress: {
+                        ...user.billingAddress,
+                        postalCode: e.target.value,
+                      },
+                    })
+                  }}
                   label="Código Postal"
                 />
                 <FormInput
                   name="city"
                   type="text"
-                  value={user.deliveryAddress.city}
-                  onChange={() => null}
+                  value={user.billingAddress.city}
+                  onChange={(e) => {
+                    setUser({
+                      ...user,
+                      billingAddress: {
+                        ...user.billingAddress,
+                        city: e.target.value,
+                      },
+                    })
+                  }}
                   label="Cidade"
                 />
                 <FormInput
                   name="country"
                   type="text"
-                  value={user.deliveryAddress.country}
-                  onChange={() => null}
+                  value={user.billingAddress.country}
+                  onChange={(e) => {
+                    setUser({
+                      ...user,
+                      billingAddress: {
+                        ...user.billingAddress,
+                        country: e.target.value,
+                      },
+                    })
+                  }}
                   label="Pais"
                 />
               </>

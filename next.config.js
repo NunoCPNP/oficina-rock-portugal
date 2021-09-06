@@ -3,6 +3,10 @@ const { withSentryConfig } = require('@sentry/nextjs')
 
 moduleExports = {
   reactStrictMode: true,
+  eslint: {
+    dirs: ['components', 'context', 'hooks', 'Layout', 'modules', 'pages', 'services', 'styles'],
+  },
+  reactStrictMode: true,
   ...nextTranslate(),
 }
 
