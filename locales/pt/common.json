@@ -30,5 +30,15 @@
   "my-account": "Minha conta",
   "account-settings": "Definições da conta",
   "name": "Nome",
-  "email": "E-Mail"
+  "email": "E-Mail",
+  "personal-details": "Detalhes Pessoais",
+  "phone-number": "Numero Telefone",
+  "delivery-address": "Morada de Envio",
+  "street": "Rua",
+  "postal-code": "Código Postal",
+  "city": "Cidade",
+  "country": "País",
+  "same-address": "Moarada de Envio e Facturação são as mesmas",
+  "billing-address": "Morada de Facturação",
+  "update-info": "Actualizar Informação da Conta"
 }

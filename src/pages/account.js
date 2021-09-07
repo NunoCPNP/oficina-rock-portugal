@@ -7,6 +7,9 @@ import SEO from '@/components/SEO'
 import FormInput from '@/components/FormInput'
 import SectionTitle from '@/components/SectionTitle'
 import FormCheckBox from '@/components/FormCheckBox'
+import CustomButton from '@/components/CustomButton'
+
+import { firestore } from '@/services/firebase'
 
 import useAuth from '@/hooks/useAuth'
 
@@ -29,7 +32,7 @@ const Account = () => {
       {user && (
         <AccountContainer>
           <div>
-            <SectionTitle title="Dados Pessoais" sub />
+            <SectionTitle title={t(`personal-details`)} sub />
             <FormInput disabled name="name" type="text" value={user.displayName} label={t(`name`)} />
             <FormInput disabled name="email" type="email" value={user.email} label={t(`email`)} />
             <FormInput
@@ -42,14 +45,14 @@ const Account = () => {
                   phoneNumber: e.target.value,
                 })
               }
-              label="Phone Number"
+              label={t(`phone-number`)}
             />
           </div>
           <div>
             <div>
-              <SectionTitle title="Morada de Envio" sub />
+              <SectionTitle title={t(`delivery-address`)} sub />
               <FormInput
-                name="rua"
+                name="street"
                 type="text"
                 value={user.deliveryAddress.street}
                 onChange={(e) =>
@@ -61,7 +64,7 @@ const Account = () => {
                     },
                   })
                 }
-                label="Rua"
+                label={t(`street`)}
               />
               <FormInput
                 name="postalCode"
@@ -76,7 +79,7 @@ const Account = () => {
                     },
                   })
                 }
-                label="Código Postal"
+                label={t(`postal-code`)}
               />
               <FormInput
                 name="city"
@@ -91,7 +94,7 @@ const Account = () => {
                     },
                   })
                 }}
-                label="Cidade"
+                label={t(`city`)}
               />
               <FormInput
                 name="country"
@@ -106,7 +109,7 @@ const Account = () => {
                     },
                   })
                 }}
-                label="Pais"
+                label={t(`country`)}
               />
             </div>
             <FormCheckBox
@@ -119,13 +122,13 @@ const Account = () => {
                   deliverySameAsBilling: !user.deliverySameAsBilling,
                 })
               }
-              label="Mesma morada para Envio e Facturação"
+              label={t(`same-address`)}
             />
             {!user.deliverySameAsBilling && (
               <>
-                <SectionTitle title="Morada de Facturação" sub />
+                <SectionTitle title={t(`billing-address`)} sub />
                 <FormInput
-                  name="rua"
+                  name="steet"
                   type="text"
                   value={user.billingAddress.street}
                   onChange={(e) => {
@@ -137,7 +140,7 @@ const Account = () => {
                       },
                     })
                   }}
-                  label="Rua"
+                  label={t(`street`)}
                 />
                 <FormInput
                   name="postalCode"
@@ -152,7 +155,7 @@ const Account = () => {
                       },
                     })
                   }}
-                  label="Código Postal"
+                  label={t(`postal-code`)}
                 />
                 <FormInput
                   name="city"
@@ -167,7 +170,7 @@ const Account = () => {
                       },
                     })
                   }}
-                  label="Cidade"
+                  label={t(`postal-code`)}
                 />
                 <FormInput
                   name="country"
@@ -182,13 +185,30 @@ const Account = () => {
                       },
                     })
                   }}
-                  label="Pais"
+                  label={t(`country`)}
                 />
               </>
             )}
           </div>
         </AccountContainer>
       )}
+      <ButtonContainer>
+        <CustomButton
+          onClick={async () => {
+            const userRef = firestore.doc(`users/${user.uid}`)
+
+            try {
+              await userRef.set({
+                ...user,
+              })
+            } catch (error) {
+              console.log('Error updating user: ', error.message)
+            }
+          }}
+        >
+          {t(`update-info`)}
+        </CustomButton>
+      </ButtonContainer>
     </>
   )
 }
@@ -197,6 +217,12 @@ const AccountContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 2rem;
+`
+
+const ButtonContainer = styled.div`
+  margin: 4rem;
+  display: flex;
+  justify-content: center;
 `
 
 export default Account

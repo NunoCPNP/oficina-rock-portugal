@@ -30,5 +30,15 @@
   "my-account": "My Account",
   "account-settings": "Account Settings",
   "name": "Name",
-  "email": "E-Mail"
+  "email": "E-Mail",
+  "personal-details": "Personal Details",
+  "phone-number": "Phone Number",
+  "delivery-address": "Delivery Address",
+  "street": "Street",
+  "postal-code": "Postal Code",
+  "city": "City",
+  "country": "Country",
+  "same-address": "Delivery and Billing address are the same",
+  "billing-address": "Billing Address",
+  "update-info": "Update Account Information"
 }
