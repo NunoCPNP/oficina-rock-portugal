@@ -5,7 +5,7 @@ import ProductCard from '@/components/ProductCard'
 
 import { Container, GridContainer, Empty } from './ProductList.styles'
 
-const ProductList = ({ collection }) => {
+const ProductList = ({ collection, promotion }) => {
   const { t } = useTranslation('common')
   return (
     <Container>
@@ -23,7 +23,7 @@ const ProductList = ({ collection }) => {
             />
           ))
         ) : (
-          <Empty>{t(`empty_category`)}</Empty>
+          <>{!promotion && <Empty>{t(`empty_category`)}</Empty>}</>
         )}
       </GridContainer>
     </Container>

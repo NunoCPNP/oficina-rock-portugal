@@ -5,7 +5,7 @@ import { AnimatePresence } from 'framer-motion'
 import CustomButton from '@/components/CustomButton'
 import CartItem from '@/components/CartItem'
 
-import { useSettingsState } from '@/hooks/useSettings'
+import useSettings from '@/hooks/useSettings'
 import { useProductState } from '@/hooks/useProduct'
 
 import { Container, CartContainer, ButtonContainer } from './CartDrawer.styles'
@@ -13,7 +13,7 @@ import { Container, CartContainer, ButtonContainer } from './CartDrawer.styles'
 const CartDrawer = () => {
   const router = useRouter()
   const { t } = useTranslation('common')
-  const { cartOpen } = useSettingsState()
+  const [{ cartOpen }, dispatch] = useSettings()
   const { shoppingBag } = useProductState()
 
   return (
@@ -32,7 +32,13 @@ const CartDrawer = () => {
             )}
           </CartContainer>
           <ButtonContainer>
-            <CustomButton inverted onClick={() => router.push('/checkout')}>
+            <CustomButton
+              inverted
+              onClick={() => {
+                router.push('/checkout')
+                dispatch({ type: 'TOGGLE_CART' })
+              }}
+            >
               {t(`go-to-checkout`)}
             </CustomButton>
           </ButtonContainer>

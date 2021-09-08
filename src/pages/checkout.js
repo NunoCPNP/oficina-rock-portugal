@@ -1,10 +1,17 @@
-import SEO from '@/components/SEO'
+import useTranslation from 'next-translate/useTranslation'
 
-const CheckOut = () => (
-  <>
-    <SEO title="Oficina Rock Portugal" description="" />
-    <div>CheckOut</div>
-  </>
-)
+import SEO from '@/components/SEO'
+import SectionTitle from '@/components/SectionTitle'
+
+const CheckOut = () => {
+  const { t } = useTranslation('common')
+
+  return (
+    <>
+      <SEO title="Oficina Rock Portugal" description="" />
+      <SectionTitle title={t(`checkout`)} offset="4rem" />
+    </>
+  )
+}
 
 export default CheckOut

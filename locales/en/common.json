@@ -40,5 +40,8 @@
   "country": "Country",
   "same-address": "Delivery and Billing address are the same",
   "billing-address": "Billing Address",
-  "update-info": "Update Account Information"
+  "update-info": "Update Account Information",
+  "no-promotion-newsletter-message": "At the moment we dont have any active promotion running, subscribe to our newsletter to be the first to know our next news and promotions.",
+  "subscribe": "Subscribe",
+  "checkout": "Checkout"
 }

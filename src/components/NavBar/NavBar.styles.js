@@ -9,6 +9,7 @@ export const HeaderContainer = styled.div`
 export const LogoContainer = styled.div`
   display: flex;
   align-items: center;
+  cursor: pointer;
 `
 
 export const LinkContainer = styled.div`

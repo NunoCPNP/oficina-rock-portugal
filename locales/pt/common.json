@@ -40,5 +40,7 @@
   "country": "País",
   "same-address": "Moarada de Envio e Facturação são as mesmas",
   "billing-address": "Morada de Facturação",
-  "update-info": "Actualizar Informação da Conta"
+  "update-info": "Actualizar Informação da Conta",
+  "no-promotion-newsletter-message": "Actualmente não temos nenhuma promoção activa. Subscreve a nossa newsletter para seres o primeiro a saber as nossas proximas novidades e promoções",
+  "subscribe": "Subscrever"
 }
