@@ -17,7 +17,7 @@ exports[`<Footer /> spec Should match snapshot 1`] = `
 
 .emotion-2 h4 {
   font-weight: 400;
-  padding-bottom: 1rem;
+  line-height: 3rem;
 }
 
 <footer

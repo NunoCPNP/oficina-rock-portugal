@@ -1,4 +1,3 @@
-import styled from '@emotion/styled'
 import useTranslation from 'next-translate/useTranslation'
 
 import SEO from '@/components/SEO'
@@ -13,18 +12,14 @@ const Promotions = ({ collection }) => {
   const { t } = useTranslation('common')
 
   return (
-    <Container>
+    <>
       <SEO title="Oficina Rock Portugal" description="" />
       <SectionTitle title={t(`promotions`)} offset="4rem" />
       <ProductList collection={collection} promotion />
       <NewsLetter message={t(`no-promotion-newsletter-message`)} />
-    </Container>
+    </>
   )
 }
-
-const Container = styled.div`
-  min-height: calc(100vh - 33rem);
-`
 
 export async function getServerSideProps() {
   const collection = []

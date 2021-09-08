@@ -16,6 +16,6 @@ export const GridContainer = styled.div`
 export const GridItem = styled.div`
   h4 {
     font-weight: 400;
-    padding-bottom: 1rem;
+    line-height: 3rem;
   }
 `

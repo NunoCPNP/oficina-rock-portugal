@@ -5,6 +5,7 @@ const Main = styled.main`
   max-width: 130rem;
   margin: 0 auto;
   padding-top: 11rem;
+  min-height: calc(100vh - 34rem);
 `
 
 const DynamicHeader = dynamic(() => import('@/modules/Header'))
