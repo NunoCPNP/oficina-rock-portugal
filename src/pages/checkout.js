@@ -2,7 +2,7 @@ import useTranslation from 'next-translate/useTranslation'
 
 import SEO from '@/components/SEO'
 import SectionTitle from '@/components/SectionTitle'
-import CheckOutItems from '@/modules/CheckOutItems'
+import CheckOutItems from '@/components/CheckOutItems'
 
 import useProduct from '@/hooks/useProduct'
 import useAuth from '@/hooks/useAuth'
