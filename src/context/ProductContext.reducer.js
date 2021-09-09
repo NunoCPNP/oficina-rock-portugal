@@ -47,7 +47,7 @@ export const reducer = (state, action) => {
     case 'ADD_PRODUCT_TO_BAG': {
       return {
         ...state,
-        shoppingBag: [...state.shoppingBag, state.currentProduct],
+        shoppingBag: [...state.shoppingBag, action.payload],
       }
     }
 

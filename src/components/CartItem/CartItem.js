@@ -15,6 +15,7 @@ const CartItem = ({ item = {} }) => {
         </div>
       </DetailsContainer>
       <div>{item.quantitySelected}</div>
+      <div>{item.size}</div>
       <div>{item.price * item.quantitySelected} €</div>
     </Container>
   )

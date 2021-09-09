@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 
 export const Container = styled.div`
   display: grid;
-  grid-template-columns: auto 10rem auto auto;
+  grid-template-columns: auto 10rem auto auto auto;
   grid-gap: 2rem;
   align-items: center;
   margin-bottom: 1rem;

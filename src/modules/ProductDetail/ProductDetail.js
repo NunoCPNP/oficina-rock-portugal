@@ -28,7 +28,7 @@ const ProductDetail = ({ data }) => {
         <div>
           <CustomButton
             disable={!currentProduct.quantityAvailable}
-            onClick={() => dispatch({ type: 'ADD_PRODUCT_TO_BAG' })}
+            onClick={() => dispatch({ type: 'ADD_PRODUCT_TO_BAG', payload: currentProduct })}
           >
             {currentProduct.quantityAvailable ? t(`add-to-bag`) : t(`out-of-stock`)}
           </CustomButton>
