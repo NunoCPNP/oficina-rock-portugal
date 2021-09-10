@@ -14,12 +14,16 @@ const CheckOut = () => {
   const [{ shoppingBag }, dispatch] = useProduct()
   const { user } = useAuth()
 
+  const total = shoppingBag.reduce((accumulator, item, index, array) => {
+    return accumulator + item.price
+  }, 0)
+
   return (
     <>
       <SEO title="Oficina Rock Portugal" description="" />
       <SectionTitle title={t(`checkout`)} offset="4rem" />
       <CheckOutItems />
-      <Payment />
+      <Payment total={total} />
     </>
   )
 }

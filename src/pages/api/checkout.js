@@ -1,11 +1,8 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
 
 export default async function handler(req, res) {
-  console.log(req)
-
   if (req.method === 'POST') {
     try {
-      // Create Checkout Sessions from body params.
       const session = await stripe.checkout.sessions.create({
         line_items: [
           {
@@ -14,7 +11,7 @@ export default async function handler(req, res) {
               product_data: {
                 name: 'T-shirt',
               },
-              unit_amount: 2000,
+              unit_amount: req.body.price * 100,
             },
             quantity: 1,
           },

@@ -1,7 +1,7 @@
 {
   "name": "oficina-rock-portugal",
   "description": "Oficina Rock Portugal Online Shop",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "author": {
     "name": "Nuno Pereira",
     "email": "hello@nunopereira.tech",
@@ -28,7 +28,6 @@
     "@emotion/styled": "^11.3.0",
     "@sendgrid/mail": "^7.4.6",
     "@sentry/nextjs": "^6.12.0",
-    "@stripe/react-stripe-js": "^1.4.1",
     "@stripe/stripe-js": "^1.17.1",
     "cookie-cutter": "^0.2.0",
     "firebase": "^8.8.1",

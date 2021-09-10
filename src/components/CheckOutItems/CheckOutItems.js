@@ -10,20 +10,20 @@ const CheckOutItems = () => {
   const { t } = useTranslation('common')
   const [{ shoppingBag }, dispatch] = useProduct()
 
-  console.log('-->', shoppingBag)
-
   return (
     <Container>
       {shoppingBag.length === 0 && <EmptyBag>{t(`cart-empty`)}</EmptyBag>}
       <Bag>
-        <BagItemHeader>
-          <div></div>
-          <div>Description</div>
-          <div>Quantity</div>
-          <div>Size</div>
-          <div>Price</div>
-          <div>Remove</div>
-        </BagItemHeader>
+        {shoppingBag.length !== 0 && (
+          <BagItemHeader>
+            <div></div>
+            <div>Description</div>
+            <div>Quantity</div>
+            <div>Size</div>
+            <div>Price</div>
+            <div>Remove</div>
+          </BagItemHeader>
+        )}
         {shoppingBag.map((item, index) => (
           <BagItem key={index}>
             <div>
