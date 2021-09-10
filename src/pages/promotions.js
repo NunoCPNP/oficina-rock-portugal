@@ -2,9 +2,9 @@ import useTranslation from 'next-translate/useTranslation'
 
 import SEO from '@/components/SEO'
 import SectionTitle from '@/components/SectionTitle'
-import ProductList from '@/modules/ProductList'
+import ProductList from '@/components/ProductList'
 
-import NewsLetter from '@/modules/NewsLetter'
+import NewsLetter from '@/components/NewsLetter'
 
 import { firestore } from '@/services/firebase'
 

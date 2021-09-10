@@ -2,7 +2,7 @@ import { firestore } from '@/services/firebase'
 
 import SEO from '@/components/SEO'
 import SectionTitle from '@/components/SectionTitle'
-import ProductDetail from '@/modules/ProductDetail'
+import ProductDetail from '@/components/ProductDetail'
 
 const Product = ({ data }) => {
   return (

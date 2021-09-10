@@ -4,7 +4,7 @@ import Router from 'next/router'
 import FormInput from '@/components/FormInput'
 import CustomButton from '@/components/CustomButton'
 
-import Loader from '@/modules/Loader'
+import Loader from '@/components/Loader'
 
 import useSettings from '@/hooks/useSettings'
 

@@ -2,8 +2,8 @@ import useTranslation from 'next-translate/useTranslation'
 import { firestore } from '@/services/firebase'
 
 import SEO from '@/components/SEO'
-import CTA from '@/modules/CTA'
-import ProductList from '@/modules/ProductList'
+import CTA from '@/components/CTA'
+import ProductList from '@/components/ProductList'
 import SectionTitle from '@/components/SectionTitle'
 
 const Home = ({ collection }) => {

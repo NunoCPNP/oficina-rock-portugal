@@ -15,7 +15,6 @@ module.exports = {
     '^@/components(.*)$': '<rootDir>/src/components$1',
     '^@/context(.*)$': '<rootDir>/src/context$1',
     '^@/hooks(.*)$': '<rootDir>/src/hooks$1',
-    '^@/modules(.*)$': '<rootDir>/src/modules$1',
     '^@/services(.*)$': '<rootDir>/src/services$1',
   },
   setupFilesAfterEnv: ['./jest.setup.js'],

@@ -8,10 +8,10 @@ const Main = styled.main`
   min-height: calc(100vh - 34rem);
 `
 
-const DynamicHeader = dynamic(() => import('@/modules/Header'))
-const DynamicFooter = dynamic(() => import('@/modules/Footer'))
-const DynamicCartDrawer = dynamic(() => import('@/modules/CartDrawer'))
-const DynamicGDPR = dynamic(() => import('@/modules/GDPR'))
+const DynamicHeader = dynamic(() => import('@/components/Header'))
+const DynamicFooter = dynamic(() => import('@/components/Footer'))
+const DynamicCartDrawer = dynamic(() => import('@/components/CartDrawer'))
+const DynamicGDPR = dynamic(() => import('@/components/GDPR'))
 const DynamicToast = dynamic(() => import('@/components/Toast'))
 
 const DefaultLayout = ({ children }) => {
