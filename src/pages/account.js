@@ -201,6 +201,8 @@ const Account = () => {
               await userRef.set({
                 ...user,
               })
+
+              router.push('/')
             } catch (error) {
               console.log('Error updating user: ', error.message)
             }

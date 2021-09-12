@@ -2,13 +2,13 @@ import Image from 'next/image'
 import useTranslation from 'next-translate/useTranslation'
 import { ImCross } from 'react-icons/im'
 
-import useProduct from '@/hooks/useProduct'
+import { useProductState } from '@/hooks/useProduct'
 
 import { Container, EmptyBag, Bag, BagItem, BagItemHeader } from './CheckOutItems.styles'
 
 const CheckOutItems = () => {
   const { t } = useTranslation('common')
-  const [{ shoppingBag }, dispatch] = useProduct()
+  const { shoppingBag } = useProductState()
 
   return (
     <Container>

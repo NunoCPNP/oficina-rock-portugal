@@ -18,9 +18,9 @@ const BottomNavBar = () => {
       <div>{user && `${hi}, ${user.displayName} !`}</div>
       <LinkContainer>
         <ul>
-          <li>
+          {/* <li>
             <Link href="/bands">{t(`bands`)}</Link>
-          </li>
+          </li> */}
           <li>
             <Link href="/men">{t(`men`)}</Link>
           </li>
@@ -28,7 +28,7 @@ const BottomNavBar = () => {
             <Link href="/women">{t(`women`)}</Link>
           </li>
           <li>
-            <Link href="/acessories">{t(`acessories`)}</Link>
+            <Link href="/accessories">{t(`accessories`)}</Link>
           </li>
           <li>
             <Link href="/promotions">{t(`promotions`)}</Link>

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useRouter } from 'next/router'
 import useTranslation from 'next-translate/useTranslation'
 
 import CustomButton from '@/components/CustomButton'
@@ -7,20 +8,21 @@ import FormInput from '@/components/FormInput'
 import { Container, InputContainer, MessageContainer } from './NewsLetter.styles'
 
 const NewsLetter = ({ message = '' }) => {
-  const [email, setEmail] = useState('')
   const { t } = useTranslation('common')
+  const router = useRouter()
+  const [email, setEmail] = useState('')
 
   const handleSubmit = async (e) => {
     e.preventDefault()
 
-    try {
-      fetch('/api/mail', {
-        method: 'post',
-        body: email,
-      })
+    const response = await fetch('/api/mail', {
+      method: 'post',
+      body: email,
+    })
+
+    if (response.ok) {
       setEmail('')
-    } catch (error) {
-      console.log(error)
+      router.push('/')
     }
   }
 

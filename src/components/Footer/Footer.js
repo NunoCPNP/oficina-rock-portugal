@@ -13,10 +13,10 @@ const Footer = () => {
             <h4>Quem Somos</h4>
           </div>
           <div>
-            <h4>Politicas de Privacidade</h4>
+            <h4>Políticas de Privacidade</h4>
           </div>
           <div>
-            <h4>Politicas de Devolução e Reembolso</h4>
+            <h4>Políticas de Devolução e Reembolso</h4>
           </div>
           <div>
             <h4>Trocas e Devoluções</h4>

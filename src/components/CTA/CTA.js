@@ -27,12 +27,12 @@ const CTA = () => {
         </ItemContainer>
         <ItemContainer
           style={{
-            backgroundImage: "url('acessories.webp')",
+            backgroundImage: "url('accessories.webp')",
           }}
-          onClick={() => router.push('/acessories')}
+          onClick={() => router.push('/accessories')}
         >
           <TextContainer>
-            <h2>{t(`common:acessories`)}</h2>
+            <h2>{t(`common:accessories`)}</h2>
           </TextContainer>
         </ItemContainer>
       </GridContainer>
