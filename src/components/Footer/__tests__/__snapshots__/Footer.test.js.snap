@@ -37,12 +37,12 @@ exports[`<Footer /> spec Should match snapshot 1`] = `
         </div>
         <div>
           <h4>
-            Politicas de Privacidade
+            Políticas de Privacidade
           </h4>
         </div>
         <div>
           <h4>
-            Politicas de Devolução e Reembolso
+            Políticas de Devolução e Reembolso
           </h4>
         </div>
         <div>
