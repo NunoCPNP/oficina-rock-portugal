@@ -21,6 +21,7 @@ export default async function handler(req, res) {
         success_url: `${req.headers.origin}/checkout/?success=true&session_id={CHECKOUT_SESSION_ID}`,
         cancel_url: `${req.headers.origin}/checkout/?canceled=true`,
       })
+
       res.redirect(303, session.url)
     } catch (err) {
       res.status(err.statusCode || 500).json(err.message)
