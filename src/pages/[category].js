@@ -1,11 +1,11 @@
 import { useRouter } from 'next/router'
 import useTranslation from 'next-translate/useTranslation'
 
-import { firestore } from '@/services/firebase'
-
 import SEO from '@/components/SEO'
-import ProductList from '@/components/ProductList'
 import SectionTitle from '@/components/SectionTitle'
+import ProductList from '@/components/ProductList'
+
+import { firestore } from '@/services/firebase'
 
 const Category = ({ collection }) => {
   const { query } = useRouter()
