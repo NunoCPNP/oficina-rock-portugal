@@ -3,17 +3,14 @@ import Router from 'next/router'
 
 import FormInput from '@/components/FormInput'
 import CustomButton from '@/components/CustomButton'
-
 import Loader from '@/components/Loader'
-
-import useSettings from '@/hooks/useSettings'
 
 import { auth, createUserProfileDocument } from '@/services/firebase'
 
 import { SignUpContainer, SignUpTitle, LoaderContainer } from './SignUp.styles'
 
 const SignUp = () => {
-  const [{ isLoading }, dispatch] = useSettings()
+  const [loading, setLoading] = useState(false)
 
   const [userCredentials, setUserCredentials] = useState({
     displayName: '',
@@ -33,7 +30,7 @@ const SignUp = () => {
       return
     }
 
-    dispatch({ type: 'TOGGLE_LOADING' })
+    setLoading(true)
 
     try {
       const { user } = await auth.createUserWithEmailAndPassword(email, password)
@@ -54,7 +51,7 @@ const SignUp = () => {
       console.error(error)
     }
 
-    dispatch({ type: 'TOGGLE_LOADING' })
+    setLoading(false)
   }
 
   const handleChange = (event) => {
@@ -63,7 +60,7 @@ const SignUp = () => {
     setUserCredentials({ ...userCredentials, [name]: value })
   }
 
-  return isLoading ? (
+  return loading ? (
     <LoaderContainer>
       <Loader />
     </LoaderContainer>

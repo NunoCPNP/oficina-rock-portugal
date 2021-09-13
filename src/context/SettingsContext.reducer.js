@@ -21,28 +21,6 @@ export const reducer = (state, action) => {
       }
     }
 
-    case 'ENABLE_TOAST': {
-      return {
-        ...state,
-        toast: {
-          show: true,
-          type: action.payload.type,
-          message: action.payload.message,
-        },
-      }
-    }
-
-    case 'DISABLE_TOAST': {
-      return {
-        ...state,
-        toast: {
-          show: false,
-          type: null,
-          message: null,
-        },
-      }
-    }
-
     default: {
       return state
     }

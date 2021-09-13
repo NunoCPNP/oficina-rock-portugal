@@ -42,5 +42,6 @@
   "billing-address": "Morada de Faturação",
   "update-info": "Atualizar Informação da Conta",
   "no-promotion-newsletter-message": "Atualmente não temos nenhuma promoção ativa. Subscreve a nossa newsletter para seres o primeiro a saber as nossas próximas novidades e promoções",
-  "subscribe": "Subscrever"
+  "subscribe": "Subscrever",
+  "checkout": "Finalizar a compra"
 }

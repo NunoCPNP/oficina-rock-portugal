@@ -9,11 +9,6 @@ const initialState = {
   cartOpen: false,
   gdprOpen: true,
   isLoading: false,
-  toast: {
-    show: false,
-    type: 'Info', // Info, Warning, Error
-    message: '',
-  },
 }
 
 export const SettingsProvider = ({ children }) => {

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Router from 'next/router'
+import toast from 'react-hot-toast'
 
 import FormInput from '@/components/FormInput'
 import CustomButton from '@/components/CustomButton'
@@ -7,7 +8,6 @@ import CustomButton from '@/components/CustomButton'
 import Loader from '@/components/Loader'
 
 import useAuth from '@/hooks/useAuth'
-import useSettings from '@/hooks/useSettings'
 
 import { auth } from '@/services/firebase'
 
@@ -15,7 +15,7 @@ import { ButtonsBarContainer, SignInContainer, SignInTitle, LoaderContainer } fr
 
 const SignIn = () => {
   const { signinGoogle } = useAuth()
-  const [{ isLoading }, dispatch] = useSettings()
+  const [loading, setLoading] = useState(false)
 
   const [userCredentials, setCredentials] = useState({
     email: '',
@@ -27,7 +27,7 @@ const SignIn = () => {
   const handleSubmit = async (event) => {
     event.preventDefault()
 
-    dispatch({ type: 'TOGGLE_LOADING' })
+    setLoading(true)
 
     try {
       await auth.signInWithEmailAndPassword(email, password)
@@ -37,12 +37,13 @@ const SignIn = () => {
         password: '',
       })
 
+      toast.success('Logged in with success !')
       Router.push('/')
     } catch (error) {
-      console.log(error)
+      toast.error(error.message)
     }
 
-    dispatch({ type: 'TOGGLE_LOADING' })
+    setLoading(false)
   }
 
   const handleChange = (event) => {
@@ -51,7 +52,7 @@ const SignIn = () => {
     setCredentials({ ...userCredentials, [name]: value })
   }
 
-  return isLoading ? (
+  return loading ? (
     <LoaderContainer>
       <Loader />
     </LoaderContainer>
