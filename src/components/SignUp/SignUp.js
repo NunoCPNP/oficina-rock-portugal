@@ -38,7 +38,9 @@ const SignUp = () => {
     try {
       const { user } = await auth.createUserWithEmailAndPassword(email, password)
 
-      await createUserProfileDocument(user, { displayName })
+      const response = await createUserProfileDocument(user, { displayName })
+
+      console.log(response)
 
       setUserCredentials({
         displayName: '',
