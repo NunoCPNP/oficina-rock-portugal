@@ -33,7 +33,7 @@ const Account = () => {
         <AccountContainer>
           <div>
             <SectionTitle title={t(`personal-details`)} sub />
-            <FormInput disabled name="name" type="text" value={user.displayName} label={t(`name`)} />
+            <FormInput disabled name="name" type="text" value={user.displayName || ''} label={t(`name`)} />
             <FormInput disabled name="email" type="email" value={user.email} label={t(`email`)} />
             <FormInput
               name="phone"

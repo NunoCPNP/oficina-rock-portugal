@@ -15,12 +15,15 @@ const BottomNavBar = () => {
 
   return (
     <StyledNavigation>
-      <div>{user && `${hi}, ${user.displayName} !`}</div>
+      <div>{user && `${hi}, ${user.displayName || ''} !`}</div>
       <LinkContainer>
         <ul>
-          {/* <li>
+          {/* 
+          // TODO -> Band list
+          <li>
             <Link href="/bands">{t(`bands`)}</Link>
-          </li> */}
+          </li> 
+          */}
           <li>
             <Link href="/men">{t(`men`)}</Link>
           </li>
