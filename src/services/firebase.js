@@ -59,7 +59,7 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
     }
   }
 
-  return userRef
+  return snapShot
 }
 
 export const auth = firebase.auth()
