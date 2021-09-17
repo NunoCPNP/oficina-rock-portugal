@@ -1,9 +1,52 @@
 import { createContext, useState, useEffect } from 'react'
 import Router from 'next/router'
+import toast from 'react-hot-toast'
 
-import firebase, { firestore, createUserProfileDocument } from '@/services/firebase'
+import firebase, { firestore } from '@/services/firebase'
 
 const AuthContext = createContext()
+
+const createUserProfileDocument = async (user) => {
+  const userRef = firestore.doc(`users/${user.uid}`)
+
+  const snapShot = await userRef.get()
+
+  if (!snapShot.exists) {
+    const { displayName, email, uid, photoURL, providerData } = user
+
+    const createdAt = new Date()
+
+    try {
+      await userRef.set({
+        uid,
+        displayName,
+        email,
+        photoURL,
+        createdAt,
+        providerId: providerData[0].providerId,
+        phoneNumber: '',
+        deliveryAddress: {
+          street: '',
+          city: '',
+          postalCode: '',
+          country: '',
+        },
+        deliverySameAsBilling: true,
+        billingAddress: {
+          street: '',
+          city: '',
+          postalCode: '',
+          country: '',
+        },
+        isAdmin: false,
+      })
+    } catch (error) {
+      console.log('Error creating user: ', error.message)
+    }
+  }
+
+  return snapShot
+}
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null)
@@ -32,6 +75,7 @@ export function AuthProvider({ children }) {
 
       await handleUser(response.user)
 
+      toast.success('Logged in with success !')
       Router.push('/')
     } catch (error) {
       console.log(error)

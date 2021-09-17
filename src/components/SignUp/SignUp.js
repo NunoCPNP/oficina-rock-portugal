@@ -5,7 +5,7 @@ import FormInput from '@/components/FormInput'
 import CustomButton from '@/components/CustomButton'
 import Loader from '@/components/Loader'
 
-import { auth, createUserProfileDocument } from '@/services/firebase'
+import { auth } from '@/services/firebase'
 
 import { SignUpContainer, SignUpTitle, LoaderContainer } from './SignUp.styles'
 
@@ -33,14 +33,9 @@ const SignUp = () => {
     setLoading(true)
 
     try {
-      const { user } = await auth.createUserWithEmailAndPassword(email, password)
-
-      const response = await createUserProfileDocument(user, { displayName })
-
-      console.log(response)
+      await auth.createUserWithEmailAndPassword(email, password)
 
       setUserCredentials({
-        displayName: '',
         email: '',
         password: '',
         confirmPassword: '',
@@ -69,14 +64,6 @@ const SignUp = () => {
       <SignUpTitle>I do not have a account</SignUpTitle>
       <span>Sign up with your email and password</span>
       <form className="sign-up-form" onSubmit={handleSubmit}>
-        <FormInput
-          type="text"
-          name="displayName"
-          value={displayName}
-          onChange={handleChange}
-          label="Display Name"
-          required
-        />
         <FormInput type="email" name="email" value={email} onChange={handleChange} label="Email" required />
         <FormInput type="password" name="password" value={password} onChange={handleChange} label="Password" required />
         <FormInput
