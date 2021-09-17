@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import styled from '@emotion/styled'
 import useTranslation from 'next-translate/useTranslation'
@@ -12,216 +11,214 @@ import CustomButton from '@/components/CustomButton'
 import { firestore } from '@/services/firebase'
 
 import useAuth from '@/hooks/useAuth'
+import NoUser from '@/components/NoUser'
 
 const Account = () => {
   const router = useRouter()
   const { t } = useTranslation('common')
   const { user, setUser } = useAuth()
 
-  useEffect(() => {
-    if (!user) {
-      router.push('/login')
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [user])
-
   return (
     <>
       <SEO title="Oficina Rock Portugal" description="" />
       <SectionTitle title={t(`account-settings`)} offset="4rem" />
-      {user && (
-        <AccountContainer>
-          <div>
-            <SectionTitle title={t(`personal-details`)} sub />
-            <FormInput
-              name="name"
-              type="text"
-              value={user.displayName || ''}
-              label={t(`name`)}
-              onChange={(e) =>
-                setUser({
-                  ...user,
-                  displayName: e.target.value,
-                })
-              }
-            />
-            <FormInput disabled name="email" type="email" value={user.email} label={t(`email`)} />
-            <FormInput
-              name="phone"
-              type="tel"
-              value={user.phoneNumber}
-              onChange={(e) =>
-                setUser({
-                  ...user,
-                  phoneNumber: e.target.value,
-                })
-              }
-              label={t(`phone-number`)}
-            />
-          </div>
-          <div>
+      {user ? (
+        <>
+          <AccountContainer>
             <div>
-              <SectionTitle title={t(`delivery-address`)} sub />
+              <SectionTitle title={t(`personal-details`)} sub />
               <FormInput
-                name="street"
+                name="name"
                 type="text"
-                value={user.deliveryAddress.street}
+                value={user.displayName || ''}
+                label={t(`name`)}
                 onChange={(e) =>
                   setUser({
                     ...user,
-                    deliveryAddress: {
-                      ...user.deliveryAddress,
-                      street: e.target.value,
-                    },
+                    displayName: e.target.value,
                   })
                 }
-                label={t(`street`)}
               />
+              <FormInput disabled name="email" type="email" value={user.email} label={t(`email`)} />
               <FormInput
-                name="postalCode"
-                type="text"
-                value={user.deliveryAddress.postalCode}
+                name="phone"
+                type="tel"
+                value={user.phoneNumber}
                 onChange={(e) =>
                   setUser({
                     ...user,
-                    deliveryAddress: {
-                      ...user.deliveryAddress,
-                      postalCode: e.target.value,
-                    },
+                    phoneNumber: e.target.value,
                   })
                 }
-                label={t(`postal-code`)}
-              />
-              <FormInput
-                name="city"
-                type="text"
-                value={user.deliveryAddress.city}
-                onChange={(e) => {
-                  setUser({
-                    ...user,
-                    deliveryAddress: {
-                      ...user.deliveryAddress,
-                      city: e.target.value,
-                    },
-                  })
-                }}
-                label={t(`city`)}
-              />
-              <FormInput
-                name="country"
-                type="text"
-                value={user.deliveryAddress.country}
-                onChange={(e) => {
-                  setUser({
-                    ...user,
-                    deliveryAddress: {
-                      ...user.deliveryAddress,
-                      country: e.target.value,
-                    },
-                  })
-                }}
-                label={t(`country`)}
+                label={t(`phone-number`)}
               />
             </div>
-            <FormCheckBox
-              name="sameaddress"
-              type="checkbox"
-              checked={user.deliverySameAsBilling}
-              onChange={() =>
-                setUser({
-                  ...user,
-                  deliverySameAsBilling: !user.deliverySameAsBilling,
-                })
-              }
-              label={t(`same-address`)}
-            />
-            {!user.deliverySameAsBilling && (
-              <>
-                <SectionTitle title={t(`billing-address`)} sub />
+            <div>
+              <div>
+                <SectionTitle title={t(`delivery-address`)} sub />
                 <FormInput
-                  name="steet"
+                  name="street"
                   type="text"
-                  value={user.billingAddress.street}
-                  onChange={(e) => {
+                  value={user.deliveryAddress.street}
+                  onChange={(e) =>
                     setUser({
                       ...user,
-                      billingAddress: {
-                        ...user.billingAddress,
+                      deliveryAddress: {
+                        ...user.deliveryAddress,
                         street: e.target.value,
                       },
                     })
-                  }}
+                  }
                   label={t(`street`)}
                 />
                 <FormInput
                   name="postalCode"
                   type="text"
-                  value={user.billingAddress.postalCode}
-                  onChange={(e) => {
+                  value={user.deliveryAddress.postalCode}
+                  onChange={(e) =>
                     setUser({
                       ...user,
-                      billingAddress: {
-                        ...user.billingAddress,
+                      deliveryAddress: {
+                        ...user.deliveryAddress,
                         postalCode: e.target.value,
                       },
                     })
-                  }}
+                  }
                   label={t(`postal-code`)}
                 />
                 <FormInput
                   name="city"
                   type="text"
-                  value={user.billingAddress.city}
+                  value={user.deliveryAddress.city}
                   onChange={(e) => {
                     setUser({
                       ...user,
-                      billingAddress: {
-                        ...user.billingAddress,
+                      deliveryAddress: {
+                        ...user.deliveryAddress,
                         city: e.target.value,
                       },
                     })
                   }}
-                  label={t(`postal-code`)}
+                  label={t(`city`)}
                 />
                 <FormInput
                   name="country"
                   type="text"
-                  value={user.billingAddress.country}
+                  value={user.deliveryAddress.country}
                   onChange={(e) => {
                     setUser({
                       ...user,
-                      billingAddress: {
-                        ...user.billingAddress,
+                      deliveryAddress: {
+                        ...user.deliveryAddress,
                         country: e.target.value,
                       },
                     })
                   }}
                   label={t(`country`)}
                 />
-              </>
-            )}
-          </div>
-        </AccountContainer>
+              </div>
+              <FormCheckBox
+                name="sameaddress"
+                type="checkbox"
+                checked={user.deliverySameAsBilling}
+                onChange={() =>
+                  setUser({
+                    ...user,
+                    deliverySameAsBilling: !user.deliverySameAsBilling,
+                  })
+                }
+                label={t(`same-address`)}
+              />
+              {!user.deliverySameAsBilling && (
+                <>
+                  <SectionTitle title={t(`billing-address`)} sub />
+                  <FormInput
+                    name="steet"
+                    type="text"
+                    value={user.billingAddress.street}
+                    onChange={(e) => {
+                      setUser({
+                        ...user,
+                        billingAddress: {
+                          ...user.billingAddress,
+                          street: e.target.value,
+                        },
+                      })
+                    }}
+                    label={t(`street`)}
+                  />
+                  <FormInput
+                    name="postalCode"
+                    type="text"
+                    value={user.billingAddress.postalCode}
+                    onChange={(e) => {
+                      setUser({
+                        ...user,
+                        billingAddress: {
+                          ...user.billingAddress,
+                          postalCode: e.target.value,
+                        },
+                      })
+                    }}
+                    label={t(`postal-code`)}
+                  />
+                  <FormInput
+                    name="city"
+                    type="text"
+                    value={user.billingAddress.city}
+                    onChange={(e) => {
+                      setUser({
+                        ...user,
+                        billingAddress: {
+                          ...user.billingAddress,
+                          city: e.target.value,
+                        },
+                      })
+                    }}
+                    label={t(`postal-code`)}
+                  />
+                  <FormInput
+                    name="country"
+                    type="text"
+                    value={user.billingAddress.country}
+                    onChange={(e) => {
+                      setUser({
+                        ...user,
+                        billingAddress: {
+                          ...user.billingAddress,
+                          country: e.target.value,
+                        },
+                      })
+                    }}
+                    label={t(`country`)}
+                  />
+                </>
+              )}
+            </div>
+          </AccountContainer>
+          <ButtonContainer>
+            <CustomButton
+              onClick={async () => {
+                const userRef = firestore.doc(`users/${user.uid}`)
+
+                try {
+                  await userRef.set({
+                    ...user,
+                  })
+
+                  router.push('/')
+                } catch (error) {
+                  console.log('Error updating user: ', error.message)
+                }
+              }}
+            >
+              {t(`update-info`)}
+            </CustomButton>
+          </ButtonContainer>
+        </>
+      ) : (
+        <NoUser context="account" />
       )}
-      <ButtonContainer>
-        <CustomButton
-          onClick={async () => {
-            const userRef = firestore.doc(`users/${user.uid}`)
-
-            try {
-              await userRef.set({
-                ...user,
-              })
-
-              router.push('/')
-            } catch (error) {
-              console.log('Error updating user: ', error.message)
-            }
-          }}
-        >
-          {t(`update-info`)}
-        </CustomButton>
-      </ButtonContainer>
     </>
   )
 }

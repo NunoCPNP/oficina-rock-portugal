@@ -1,6 +1,6 @@
 import CheckOutItems from '@/components/CheckOutItems'
 import Payment from '@/components/Payment'
-import CheckOutNoUser from '@/components/CheckOutNoUser'
+import NoUser from '@/components/NoUser'
 import CheckOutWarnings from '@/components/CheckOutWarnings'
 import CheckOutWrapper from '@/components/CheckOutWrapper'
 
@@ -18,7 +18,7 @@ const CheckOut = () => {
   if (!user)
     return (
       <CheckOutWrapper>
-        <CheckOutNoUser />
+        <NoUser context="checkout" />
       </CheckOutWrapper>
     )
 

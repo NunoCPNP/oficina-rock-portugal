@@ -17,7 +17,7 @@ const BottomNavBar = () => {
 
   return (
     <StyledNavigation>
-      {user && <div>{user.displayName ? `${hi}, ${user.displayName} !` : `${hi}`}</div>}
+      <div>{user && <>{user.displayName ? `${hi}, ${user.displayName} !` : `${hi}`}</>}</div>
       <LinkContainer>
         <ul>
           {/* 
