@@ -1,9 +1,9 @@
-import { Container } from './CheckOutWarnings.styles'
+import { Container, Header } from './CheckOutWarnings.styles'
 
 const CheckOutWarnings = ({ user }) => {
   return (
     <Container>
-      <div>Fix this before continue to checkout</div>
+      <Header>Please complete your account data before continue to checkout</Header>
       {user.phoneNumber === '' && <div>No phone</div>}
       {user.deliveryAddress.street === '' && <div>No street</div>}
       {user.deliveryAddress.postalCode === '' && <div>No postal code</div>}
