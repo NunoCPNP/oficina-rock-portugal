@@ -23,7 +23,7 @@
     "cy:open": "start-server-and-test dev 3000 cy:open-only",
     "cy:run": "start-server-and-test dev 3000 cy:run-only",
     "delete:node_modules": "find . -name \"node_modules\" -exec rm -rf '{}' +",
-    "delete:yarn-offline-cache": "find . -name \"yarn-offline-cache\" -exec rm -rf '{}' +",
+    "delete:yarn-offline-cache": "find . -name \"yarn-offline-cache\" -exec rm -rf '{}' +"
   },
   "dependencies": {
     "@emotion/react": "^11.4.0",
