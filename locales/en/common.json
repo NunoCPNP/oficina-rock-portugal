@@ -43,5 +43,22 @@
   "update-info": "Update Account Information",
   "no-promotion-newsletter-message": "At the moment we dont have any active promotion running, subscribe to our newsletter to be the first to know our next news and promotions.",
   "subscribe": "Subscribe",
-  "checkout": "Checkout"
+  "checkout": "Checkout",
+  "checkout-warnings": "<a>Please complete your <b>account</b> data before continue to checkout</a>",
+  "no-phone": "TODO",
+  "no-street": "TODO",
+  "no-city": "TODO",
+  "no-postal-code": "TODO",
+  "no-country": "TODO",
+  "no-delivery-address": "TODO",
+  "no-user-checkout": "<a>Please <b>Login</b> or <c>Create a New Account</c> to be able to proceed to checkout</a>",
+  "no-user-account": "<a>Please <b>Login</b> or <c>Create a New Account</c> to be able to change or complete your account information</a>",
+  "sign-in-title": "I already have an account",
+  "sign-in-span": "Sign in with your email and password",
+  "sign-in-button": " Sign in ",
+  "sign-in-google": "Sign in with Google",
+  "sign-up-title": "I do not have a account",
+  "sign-up-spam": "Sign up with your email and password",
+  "sign-up-button": "SIGN UP",
+  "confirm-password": "Confirm Password"
 }

@@ -43,5 +43,22 @@
   "update-info": "Atualizar Informação da Conta",
   "no-promotion-newsletter-message": "Atualmente não temos nenhuma promoção ativa. Subscreve a nossa newsletter para seres o primeiro a saber as nossas próximas novidades e promoções",
   "subscribe": "Subscrever",
-  "checkout": "Finalizar a compra"
+  "checkout": "Finalizar a compra",
+  "checkout-warnings": "TODO",
+  "no-phone": "TODO",
+  "no-street": "TODO",
+  "no-city": "TODO",
+  "no-postal-code": "TODO",
+  "no-country": "TODO",
+  "no-delivery-address": "TODO",
+  "no-user-checkout": "TODO",
+  "no-user-account": "TODO",
+  "sign-in-title": "TODO",
+  "sign-in-span": "TODO",
+  "sign-in-button": "TODO",
+  "sign-in-google": "TODO",
+  "sign-up-title": "TODO",
+  "sign-up-spam": "TODO",
+  "sign-up-button": "TODO",
+  "confirm-password": "TODO"
 }

@@ -51,6 +51,17 @@ export const reducer = (state, action) => {
       }
     }
 
+    case 'DELETE_PRODUCT_FROM_BAG': {
+      const bag = [...state.shoppingBag]
+
+      bag.splice(action.payload, 1)
+
+      return {
+        ...state,
+        shoppingBag: [...bag],
+      }
+    }
+
     default: {
       return state
     }

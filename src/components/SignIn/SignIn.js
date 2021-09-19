@@ -1,6 +1,7 @@
-import { useState } from 'react'
-import Router from 'next/router'
 import toast from 'react-hot-toast'
+import Router from 'next/router'
+import useTranslation from 'next-translate/useTranslation'
+import { useState } from 'react'
 
 import FormInput from '@/components/FormInput'
 import CustomButton from '@/components/CustomButton'
@@ -14,6 +15,7 @@ import { auth } from '@/services/firebase'
 import { ButtonsBarContainer, SignInContainer, SignInTitle, LoaderContainer } from './SignIn.styles'
 
 const SignIn = () => {
+  const { t } = useTranslation('common')
   const { signinGoogle } = useAuth()
   const [loading, setLoading] = useState(false)
 
@@ -58,23 +60,23 @@ const SignIn = () => {
     </LoaderContainer>
   ) : (
     <SignInContainer>
-      <SignInTitle>I already have an account</SignInTitle>
-      <span>Sign in with your email and password</span>
+      <SignInTitle>{t(`sign-in-title`)}</SignInTitle>
+      <span>{t(`sign-in-span`)}</span>
 
       <form onSubmit={handleSubmit}>
-        <FormInput name="email" type="email" handleChange={handleChange} value={email} label="email" required />
+        <FormInput name="email" type="email" handleChange={handleChange} value={email} label={t(`email`)} required />
         <FormInput
           name="password"
           type="password"
           value={password}
           handleChange={handleChange}
-          label="password"
+          label="Password"
           required
         />
         <ButtonsBarContainer>
-          <CustomButton type="submit"> Sign in </CustomButton>
+          <CustomButton type="submit">{t(`sign-in-button`)}</CustomButton>
           <CustomButton type="button" onClick={() => signinGoogle()} isGoogleSignIn>
-            Sign in with Google
+            {t(`sign-in-google`)}
           </CustomButton>
         </ButtonsBarContainer>
       </form>

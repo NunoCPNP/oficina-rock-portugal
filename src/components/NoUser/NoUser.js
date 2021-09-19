@@ -1,24 +1,30 @@
 import Link from 'next/link'
-import useTranslation from 'next-translate/useTranslation'
+import Trans from 'next-translate/Trans'
 
 import { Container } from './NoUser.styles'
 
 const NoUser = ({ context }) => {
-  const { t } = useTranslation('common')
-
   return (
     <Container>
       {context === 'checkout' && (
-        <div>
-          Please <Link href="/login">Login</Link> or <Link href="/login">Create a New Account</Link> to be able to
-          proceed to checkout
-        </div>
+        <Trans
+          i18nKey="common:no-user-checkout"
+          components={{
+            a: <div />,
+            b: <Link href="/login" />,
+            c: <Link href="/login" />,
+          }}
+        />
       )}
       {context === 'account' && (
-        <div>
-          Please <Link href="/login">Login</Link> or <Link href="/login">Create a New Account</Link> to be able to
-          change or complete your account information
-        </div>
+        <Trans
+          i18nKey="common:no-user-account"
+          components={{
+            a: <div />,
+            b: <Link href="/login" />,
+            c: <Link href="/login" />,
+          }}
+        />
       )}
     </Container>
   )

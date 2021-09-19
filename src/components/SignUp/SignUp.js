@@ -1,5 +1,6 @@
-import { useState } from 'react'
 import Router from 'next/router'
+import useTranslation from 'next-translate/useTranslation'
+import { useState } from 'react'
 
 import FormInput from '@/components/FormInput'
 import CustomButton from '@/components/CustomButton'
@@ -10,16 +11,16 @@ import { auth } from '@/services/firebase'
 import { SignUpContainer, SignUpTitle, LoaderContainer } from './SignUp.styles'
 
 const SignUp = () => {
+  const { t } = useTranslation('common')
   const [loading, setLoading] = useState(false)
 
   const [userCredentials, setUserCredentials] = useState({
-    displayName: '',
     email: '',
     password: '',
     confirmPassword: '',
   })
 
-  const { displayName, email, password, confirmPassword } = userCredentials
+  const { email, password, confirmPassword } = userCredentials
 
   const handleSubmit = async (event) => {
     event.preventDefault()
@@ -61,20 +62,20 @@ const SignUp = () => {
     </LoaderContainer>
   ) : (
     <SignUpContainer>
-      <SignUpTitle>I do not have a account</SignUpTitle>
-      <span>Sign up with your email and password</span>
+      <SignUpTitle>{t(`sign-up-title`)}</SignUpTitle>
+      <span>{t(`sign-up-spam`)}</span>
       <form className="sign-up-form" onSubmit={handleSubmit}>
-        <FormInput type="email" name="email" value={email} onChange={handleChange} label="Email" required />
+        <FormInput type="email" name="email" value={email} onChange={handleChange} label={t(`email`)} required />
         <FormInput type="password" name="password" value={password} onChange={handleChange} label="Password" required />
         <FormInput
           type="password"
           name="confirmPassword"
           value={confirmPassword}
           onChange={handleChange}
-          label="Confirm Password"
+          label={t(`confirm-password`)}
           required
         />
-        <CustomButton type="submit">SIGN UP</CustomButton>
+        <CustomButton type="submit">{t(`sign-up-button`)}</CustomButton>
       </form>
     </SignUpContainer>
   )
