@@ -4,6 +4,9 @@
 
 - Server Side Rendering
 - Internationalization
+- Spring Animations
+- Firebase OAuth
+- Firestore Database
 
 ## Tech Stack
 
@@ -11,5 +14,4 @@
 - Next-Translate
 - Emotion
 - Framer-Motion
-- Firebase Auth
-- Firebase Firestore
+- Firebase

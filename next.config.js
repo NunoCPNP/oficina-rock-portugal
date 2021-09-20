@@ -6,7 +6,6 @@ moduleExports = {
   eslint: {
     dirs: ['components', 'context', 'hooks', 'Layout', 'pages', 'services', 'styles'],
   },
-  reactStrictMode: true,
   ...nextTranslate(),
 }
 

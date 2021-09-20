@@ -19,7 +19,7 @@ jobs:
 
       - name: Running linters ...
         run: yarn lint
-      
+
       - name: Running CSS linters ...
         run: yarn lint:css
 
@@ -30,6 +30,6 @@ jobs:
         uses: amondnet/vercel-action@v20
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-args: "--prod"
-          vercel-org-id: ${{ secrets.ORG_ID}}
+          vercel-args: '--prod'
+          vercel-org-id: ${{ secrets.ORG_ID }}
           vercel-project-id: ${{ secrets.PROJECT_ID }}
