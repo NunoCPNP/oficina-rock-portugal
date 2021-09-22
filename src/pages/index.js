@@ -5,6 +5,7 @@ import SEO from '@/components/SEO'
 import CTA from '@/components/CTA'
 import ProductList from '@/components/ProductList'
 import SectionTitle from '@/components/SectionTitle'
+import TopBanner from '@/components/TopBanner'
 
 const Home = ({ collection }) => {
   const { t } = useTranslation('common')
@@ -12,6 +13,7 @@ const Home = ({ collection }) => {
   return (
     <>
       <SEO title="Oficina Rock Portugal" description="Oficina Rock Portugal" />
+      <TopBanner />
       <CTA />
       <SectionTitle title={t(`news`)} />
       <ProductList collection={collection} />

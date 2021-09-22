@@ -60,5 +60,19 @@
   "sign-up-title": "I do not have a account",
   "sign-up-spam": "Sign up with your email and password",
   "sign-up-button": "SIGN UP",
-  "confirm-password": "Confirm Password"
+  "confirm-password": "Confirm Password",
+  "measure-title": "Measurement Chart",
+  "measure-xs": "Width 43 cm - Height 60 cm",
+  "measure-s": "Width 54 cm - Height 70 cm",
+  "measure-m": "Width 56 cm - Height 72 cm",
+  "measure-l": "Width 58 cm - Height 74 cm",
+  "measure-xl": "Width 62 cm - Height 78 cm",
+  "measure-xxl": "Width 65 cm - Height 82 cm",
+  "who-we-are": "Who We Are",
+  "privacy-policies": "Privacy and Security Policy",
+  "return-and-refund": "Return and Refund Policy",
+  "faq": "Frequently Asked Questions",
+  "contacts": "Contacts",
+  "payment-methods": "Payment Methods",
+  "newsletter": "Newsletter"
 }

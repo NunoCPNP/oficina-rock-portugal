@@ -19,3 +19,19 @@ export const GridItem = styled.div`
     line-height: 3rem;
   }
 `
+
+export const ContactsContainer = styled.div`
+  padding-top: 1rem;
+
+  div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.4rem;
+
+    svg {
+      width: 2.2rem;
+      height: 2.2rem;
+      margin-right: 0.6rem;
+    }
+  }
+`

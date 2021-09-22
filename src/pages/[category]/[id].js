@@ -3,6 +3,7 @@ import { firestore } from '@/services/firebase'
 import SEO from '@/components/SEO'
 import SectionTitle from '@/components/SectionTitle'
 import ProductDetail from '@/components/ProductDetail'
+import Measurements from '@/components/Measurements'
 
 const Product = ({ data }) => {
   return (
@@ -10,6 +11,7 @@ const Product = ({ data }) => {
       <SEO title="Oficina Rock Portugal" description="" />
       <SectionTitle title={`${data.band} - ${data.title}`} section={`${data.type}`} offset="4rem" />
       <ProductDetail data={data} />
+      <Measurements />
     </>
   )
 }

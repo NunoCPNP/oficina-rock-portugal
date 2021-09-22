@@ -1,6 +1,7 @@
 import useTranslation from 'next-translate/useTranslation'
+import { AiFillFacebook, AiFillInstagram, AiOutlineWhatsApp } from 'react-icons/ai'
 
-import { StyledFooter, GridContainer, GridItem } from './Footer.styles'
+import { StyledFooter, GridContainer, GridItem, ContactsContainer } from './Footer.styles'
 
 const Footer = () => {
   const { t } = useTranslation('common')
@@ -10,29 +11,39 @@ const Footer = () => {
       <GridContainer>
         <GridItem>
           <div>
-            <h4>Quem Somos</h4>
+            <h4>{t(`who-we-are`)}</h4>
           </div>
           <div>
-            <h4>Políticas de Privacidade</h4>
+            <h4>{t(`privacy-policies`)}</h4>
           </div>
           <div>
-            <h4>Políticas de Devolução e Reembolso</h4>
+            <h4>{t(`return-and-refund`)}</h4>
           </div>
           <div>
-            <h4>Trocas e Devoluções</h4>
-          </div>
-          <div>
-            <h4>Dúvidas Frequentes</h4>
+            <h4>{t(`faq`)}</h4>
           </div>
         </GridItem>
         <GridItem>
-          <h3>Contactos</h3>
+          <h3>{t(`contacts`)}</h3>
+          <ContactsContainer>
+            <div>
+              <AiFillFacebook />
+              <span>oficinarockpt</span>
+            </div>
+            <div>
+              <AiFillInstagram />
+              <span>oficinarockpt</span>
+            </div>
+            <div>
+              <AiOutlineWhatsApp />
+            </div>
+          </ContactsContainer>
         </GridItem>
         <GridItem>
-          <h3>Métodos de Pagamento</h3>
+          <h3>{t(`payment-methods`)}</h3>
         </GridItem>
         <GridItem>
-          <h3>Newsletter</h3>
+          <h3>{t(`newsletter`)}</h3>
         </GridItem>
       </GridContainer>
     </StyledFooter>
