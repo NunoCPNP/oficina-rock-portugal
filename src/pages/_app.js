@@ -9,44 +9,20 @@ import { ProductProvider } from '@/context/ProductContext'
 
 import GlobalStyles from '../styles/GlobalStyles'
 
-const sendAnalytics = ({ name, value }) => {
-  if (process.env.NEXT_PUBLIC_SEND_ANALYTICS) {
-    const url = `https://qckm.io?m=${name}&v=${value}&k=${process.env.NEXT_PUBLIC_QUICK_METRICS_API_KEY}`
-
-    if (navigator.sendBeacon) {
-      navigator.sendBeacon(url)
-    } else {
-      fetch(url, { method: 'POST', keepalive: true })
-    }
-  } else {
-    console.warn('The Analytics feature is disabled')
-  }
-}
-
-export function reportWebVitals(metric) {
-  switch (metric.name) {
-    case 'Next.js-hydration':
-      sendAnalytics(metric)
-      break
-
-    case 'Next.js-route-change-to-render':
-      sendAnalytics(metric)
-      break
-
-    case 'Next.js-render':
-      sendAnalytics(metric)
-      break
-
-    default:
-      break
-  }
+export function reportWebVitals({ id, name, label, value }) {
+  window.gtag('event', name, {
+    event_category: label === 'web-vital' ? 'Web Vitals' : 'Next.js custom metric',
+    value: Math.round(name === 'CLS' ? value * 1000 : value), // values must be integers
+    event_label: id, // id unique to current page load
+    non_interaction: true,
+  })
 }
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
 
   const handleRouteChange = (url) => {
-    window.gtag('config', process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, {
+    window.gtag('config', process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID, {
       page_path: url,
     })
   }

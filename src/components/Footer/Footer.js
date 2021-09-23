@@ -1,5 +1,5 @@
 import useTranslation from 'next-translate/useTranslation'
-import { AiFillFacebook, AiFillInstagram, AiOutlineWhatsApp } from 'react-icons/ai'
+import { AiFillPhone, AiTwotoneMail, AiFillFacebook, AiFillInstagram, AiOutlineWhatsApp } from 'react-icons/ai'
 
 import { StyledFooter, GridContainer, GridItem, ContactsContainer } from './Footer.styles'
 
@@ -26,6 +26,13 @@ const Footer = () => {
         <GridItem>
           <h3>{t(`contacts`)}</h3>
           <ContactsContainer>
+            <div>
+              <AiFillPhone />
+            </div>
+            <div>
+              <AiTwotoneMail />
+              <span>oficinarockpt@gmail.com</span>
+            </div>
             <div>
               <AiFillFacebook />
               <span>oficinarockpt</span>

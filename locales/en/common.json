@@ -74,5 +74,14 @@
   "faq": "Frequently Asked Questions",
   "contacts": "Contacts",
   "payment-methods": "Payment Methods",
-  "newsletter": "Newsletter"
+  "newsletter": "Newsletter",
+  "cc-pay": "Pay with Credit Card",
+  "payment-options": "Payment Options",
+  "description": "Description",
+  "quantity": "Quantity",
+  "size": "Size",
+  "remove": "Remove",
+  "added-to-bag": "{{ item }} added to bag !",
+  "success-login": "User logged in with success !",
+  "success-logout": "User logged out with success !"
 }

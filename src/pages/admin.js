@@ -1,26 +1,17 @@
-import { useEffect } from 'react'
-import { useRouter } from 'next/router'
+// import { useRouter } from 'next/router'
 
 import SEO from '@/components/SEO'
 
-import useAuth from '@/hooks/useAuth'
+// import useAuth from '@/hooks/useAuth'
 
 const Admin = () => {
-  const router = useRouter()
-  const { user } = useAuth()
-
-  console.log(user)
-
-  useEffect(() => {
-    if (!user) {
-      router.push('/')
-    }
-  }, [user])
+  // const router = useRouter()
+  // const { user } = useAuth()
 
   return (
     <>
       <SEO title="Oficina Rock Portugal" description="" />
-      <div>My Account</div>
+      <div>Admin</div>
     </>
   )
 }

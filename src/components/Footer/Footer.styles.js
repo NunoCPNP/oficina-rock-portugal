@@ -14,6 +14,10 @@ export const GridContainer = styled.div`
 `
 
 export const GridItem = styled.div`
+  h3 {
+    text-transform: uppercase;
+  }
+
   h4 {
     font-weight: 400;
     line-height: 3rem;

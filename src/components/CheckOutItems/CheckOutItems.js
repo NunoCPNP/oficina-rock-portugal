@@ -17,11 +17,11 @@ const CheckOutItems = () => {
         {shoppingBag.length !== 0 && (
           <BagItemHeader>
             <div></div>
-            <div>Description</div>
-            <div>Quantity</div>
-            <div>Size</div>
-            <div>Price</div>
-            <div>Remove</div>
+            <div>{t(`description`)}</div>
+            <div>{t(`quantity`)}</div>
+            <div>{t(`size`)}</div>
+            <div>{t(`price`)}</div>
+            <div>{t(`remove`)}</div>
           </BagItemHeader>
         )}
         {shoppingBag.map((item, index) => (

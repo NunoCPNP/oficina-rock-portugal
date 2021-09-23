@@ -1,6 +1,7 @@
 import { createContext, useState, useEffect } from 'react'
 import Router from 'next/router'
 import toast from 'react-hot-toast'
+import useTranslation from 'next-translate/useTranslation'
 
 import firebase, { firestore } from '@/services/firebase'
 
@@ -49,7 +50,11 @@ const createUserProfileDocument = async (user) => {
 }
 
 export function AuthProvider({ children }) {
+  const { t } = useTranslation('common')
   const [user, setUser] = useState(null)
+
+  const login = t(`success-login`)
+  const logout = t(`success-logout`)
 
   const handleUser = async (currentUser) => {
     if (currentUser) {
@@ -75,7 +80,8 @@ export function AuthProvider({ children }) {
 
       await handleUser(response.user)
 
-      toast.success('Logged in with success !')
+      toast.success(login)
+
       Router.push('/')
     } catch (error) {
       console.log(error)
@@ -87,6 +93,8 @@ export function AuthProvider({ children }) {
       await firebase.auth().signOut()
 
       handleUser(false)
+
+      toast.success(logout)
 
       Router.push('/')
     } catch (error) {

@@ -13,6 +13,18 @@ import { firestore } from '@/services/firebase'
 import useAuth from '@/hooks/useAuth'
 import NoUser from '@/components/NoUser'
 
+const AccountContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+`
+
+const ButtonContainer = styled.div`
+  margin: 4rem;
+  display: flex;
+  justify-content: center;
+`
+
 const Account = () => {
   const router = useRouter()
   const { t } = useTranslation('common')
@@ -222,17 +234,5 @@ const Account = () => {
     </>
   )
 }
-
-const AccountContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 2rem;
-`
-
-const ButtonContainer = styled.div`
-  margin: 4rem;
-  display: flex;
-  justify-content: center;
-`
 
 export default Account
