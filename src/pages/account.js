@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router'
+import toast from 'react-hot-toast'
 import styled from '@emotion/styled'
 import useTranslation from 'next-translate/useTranslation'
 
@@ -23,12 +24,19 @@ const ButtonContainer = styled.div`
   margin: 4rem;
   display: flex;
   justify-content: center;
+
+  button:last-child {
+    margin-left: 2rem;
+  }
 `
 
 const Account = () => {
   const router = useRouter()
   const { t } = useTranslation('common')
   const { user, setUser } = useAuth()
+
+  const updateSuccess = t(`update-success`)
+  const updateError = t(`update-error`)
 
   return (
     <>
@@ -209,6 +217,9 @@ const Account = () => {
             </div>
           </AccountContainer>
           <ButtonContainer>
+            <CustomButton onClick={() => router.push('/')} inverted>
+              {t(`go-back`)}
+            </CustomButton>
             <CustomButton
               onClick={async () => {
                 const userRef = firestore.doc(`users/${user.uid}`)
@@ -218,8 +229,10 @@ const Account = () => {
                     ...user,
                   })
 
+                  toast.success(updateSuccess)
                   router.push('/')
                 } catch (error) {
+                  toast.error(updateError)
                   console.log('Error updating user: ', error.message)
                 }
               }}

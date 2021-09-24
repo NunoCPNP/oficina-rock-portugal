@@ -83,5 +83,9 @@
   "remove": "Remove",
   "added-to-bag": "{{ item }} added to bag !",
   "success-login": "User logged in with success !",
-  "success-logout": "User logged out with success !"
+  "success-logout": "User logged out with success !",
+  "go-back": "Go Back",
+  "update-success": "Updated user account information !",
+  "update-error": "Error updating account information !",
+  "go-to-account": "Go to account settings"
 }
