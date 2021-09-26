@@ -15,7 +15,7 @@ export const Container = styled(motion.div)`
 `
 
 export const CartContainer = styled.div`
-  padding-top: 10rem;
+  padding-top: 12rem;
   display: inherit;
   justify-content: center;
 `
