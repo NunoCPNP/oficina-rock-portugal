@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 
 export const Container = styled.header`
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
   z-index: var(--headerLevel);

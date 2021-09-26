@@ -16,6 +16,7 @@ export const GridContainer = styled.div`
 export const GridItem = styled.div`
   h3 {
     text-transform: uppercase;
+    padding-bottom: 1rem;
   }
 
   h4 {

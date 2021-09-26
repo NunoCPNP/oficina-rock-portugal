@@ -1,6 +1,8 @@
 import useTranslation from 'next-translate/useTranslation'
 import { AiFillPhone, AiTwotoneMail, AiFillFacebook, AiFillInstagram, AiOutlineWhatsApp } from 'react-icons/ai'
 
+import Copyright from '../Copyright'
+
 import { StyledFooter, GridContainer, GridItem, ContactsContainer } from './Footer.styles'
 
 const Footer = () => {
@@ -28,6 +30,11 @@ const Footer = () => {
           <ContactsContainer>
             <div>
               <AiFillPhone />
+              <span>+351 964 631 183</span>
+            </div>
+            <div>
+              <AiOutlineWhatsApp />
+              <span>+351 964 631 183</span>
             </div>
             <div>
               <AiTwotoneMail />
@@ -41,9 +48,6 @@ const Footer = () => {
               <AiFillInstagram />
               <span>oficinarockpt</span>
             </div>
-            <div>
-              <AiOutlineWhatsApp />
-            </div>
           </ContactsContainer>
         </GridItem>
         <GridItem>
@@ -53,6 +57,7 @@ const Footer = () => {
           <h3>{t(`newsletter`)}</h3>
         </GridItem>
       </GridContainer>
+      <Copyright />
     </StyledFooter>
   )
 }

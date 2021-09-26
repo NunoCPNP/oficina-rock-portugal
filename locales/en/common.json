@@ -45,12 +45,12 @@
   "subscribe": "Subscribe",
   "checkout": "Checkout",
   "checkout-warnings": "<a>Please complete your <b>account</b> data before continue to checkout</a>",
-  "no-phone": "TODO",
-  "no-street": "TODO",
-  "no-city": "TODO",
-  "no-postal-code": "TODO",
-  "no-country": "TODO",
-  "no-delivery-address": "TODO",
+  "no-phone": "No valid phone number provided",
+  "no-street": "No valid street for delivery / billing address provided",
+  "no-city": "No valid city for delivery / billing address provided",
+  "no-postal-code": "No valid postal code for delivery / billing address provided",
+  "no-country": "No valid country for delivery / billing address provided",
+  "no-delivery-address": "No delivery address provided",
   "no-user-checkout": "<a>Please <b>Login</b> or <c>Create a New Account</c> to be able to proceed to checkout</a>",
   "no-user-account": "<a>Please <b>Login</b> or <c>Create a New Account</c> to be able to change or complete your account information</a>",
   "sign-in-title": "I already have an account",
@@ -87,5 +87,8 @@
   "go-back": "Go Back",
   "update-success": "Updated user account information !",
   "update-error": "Error updating account information !",
-  "go-to-account": "Go to account settings"
+  "go-to-account": "Go to account settings",
+  "slot-0": "Shipping is FREE for all orders in Portugal",
+  "slot-1": "Oficina do Rock now in Portugal !",
+  "copyright": "© 2021 Oficina Rock Portugal"
 }
