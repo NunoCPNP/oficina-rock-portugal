@@ -40,3 +40,12 @@ export const ContactsContainer = styled.div`
     }
   }
 `
+
+export const MethodsContainer = styled.div`
+  padding-top: 1rem;
+
+  div {
+    display: flex;
+    align-items: center;
+  }
+`
