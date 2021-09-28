@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 
 import Footer from '../Footer'
 
@@ -17,10 +17,21 @@ describe('<Footer /> spec', () => {
     `)
   })
 
+  it('Should render all React-Icons svg', () => {
+    const { queryAllByTestId } = render(<Footer />)
+
+    expect(queryAllByTestId(/react-icon/i)).toHaveLength(6)
+  })
+
+  it('Should render Payment Options image', () => {
+    render(<Footer />)
+
+    expect(screen.getAllByRole('img')).toHaveLength(2)
+  })
+
   it('Should render Copyright Component', () => {
     const { queryAllByTestId } = render(<Footer />)
 
-    const copyright = queryAllByTestId(/copyright/i)
-    expect(copyright).toHaveLength(1)
+    expect(queryAllByTestId(/copyright/i)).toHaveLength(1)
   })
 })

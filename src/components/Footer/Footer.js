@@ -31,21 +31,21 @@ const Footer = () => {
           <h3>{t(`contacts`)}</h3>
           <ContactsContainer>
             <div>
-              <AiFillPhone />
-              <AiOutlineWhatsApp />
+              <AiFillPhone data-testid="react-icon" />
+              <AiOutlineWhatsApp data-testid="react-icon" />
               <span>+351 964 631 183</span>
             </div>
             <div>
-              <AiTwotoneMail />
+              <AiTwotoneMail data-testid="react-icon" />
               <span>oficinarockpt@gmail.com</span>
             </div>
             <div>
-              <AiFillFacebook />
-              <AiFillInstagram />
+              <AiFillFacebook data-testid="react-icon" />
+              <AiFillInstagram data-testid="react-icon" />
               <span>oficinarockpt</span>
             </div>
             <div>
-              <SiTiktok />
+              <SiTiktok data-testid="react-icon" />
               <span>oficinarockpt</span>
             </div>
           </ContactsContainer>

@@ -115,6 +115,7 @@ exports[`<Footer /> spec Should match snapshot 1`] = `
       >
         <div>
           <svg
+            data-testid="react-icon"
             fill="currentColor"
             height="1em"
             stroke="currentColor"
@@ -128,6 +129,7 @@ exports[`<Footer /> spec Should match snapshot 1`] = `
             />
           </svg>
           <svg
+            data-testid="react-icon"
             fill="currentColor"
             height="1em"
             stroke="currentColor"
@@ -152,6 +154,7 @@ exports[`<Footer /> spec Should match snapshot 1`] = `
         </div>
         <div>
           <svg
+            data-testid="react-icon"
             fill="currentColor"
             height="1em"
             stroke="currentColor"
@@ -176,6 +179,7 @@ exports[`<Footer /> spec Should match snapshot 1`] = `
         </div>
         <div>
           <svg
+            data-testid="react-icon"
             fill="currentColor"
             height="1em"
             stroke="currentColor"
@@ -189,6 +193,7 @@ exports[`<Footer /> spec Should match snapshot 1`] = `
             />
           </svg>
           <svg
+            data-testid="react-icon"
             fill="currentColor"
             height="1em"
             stroke="currentColor"
@@ -207,6 +212,7 @@ exports[`<Footer /> spec Should match snapshot 1`] = `
         </div>
         <div>
           <svg
+            data-testid="react-icon"
             fill="currentColor"
             height="1em"
             role="img"
