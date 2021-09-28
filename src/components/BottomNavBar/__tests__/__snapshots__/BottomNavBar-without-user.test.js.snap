@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BottomNavBar /> spec Should match spashot 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  padding: 1rem 4rem;
+  background: var(--darkLiver);
+  color: var(--snow);
+  box-shadow: 0 0 10px 0 rgb(0 0 0 / 30%);
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+.emotion-1 ul {
+  display: inherit;
+  margin: 0;
+}
+
+.emotion-1 li {
+  list-style: none;
+}
+
+.emotion-1 li:not(:last-child) {
+  padding-right: 1.5rem;
+}
+
+.emotion-1 li a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+.emotion-1 li a:hover {
+  border-bottom: 1px solid var(--snow);
+}
+
+.emotion-2 {
+  padding-top: 0.2rem;
+}
+
+.emotion-2 a:hover {
+  border-bottom: none!important;
+}
+
+<div
+  class="emotion-0"
+>
+  <div />
+  <div
+    class="emotion-1"
+  >
+    <ul>
+      <li>
+        <a
+          href="/men"
+        >
+          common:men
+        </a>
+      </li>
+      <li>
+        <a
+          href="/women"
+        >
+          common:women
+        </a>
+      </li>
+      <li>
+        <a
+          href="/accessories"
+        >
+          common:accessories
+        </a>
+      </li>
+      <li>
+        <a
+          href="/promotions"
+        >
+          common:promotions
+        </a>
+      </li>
+      <li>
+        <div
+          class="emotion-2"
+          data-testid="languageselector"
+        />
+      </li>
+    </ul>
+  </div>
+</div>
+`;
