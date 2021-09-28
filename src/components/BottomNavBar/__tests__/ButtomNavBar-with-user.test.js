@@ -15,7 +15,7 @@ describe('<BottomNavBar /> spec', () => {
     displayName: 'Semple User',
   }
 
-  it('Should match spashot', () => {
+  it('Should match snapshot', () => {
     const { container } = render(<BottomNavBar />)
 
     expect(container.firstChild).toMatchSnapshot()

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<BottomNavBar /> spec Should match spashot 1`] = `
+exports[`<BottomNavBar /> spec Should match snapshot 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;

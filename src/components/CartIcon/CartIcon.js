@@ -1,5 +1,6 @@
-import { useProductState } from '@/hooks/useProduct'
 import Image from 'next/image'
+
+import { useProductState } from '@/hooks/useProduct'
 
 import { CartContainer, ItemCountContainer } from './CartIcon.styles'
 
@@ -8,7 +9,7 @@ const CartIcon = () => {
 
   return (
     <CartContainer>
-      <Image src="/shopping-bag.svg" alt="" height={24} width={24} />
+      <Image data-testid="cart-icon" src="/shopping-bag.svg" alt="" height={24} width={24} />
       <ItemCountContainer>{shoppingBag.length}</ItemCountContainer>
     </CartContainer>
   )
