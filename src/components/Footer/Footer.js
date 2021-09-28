@@ -54,7 +54,7 @@ const Footer = () => {
           <h3>{t(`payment-methods`)}</h3>
           <MethodsContainer>
             <div>
-              <Image src="/payment_methods.png" alt="" width={254} height={40} />
+              <Image src="/payment_methods.png" alt={t(`payment-methods`)} width={254} height={40} />
             </div>
           </MethodsContainer>
         </GridItem>
