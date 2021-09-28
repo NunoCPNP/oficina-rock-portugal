@@ -6,7 +6,7 @@ const Copyright = () => {
   const { t } = useTranslation('common')
 
   return (
-    <Container>
+    <Container data-testid="copyright">
       <div>{t(`copyright`)}</div>
     </Container>
   )

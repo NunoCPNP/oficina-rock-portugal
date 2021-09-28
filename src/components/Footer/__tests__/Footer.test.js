@@ -1,20 +1,26 @@
-import { render, cleanup } from '@testing-library/react'
+import { render } from '@testing-library/react'
 
 import Footer from '../Footer'
 
-afterEach(cleanup)
-
 describe('<Footer /> spec', () => {
-  it('Should run without errors', () => {
-    const { queryAllByTestId } = render(<Footer />)
+  it('Should match snapshot', () => {
+    const { container } = render(<Footer />)
 
-    const footer = queryAllByTestId(/footer/i)
-    expect(footer).toHaveLength(1)
+    expect(container.firstChild).toMatchSnapshot()
   })
 
-  it('Should match snapshot', () => {
-    const { asFragment } = render(<Footer />)
+  it('Should render with correct styling', () => {
+    const { container } = render(<Footer />)
 
-    expect(asFragment(<Footer />)).toMatchSnapshot()
+    expect(container.firstChild).toHaveStyle(`
+      background-color: var(--ghostWhite);
+    `)
+  })
+
+  it('Should render Copyright Component', () => {
+    const { queryAllByTestId } = render(<Footer />)
+
+    const copyright = queryAllByTestId(/copyright/i)
+    expect(copyright).toHaveLength(1)
   })
 })
