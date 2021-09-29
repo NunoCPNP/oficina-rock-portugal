@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import mq from '@/styles/mediaQueries'
 
 export const StyledNavigation = styled.div`
   display: grid;
@@ -8,16 +9,17 @@ export const StyledNavigation = styled.div`
   color: var(--snow);
   box-shadow: 0 0 10px 0 rgb(0 0 0 / 30%);
 
-  @media only screen and (max-width: 480px) {
+  ${mq('s')} {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto auto;
+    padding: 1rem;
   }
 `
 
 export const UserName = styled.div`
-  @media only screen and (max-width: 480px) {
+  ${mq('s')} {
     justify-self: center;
-    padding-bottom: 1rem;
+    padding-bottom: 1.5rem;
   }
 `
 
@@ -47,7 +49,7 @@ export const LinkContainer = styled.div`
     }
   }
 
-  @media only screen and (max-width: 480px) {
+  ${mq('s')} {
     justify-self: center;
 
     ul {

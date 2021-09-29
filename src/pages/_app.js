@@ -7,7 +7,7 @@ import { AuthProvider } from '@/context/AuthContext'
 import { SettingsProvider } from '@/context/SettingsContext'
 import { ProductProvider } from '@/context/ProductContext'
 
-import GlobalStyles from '../styles/GlobalStyles'
+import GlobalStyles from '@/styles/GlobalStyles'
 
 export function reportWebVitals({ id, name, label, value }) {
   window.gtag('event', name, {

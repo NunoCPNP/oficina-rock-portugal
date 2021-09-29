@@ -1,13 +1,15 @@
 import styled from '@emotion/styled'
+import mq from '@/styles/mediaQueries'
 
 export const HeaderContainer = styled.div`
   display: grid;
   grid-template-columns: auto 1fr;
   padding: 0 3rem 0 3rem;
 
-  @media only screen and (max-width: 480px) {
+  ${mq('s')} {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
+    padding: 0;
   }
 `
 
@@ -16,7 +18,7 @@ export const LogoContainer = styled.div`
   align-items: center;
   cursor: pointer;
 
-  @media only screen and (max-width: 480px) {
+  ${mq('s')} {
     justify-content: center;
   }
 `
@@ -45,7 +47,7 @@ export const LinkContainer = styled.div`
     font-weight: 700;
   }
 
-  @media only screen and (max-width: 480px) {
+  ${mq('s')} {
     justify-self: center;
 
     ul {

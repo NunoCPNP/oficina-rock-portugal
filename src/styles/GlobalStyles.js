@@ -28,13 +28,6 @@ const GlobalStyles = () => {
           /* z-index */
           --headerLevel: 10;
           --highestLevel: 100;
-
-          /* Breakpoints */
-          --xs: '320px';
-          --s: '480px';
-          --m: '780px';
-          --l: '1024px';
-          --xl: '1200px';
         }
 
         /* CSS RESET */

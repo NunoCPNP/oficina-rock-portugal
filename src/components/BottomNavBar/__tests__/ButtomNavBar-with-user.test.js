@@ -25,8 +25,8 @@ describe('<BottomNavBar /> spec', () => {
     const { container } = render(<BottomNavBar />)
 
     expect(container.firstChild).toHaveStyle(`
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: auto 1fr;
       padding: 1rem 4rem;
       background: var(--darkLiver);
       color: var(--snow);

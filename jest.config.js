@@ -16,6 +16,7 @@ module.exports = {
     '^@/context(.*)$': '<rootDir>/src/context$1',
     '^@/hooks(.*)$': '<rootDir>/src/hooks$1',
     '^@/services(.*)$': '<rootDir>/src/services$1',
+    '^@/styles(.*)$': '<rootDir>/src/styles$1',
   },
   setupFilesAfterEnv: ['./jest.setup.js'],
   testMatch: ['**/?(*.)+(spec|test).[jt]s?(x)'],

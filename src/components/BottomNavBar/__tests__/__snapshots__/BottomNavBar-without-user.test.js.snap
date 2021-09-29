@@ -2,20 +2,30 @@
 
 exports[`<BottomNavBar /> spec Should match snapshot 1`] = `
 .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto 1fr;
   padding: 1rem 4rem;
   background: var(--darkLiver);
   color: var(--snow);
   box-shadow: 0 0 10px 0 rgb(0 0 0 / 30%);
 }
 
-.emotion-1 {
+@media only screen and (max-width: 480px) {
+  .emotion-0 {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    padding: 1rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .emotion-1 {
+    justify-self: center;
+    padding-bottom: 1.5rem;
+  }
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -26,43 +36,55 @@ exports[`<BottomNavBar /> spec Should match snapshot 1`] = `
   justify-content: flex-end;
 }
 
-.emotion-1 ul {
+.emotion-2 ul {
   display: inherit;
   margin: 0;
 }
 
-.emotion-1 li {
+.emotion-2 li {
   list-style: none;
 }
 
-.emotion-1 li:not(:last-child) {
+.emotion-2 li:not(:last-child) {
   padding-right: 1.5rem;
 }
 
-.emotion-1 li a {
+.emotion-2 li a {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: inherit;
 }
 
-.emotion-1 li a:hover {
+.emotion-2 li a:hover {
   border-bottom: 1px solid var(--snow);
 }
 
-.emotion-2 {
+@media only screen and (max-width: 480px) {
+  .emotion-2 {
+    justify-self: center;
+  }
+
+  .emotion-2 ul {
+    padding-left: 0;
+  }
+}
+
+.emotion-3 {
   padding-top: 0.2rem;
 }
 
-.emotion-2 a:hover {
+.emotion-3 a:hover {
   border-bottom: none!important;
 }
 
 <div
   class="emotion-0"
 >
-  <div />
   <div
     class="emotion-1"
+  />
+  <div
+    class="emotion-2"
   >
     <ul>
       <li>
@@ -95,7 +117,7 @@ exports[`<BottomNavBar /> spec Should match snapshot 1`] = `
       </li>
       <li>
         <div
-          class="emotion-2"
+          class="emotion-3"
           data-testid="languageselector"
         />
       </li>
