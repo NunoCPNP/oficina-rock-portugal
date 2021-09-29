@@ -38,7 +38,6 @@ const GlobalStyles = () => {
         }
 
         /* CSS RESET */
-
         html {
           line-height: 1.15;
           text-size-adjust: 100%;
@@ -220,7 +219,6 @@ const GlobalStyles = () => {
         }
 
         /* CSS CUSTOM */
-
         h1,
         h2,
         h3,
