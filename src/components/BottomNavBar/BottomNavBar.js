@@ -5,7 +5,7 @@ import LanguageSelector from '../LanguageSelector'
 
 import useAuth from '@/hooks/useAuth'
 
-import { StyledNavigation, LinkContainer } from './BottomNavBar.styles'
+import { StyledNavigation, UserName, LinkContainer } from './BottomNavBar.styles'
 
 const BottomNavBar = () => {
   // TODO -> Band List Page
@@ -17,7 +17,7 @@ const BottomNavBar = () => {
 
   return (
     <StyledNavigation>
-      <div>{user && <>{user.displayName ? `${hi}, ${user.displayName} !` : `${hi}`}</>}</div>
+      <UserName>{user && <>{user.displayName ? `${hi}, ${user.displayName} !` : `${hi}`}</>}</UserName>
       <LinkContainer>
         <ul>
           {/* 
