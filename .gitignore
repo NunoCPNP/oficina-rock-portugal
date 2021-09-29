@@ -35,3 +35,4 @@ yarn-error.log*
 
 # custom
 __project_notes__
+.coverage

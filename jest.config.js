@@ -2,7 +2,7 @@ module.exports = {
   verbose: true,
   clearMocks: true,
   coverageDirectory: '.coverage',
-  collectCoverageFrom: ['**/*.{js,jsx}', '!**/node_modules/**', '!**/tests/**', '!**/coverage/**', '!jest.config.js'],
+  collectCoverageFrom: ['src/**/*.{js,jsx}'],
   coverageThreshold: {
     global: {
       branches: 100,

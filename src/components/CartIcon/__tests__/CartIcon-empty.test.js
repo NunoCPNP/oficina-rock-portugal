@@ -3,6 +3,7 @@ import { render } from '@testing-library/react'
 import CartIcon from '../CartIcon'
 
 import { useProductState } from '@/hooks/useProduct'
+
 jest.mock('@/hooks/useProduct')
 
 useProductState.mockReturnValue({
