@@ -9,6 +9,8 @@ import { AuthProvider } from '@/context/AuthContext'
 import { SettingsProvider } from '@/context/SettingsContext'
 import { ProductProvider } from '@/context/ProductContext'
 
+import { toBoolean } from '@/utils/toBoolean'
+
 import GlobalStyles from '@/styles/GlobalStyles'
 
 export function reportWebVitals({ id, name, label, value }) {
@@ -37,7 +39,7 @@ function MyApp({ Component, pageProps }) {
     }
   }, [router.events])
 
-  if (process.env.NEXT_PUBLIC_MAINTENANCE) {
+  if (toBoolean(process.env.NEXT_PUBLIC_MAINTENANCE)) {
     return (
       <>
         <Maintenece />
