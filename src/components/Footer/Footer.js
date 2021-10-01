@@ -36,13 +36,13 @@ const Footer = () => {
               <span>+351 964 631 183</span>
             </div>
             <div>
-              <AiTwotoneMail data-testid="react-icon" />
-              <span>oficinarockpt@gmail.com</span>
-            </div>
-            <div>
               <AiFillFacebook data-testid="react-icon" />
               <AiFillInstagram data-testid="react-icon" />
               <span>oficinarockpt</span>
+            </div>
+            <div>
+              <AiTwotoneMail data-testid="react-icon" />
+              <span>oficinarockpt@gmail.com</span>
             </div>
             <div>
               <SiTiktok data-testid="react-icon" />

@@ -8,8 +8,6 @@ import useAuth from '@/hooks/useAuth'
 import { StyledNavigation, UserName, LinkContainer } from './BottomNavBar.styles'
 
 const BottomNavBar = () => {
-  // TODO -> Band List Page
-
   const { t } = useTranslation('common')
   const { user } = useAuth()
 
@@ -17,14 +15,9 @@ const BottomNavBar = () => {
 
   return (
     <StyledNavigation>
-      <UserName>{user && <>{user.displayName ? `${hi}, ${user.displayName} !` : `${hi}`}</>}</UserName>
+      <UserName user={user}>{user && <>{user.displayName ? `${hi}, ${user.displayName} !` : `${hi}`}</>}</UserName>
       <LinkContainer>
         <ul>
-          {/* 
-          <li>
-            <Link href="/bands">{t(`bands`)}</Link>
-          </li> 
-          */}
           <li>
             <Link href="/men">{t(`men`)}</Link>
           </li>

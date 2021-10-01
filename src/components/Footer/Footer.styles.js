@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import mq from '@/styles/mediaQueries'
 
 export const StyledFooter = styled.footer`
   background-color: var(--ghostWhite);
@@ -11,6 +12,14 @@ export const GridContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 2rem;
+
+  ${mq('m')} {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  ${mq('s')} {
+    grid-template-columns: 1fr;
+  }
 `
 
 export const GridItem = styled.div`

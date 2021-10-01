@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import mq from '@/styles/mediaQueries'
 
 export const StyledSection = styled.section`
   margin: 4rem;
@@ -8,6 +9,10 @@ export const GridContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 2rem;
+
+  ${mq('s')} {
+    grid-template-columns: 1fr;
+  }
 `
 
 export const ItemContainer = styled.div`
@@ -17,6 +22,10 @@ export const ItemContainer = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   cursor: pointer;
+
+  ${mq('s')} {
+    height: 17rem;
+  }
 `
 
 export const TextContainer = styled.div`

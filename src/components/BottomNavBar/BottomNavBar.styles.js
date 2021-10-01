@@ -12,14 +12,14 @@ export const StyledNavigation = styled.div`
   ${mq('s')} {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
-    padding: 1rem;
+    padding: ${({ user }) => (user ? '1rem' : 0)};
   }
 `
 
 export const UserName = styled.div`
   ${mq('s')} {
     justify-self: center;
-    padding-bottom: 1.5rem;
+    margin: ${({ user }) => (user ? '0.8rem' : '0')};
   }
 `
 
@@ -51,6 +51,7 @@ export const LinkContainer = styled.div`
 
   ${mq('s')} {
     justify-self: center;
+    margin: 0.8rem;
 
     ul {
       padding-left: 0;
