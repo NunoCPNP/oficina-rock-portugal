@@ -1,7 +1,12 @@
 import styled from '@emotion/styled'
+import mq from '@/styles/mediaQueries'
 
 export const Container = styled.section`
   margin: 4rem;
+
+  ${mq('s')} {
+    margin: 2rem;
+  }
 `
 
 export const GridContainer = styled.div`

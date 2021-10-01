@@ -3,6 +3,10 @@ import mq from '@/styles/mediaQueries'
 
 export const StyledSection = styled.section`
   margin: 4rem;
+
+  ${mq('s')} {
+    margin: 2rem;
+  }
 `
 
 export const GridContainer = styled.div`
@@ -24,7 +28,7 @@ export const ItemContainer = styled.div`
   cursor: pointer;
 
   ${mq('s')} {
-    height: 17rem;
+    height: 16rem;
   }
 `
 

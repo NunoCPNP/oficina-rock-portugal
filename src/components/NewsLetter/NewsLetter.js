@@ -5,7 +5,7 @@ import useTranslation from 'next-translate/useTranslation'
 import CustomButton from '@/components/CustomButton'
 import FormInput from '@/components/FormInput'
 
-import { Container, InputContainer, MessageContainer } from './NewsLetter.styles'
+import { Container, FormContainer, InputContainer, MessageContainer } from './NewsLetter.styles'
 
 const NewsLetter = ({ message = '' }) => {
   const { t } = useTranslation('common')
@@ -31,7 +31,7 @@ const NewsLetter = ({ message = '' }) => {
       <MessageContainer>
         <h4>{message}</h4>
       </MessageContainer>
-      <Container onSubmit={handleSubmit}>
+      <FormContainer onSubmit={handleSubmit}>
         <InputContainer>
           <FormInput
             name="email"
@@ -42,7 +42,7 @@ const NewsLetter = ({ message = '' }) => {
           />
         </InputContainer>
         <CustomButton type="submit">{t(`subscribe`)}</CustomButton>
-      </Container>
+      </FormContainer>
     </>
   )
 }

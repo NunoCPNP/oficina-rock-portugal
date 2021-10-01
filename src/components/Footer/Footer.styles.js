@@ -58,3 +58,14 @@ export const MethodsContainer = styled.div`
     align-items: center;
   }
 `
+
+export const Spacer = styled.div`
+  display: none;
+  border-bottom: 1px solid var(--darkLiver);
+  margin-top: 2rem;
+  opacity: 0.4;
+
+  ${mq('s')} {
+    display: block;
+  }
+`

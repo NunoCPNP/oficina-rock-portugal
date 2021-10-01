@@ -5,7 +5,7 @@ import { SiTiktok } from 'react-icons/si'
 
 import Copyright from '../Copyright'
 
-import { StyledFooter, GridContainer, GridItem, ContactsContainer, MethodsContainer } from './Footer.styles'
+import { StyledFooter, GridContainer, GridItem, ContactsContainer, MethodsContainer, Spacer } from './Footer.styles'
 
 const Footer = () => {
   const { t } = useTranslation('common')
@@ -26,6 +26,7 @@ const Footer = () => {
           <div>
             <h4>{t(`faq`)}</h4>
           </div>
+          <Spacer />
         </GridItem>
         <GridItem>
           <h3>{t(`contacts`)}</h3>
@@ -49,6 +50,7 @@ const Footer = () => {
               <span>oficinarockpt</span>
             </div>
           </ContactsContainer>
+          <Spacer />
         </GridItem>
         <GridItem>
           <h3>{t(`payment-methods`)}</h3>
@@ -57,9 +59,11 @@ const Footer = () => {
               <Image src="/payment_methods.png" alt={t(`payment-methods`)} width={160} height={35} />
             </div>
           </MethodsContainer>
+          <Spacer />
         </GridItem>
         <GridItem>
           <h3>{t(`newsletter`)}</h3>
+          <Spacer />
         </GridItem>
       </GridContainer>
       <Copyright />

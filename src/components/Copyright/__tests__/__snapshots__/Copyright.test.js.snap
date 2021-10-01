@@ -10,7 +10,7 @@ exports[`<Copyright /> spec Should match spashot 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  padding-bottom: 2rem;
+  padding: 2rem;
 }
 
 <div

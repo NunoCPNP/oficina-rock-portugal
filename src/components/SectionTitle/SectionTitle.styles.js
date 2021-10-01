@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import mq from '@/styles/mediaQueries'
 
 export const Container = styled.div`
   display: flex;
@@ -10,6 +11,10 @@ export const Container = styled.div`
 
   h3 {
     padding-left: 0.5rem;
+  }
+
+  ${mq('s')} {
+    margin-bottom: 2rem;
   }
 `
 
