@@ -1,9 +1,9 @@
-export const toBoolean = (string) => {
-  if (typeof string === Boolean) return string
+export const toBoolean = (value) => {
+  if (typeof value === 'boolean') return value
 
-  if (string === 'true') {
+  if (value === 'true') {
     return true
-  } else if (string === 'false') {
+  } else if (value === 'false') {
     return false
   } else {
     return false

@@ -3,9 +3,9 @@ import useTranslation from 'next-translate/useTranslation'
 
 import SEO from '@/components/SEO'
 
-import { Container, ImageContainer, InfoContainer } from './Maintenece.styles'
+import { Container, ImageContainer, InfoContainer } from './Maintenance.styles'
 
-const Maintenece = () => {
+const Maintenance = () => {
   const { t } = useTranslation('common')
 
   return (
@@ -21,4 +21,4 @@ const Maintenece = () => {
   )
 }
 
-export default Maintenece
+export default Maintenance
