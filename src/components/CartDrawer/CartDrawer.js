@@ -1,5 +1,4 @@
 import useTranslation from 'next-translate/useTranslation'
-import { useRef } from 'react'
 import { useRouter } from 'next/router'
 import { AnimatePresence } from 'framer-motion'
 
@@ -8,7 +7,6 @@ import CartItem from '@/components/CartItem'
 
 import useSettings from '@/hooks/useSettings'
 import { useProductState } from '@/hooks/useProduct'
-import useOnClickOutside from '@/hooks/useOnClickOutside'
 
 import { Container, CartContainer, ButtonContainer } from './CartDrawer.styles'
 
@@ -18,13 +16,10 @@ const CartDrawer = () => {
   const [{ cartOpen }, dispatch] = useSettings()
   const { shoppingBag } = useProductState()
 
-  const ref = useRef()
-  useOnClickOutside(ref, () => dispatch({ type: 'TOGGLE_CART' }))
-
   return (
     <AnimatePresence>
       {cartOpen && (
-        <Container ref={ref} initial={{ x: 300 }} animate={{ x: 0, opacity: 1 }} exit={{ x: 300, opacity: 0 }}>
+        <Container initial={{ x: 300 }} animate={{ x: 0, opacity: 1 }} exit={{ x: 300, opacity: 0 }}>
           <CartContainer>
             {shoppingBag.length > 0 ? (
               <div>

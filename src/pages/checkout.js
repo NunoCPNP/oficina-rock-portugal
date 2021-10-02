@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+
 import CheckOutItems from '@/components/CheckOutItems'
 import Payment from '@/components/Payment'
 import NoUser from '@/components/NoUser'
@@ -10,6 +12,18 @@ import useAuth from '@/hooks/useAuth'
 const CheckOut = () => {
   const { shoppingBag } = useProductState()
   const { user } = useAuth()
+
+  useEffect(() => {
+    const query = new URLSearchParams(window.location.search)
+
+    if (query.get('success')) {
+      console.log('Order placed! You will receive an email confirmation.')
+    }
+
+    if (query.get('canceled')) {
+      console.log('Order canceled -- continue to shop around and checkout when you’re ready.')
+    }
+  }, [])
 
   const total = shoppingBag.reduce((accumulator, item, index, array) => {
     return accumulator + item.price

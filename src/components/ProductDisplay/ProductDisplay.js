@@ -6,6 +6,7 @@ import { Container, ImageSelector, ImageThumb, SelectedImage } from './ProductDi
 
 const ProductDisplay = ({ images = [] }) => {
   const [selectedImage, setSelectedImage] = useState(0)
+  const [clicked, setClicked] = useState(false)
 
   return (
     <Container>
@@ -17,15 +18,29 @@ const ProductDisplay = ({ images = [] }) => {
               alt=""
               width="80"
               height="80"
-              onClick={() => setSelectedImage(index)}
+              onClick={() => {
+                index === 1 ? setClicked(true) : setClicked(false)
+                setSelectedImage(index)
+              }}
               quality="75"
-              selected={index === selectedImage}
             />
           </ImageThumb>
         ))}
       </ImageSelector>
       <SelectedImage>
-        <Image src={images[selectedImage]} alt="" width="395" height="410" quality="75" />
+        <Image
+          src={images[selectedImage]}
+          alt=""
+          width="395"
+          height="410"
+          quality="75"
+          onMouseOver={() => {
+            if (!clicked && images.length > 1 && selectedImage === 0) {
+              setSelectedImage(1)
+            }
+          }}
+          onMouseOut={() => !clicked && setSelectedImage(0)}
+        />
       </SelectedImage>
     </Container>
   )

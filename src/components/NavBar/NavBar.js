@@ -6,7 +6,7 @@ import { useRouter } from 'next/router'
 import CartIcon from '@/components/CartIcon'
 
 import useAuth from '@/hooks/useAuth'
-import useSettings from '@/hooks/useSettings'
+import { useSettingsDispatch } from '@/hooks/useSettings'
 
 import { HeaderContainer, LogoContainer, LinkContainer } from './NavBar.styles'
 
@@ -14,7 +14,7 @@ const NavBar = () => {
   const router = useRouter()
   const { t } = useTranslation('common')
   const { user, signout } = useAuth()
-  const [{ cartOpen }, dispatch] = useSettings()
+  const dispatch = useSettingsDispatch()
 
   return (
     <HeaderContainer>
