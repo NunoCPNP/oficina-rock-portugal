@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 import CheckOutItems from '@/components/CheckOutItems'
 import Payment from '@/components/Payment'
@@ -10,8 +10,10 @@ import { useProductState } from '@/hooks/useProduct'
 import useAuth from '@/hooks/useAuth'
 
 const CheckOut = () => {
-  const { shoppingBag } = useProductState()
+  const [confirmation, setConfirmation] = useState(false)
+
   const { user } = useAuth()
+  const { shoppingBag } = useProductState()
 
   useEffect(() => {
     const query = new URLSearchParams(window.location.search)
@@ -54,7 +56,8 @@ const CheckOut = () => {
   return (
     <CheckOutWrapper>
       <CheckOutItems />
-      {shoppingBag.length > 0 && <Payment total={total} />}
+      {!confirmation && <div></div>}
+      {shoppingBag.length > 0 && confirmation && <Payment total={total} />}
     </CheckOutWrapper>
   )
 }

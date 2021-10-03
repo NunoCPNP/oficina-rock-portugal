@@ -6,3 +6,8 @@ export const Container = styled.section`
   grid-template-columns: 1fr 1fr;
   grid-gap: 2rem;
 `
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  grid-gap: 4rem;
+`
