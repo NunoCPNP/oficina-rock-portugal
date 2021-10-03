@@ -26,6 +26,10 @@ exports[`<Footer /> spec Should match snapshot 1`] = `
   }
 }
 
+.emotion-2 {
+  line-height: 3rem;
+}
+
 .emotion-2 h3 {
   text-transform: uppercase;
   padding-bottom: 1rem;
@@ -33,7 +37,6 @@ exports[`<Footer /> spec Should match snapshot 1`] = `
 
 .emotion-2 h4 {
   font-weight: 400;
-  line-height: 3rem;
 }
 
 .emotion-3 {

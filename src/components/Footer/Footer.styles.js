@@ -23,6 +23,7 @@ export const GridContainer = styled.div`
 `
 
 export const GridItem = styled.div`
+  line-height: 3rem;
   h3 {
     text-transform: uppercase;
     padding-bottom: 1rem;
@@ -30,7 +31,6 @@ export const GridItem = styled.div`
 
   h4 {
     font-weight: 400;
-    line-height: 3rem;
   }
 `
 
