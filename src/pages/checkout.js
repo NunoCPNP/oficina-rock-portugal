@@ -1,19 +1,17 @@
 import { useEffect, useState } from 'react'
 
 import CheckOutItems from '@/components/CheckOutItems'
-import Payment from '@/components/Payment'
 import NoUser from '@/components/NoUser'
 import CheckOutWarnings from '@/components/CheckOutWarnings'
 import CheckOutWrapper from '@/components/CheckOutWrapper'
+import CheckOutConfirmation from '@/components/CheckOutConfirmation'
 
-import { useProductState } from '@/hooks/useProduct'
 import useAuth from '@/hooks/useAuth'
 
 const CheckOut = () => {
   const [confirmation, setConfirmation] = useState(false)
 
   const { user } = useAuth()
-  const { shoppingBag } = useProductState()
 
   useEffect(() => {
     const query = new URLSearchParams(window.location.search)
@@ -26,10 +24,6 @@ const CheckOut = () => {
       console.log('Order canceled -- continue to shop around and checkout when you’re ready.')
     }
   }, [])
-
-  const total = shoppingBag.reduce((accumulator, item, index, array) => {
-    return accumulator + item.price
-  }, 0)
 
   if (!user)
     return (
@@ -56,8 +50,7 @@ const CheckOut = () => {
   return (
     <CheckOutWrapper>
       <CheckOutItems />
-      {!confirmation && <div></div>}
-      {shoppingBag.length > 0 && confirmation && <Payment total={total} />}
+      <CheckOutConfirmation confirmation={confirmation} setConfirmation={setConfirmation} />
     </CheckOutWrapper>
   )
 }
