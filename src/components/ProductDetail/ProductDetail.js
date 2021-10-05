@@ -1,4 +1,6 @@
 import { useRouter } from 'next/router'
+
+import { AiOutlineShoppingCart } from 'react-icons/ai'
 import useTranslation from 'next-translate/useTranslation'
 import toast from 'react-hot-toast'
 
@@ -11,7 +13,7 @@ import SizeSelector from '@/components/SizeSelector'
 
 import useProduct from '@/hooks/useProduct'
 
-import { Container, ButtonContainer } from './ProductDetail.styles'
+import { Container, ButtonContainer, ButtonWrapper } from './ProductDetail.styles'
 
 const ProductDetail = ({ data }) => {
   const router = useRouter()
@@ -40,7 +42,14 @@ const ProductDetail = ({ data }) => {
                 dispatch({ type: 'ADD_PRODUCT_TO_BAG', payload: currentProduct })
               }}
             >
-              {currentProduct.quantityAvailable ? t(`add-to-bag`) : t(`out-of-stock`)}
+              {currentProduct.quantityAvailable ? (
+                <ButtonWrapper>
+                  <AiOutlineShoppingCart />
+                  {t(`add-to-bag`)}
+                </ButtonWrapper>
+              ) : (
+                t(`out-of-stock`)
+              )}
             </CustomButton>
           </div>
           <div>

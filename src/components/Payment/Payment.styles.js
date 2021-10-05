@@ -1,5 +1,16 @@
 import styled from '@emotion/styled'
 
+export const Test = styled.div`
+  display: flex;
+  justify-content: center;
+  margin: 4rem;
+
+  span {
+    margin-right: 1rem;
+    text-transform: uppercase;
+  }
+`
+
 export const Container = styled.div`
   margin: 4rem;
 

@@ -6,6 +6,7 @@ import CTA from '@/components/CTA'
 import ProductList from '@/components/ProductList'
 import SectionTitle from '@/components/SectionTitle'
 import TopBanner from '@/components/TopBanner'
+import NewsLetterWrapper from '@/components/NewsLetterWrapper'
 
 const Home = ({ collection }) => {
   const { t } = useTranslation('common')
@@ -17,6 +18,7 @@ const Home = ({ collection }) => {
       <CTA />
       <SectionTitle title={t(`news`)} />
       <ProductList collection={collection} />
+      <NewsLetterWrapper />
     </>
   )
 }

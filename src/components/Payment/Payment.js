@@ -1,10 +1,11 @@
 import { loadStripe } from '@stripe/stripe-js'
+import { AiOutlineCheck } from 'react-icons/ai'
 import useTranslation from 'next-translate/useTranslation'
 
 import SectionTitle from '../SectionTitle'
 import CustomButton from '../CustomButton'
 
-import { Container, Form, ButtonContainer } from './Payment.styles'
+import { Test, Container, Form, ButtonContainer } from './Payment.styles'
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY)
 
@@ -13,6 +14,10 @@ const Payment = ({ total }) => {
 
   return (
     <Container>
+      <Test>
+        <span>Checkout Information Confirmed</span>
+        <AiOutlineCheck />
+      </Test>
       <SectionTitle title={t(`payment-options`)} />
       <ButtonContainer>
         <Form action="/api/checkout" method="POST">
