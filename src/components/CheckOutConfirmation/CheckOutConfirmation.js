@@ -4,6 +4,8 @@ import SectionTitle from '../SectionTitle'
 import CustomButton from '../CustomButton'
 import Payment from '../Payment'
 
+import { total } from '@/utils/total'
+
 import { useProductState } from '@/hooks/useProduct'
 
 import { ButtonContainer } from './CheckOutConfirmation.styles'
@@ -12,13 +14,11 @@ const CheckOutConfirmation = ({ confirmation, setConfirmation }) => {
   const { t } = useTranslation('common')
   const { shoppingBag } = useProductState()
 
-  const total = shoppingBag.reduce((accumulator, item) => {
-    return accumulator + item.price
-  }, 0)
+  const calculatedTotal = total(shoppingBag)
 
   if (shoppingBag.length === 0) return null
 
-  if ((confirmation === true) & (shoppingBag.length > 0)) return <Payment total={total} />
+  if ((confirmation === true) & (shoppingBag.length > 0)) return <Payment total={calculatedTotal} />
 
   if (confirmation === true) return null
 
