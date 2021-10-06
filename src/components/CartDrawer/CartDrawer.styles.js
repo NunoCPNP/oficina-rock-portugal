@@ -24,3 +24,8 @@ export const ButtonContainer = styled.div`
   display: inherit;
   justify-content: center;
 `
+
+export const TotalContainer = styled.div`
+  text-align: end;
+  padding-top: 2rem;
+`

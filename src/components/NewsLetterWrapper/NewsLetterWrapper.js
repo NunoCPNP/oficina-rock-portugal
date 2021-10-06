@@ -1,12 +1,13 @@
-const { default: NewsLetter } = require('../NewsLetter')
-const { default: SectionTitle } = require('../SectionTitle')
+import NewsLetter from '@/components/NewsLetter'
 
-import { Container } from './NewsLetterWrapper.styles'
+import { Container, Title } from './NewsLetterWrapper.styles'
 
 const NewsLetterWrapper = () => {
   return (
     <Container>
-      <SectionTitle title="Newsletter Subscription" offset="4rem" />
+      <Title>
+        Subscribe to get <span>Oficina Rock</span> news & promotions
+      </Title>
       <NewsLetter />
     </Container>
   )

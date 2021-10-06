@@ -5,7 +5,6 @@ import NoUser from '@/components/NoUser'
 import CheckOutWarnings from '@/components/CheckOutWarnings'
 import CheckOutWrapper from '@/components/CheckOutWrapper'
 import CheckOutConfirmation from '@/components/CheckOutConfirmation'
-import CheckOutTotal from '@/components/CheckOutTotal'
 
 import useAuth from '@/hooks/useAuth'
 
@@ -51,7 +50,6 @@ const CheckOut = () => {
   return (
     <CheckOutWrapper>
       <CheckOutItems />
-      <CheckOutTotal />
       <CheckOutConfirmation confirmation={confirmation} setConfirmation={setConfirmation} />
     </CheckOutWrapper>
   )

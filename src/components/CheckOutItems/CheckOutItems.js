@@ -2,6 +2,8 @@ import Image from 'next/image'
 import useTranslation from 'next-translate/useTranslation'
 import { ImCross } from 'react-icons/im'
 
+import CheckOutTotal from '@/components/CheckOutTotal'
+
 import useProduct from '@/hooks/useProduct'
 
 import { Container, EmptyBag, Bag, BagItem, BagItemHeader } from './CheckOutItems.styles'
@@ -41,6 +43,7 @@ const CheckOutItems = () => {
             <ImCross className="remove" onClick={() => dispatch({ type: 'DELETE_PRODUCT_FROM_BAG', payload: index })} />
           </BagItem>
         ))}
+        {shoppingBag.length !== 0 && <CheckOutTotal />}
       </Bag>
     </Container>
   )

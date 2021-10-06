@@ -2,7 +2,7 @@ import { total } from '@/utils/total'
 
 import { useProductState } from '@/hooks/useProduct'
 
-import { Container } from './CheckOutTotal.styles'
+import { Container, Price } from './CheckOutTotal.styles'
 
 const CheckOutTotal = () => {
   const { shoppingBag } = useProductState()
@@ -11,11 +11,11 @@ const CheckOutTotal = () => {
 
   return (
     <Container>
-      <div>
-        <span>Total :</span>
-        <span>${calculatedTotal}</span>
+      <span>Total : </span>
+      <Price>
+        <span>{calculatedTotal}</span>
         <span>€</span>
-      </div>
+      </Price>
     </Container>
   )
 }

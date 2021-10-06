@@ -8,7 +8,9 @@ import CartItem from '@/components/CartItem'
 import useSettings from '@/hooks/useSettings'
 import { useProductState } from '@/hooks/useProduct'
 
-import { Container, CartContainer, ButtonContainer } from './CartDrawer.styles'
+import { total } from '@/utils/total'
+
+import { Container, CartContainer, ButtonContainer, TotalContainer } from './CartDrawer.styles'
 
 const CartDrawer = () => {
   const router = useRouter()
@@ -23,9 +25,12 @@ const CartDrawer = () => {
           <CartContainer>
             {shoppingBag.length > 0 ? (
               <div>
-                {shoppingBag.map((item, index) => (
-                  <CartItem key={index} item={item} />
-                ))}
+                <div>
+                  {shoppingBag.map((item, index) => (
+                    <CartItem key={index} item={item} />
+                  ))}
+                </div>
+                <TotalContainer>{`Total : ${total(shoppingBag)} €`}</TotalContainer>
               </div>
             ) : (
               <div>{t(`cart-empty`)}</div>
