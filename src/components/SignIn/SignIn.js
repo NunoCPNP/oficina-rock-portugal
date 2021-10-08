@@ -19,6 +19,8 @@ const SignIn = () => {
   const { signinGoogle } = useAuth()
   const [loading, setLoading] = useState(false)
 
+  const success = t(`success-login`)
+
   const [userCredentials, setCredentials] = useState({
     email: '',
     password: '',
@@ -39,7 +41,7 @@ const SignIn = () => {
         password: '',
       })
 
-      toast.success('Logged in with success !')
+      toast.success(success)
       Router.push('/')
     } catch (error) {
       toast.error(error.message)

@@ -5,7 +5,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   text-transform: uppercase;
-  font-size: var(--heading-5);
+  font-size: 1.4rem;
   position: relative;
   z-index: var(--headerLevel);
 `

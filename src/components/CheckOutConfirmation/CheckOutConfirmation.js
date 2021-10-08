@@ -1,4 +1,5 @@
 import useTranslation from 'next-translate/useTranslation'
+import { useRouter } from 'next/router'
 
 import SectionTitle from '../SectionTitle'
 import CustomButton from '../CustomButton'
@@ -12,6 +13,7 @@ import { ButtonContainer } from './CheckOutConfirmation.styles'
 
 const CheckOutConfirmation = ({ confirmation, setConfirmation }) => {
   const { t } = useTranslation('common')
+  const router = useRouter()
   const { shoppingBag } = useProductState()
 
   const calculatedTotal = total(shoppingBag)
@@ -27,7 +29,9 @@ const CheckOutConfirmation = ({ confirmation, setConfirmation }) => {
       <SectionTitle title={t(`checkout-confirmation`)} />
       <ButtonContainer>
         <CustomButton onClick={() => setConfirmation(true)}>{t(`proceed-to-payment`)}</CustomButton>
-        <CustomButton inverted>{t(`back-to-shop`)}</CustomButton>
+        <CustomButton inverted onClick={() => router.push('/')}>
+          {t(`back-to-shop`)}
+        </CustomButton>
       </ButtonContainer>
     </>
   )

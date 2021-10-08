@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useRouter } from 'next/router'
+import toast from 'react-hot-toast'
 import useTranslation from 'next-translate/useTranslation'
 
 import CustomButton from '@/components/CustomButton'
@@ -12,6 +13,8 @@ const NewsLetter = ({ message = '' }) => {
   const router = useRouter()
   const [email, setEmail] = useState('')
 
+  const success = t(`thanks-subscribing`)
+
   const handleSubmit = async (e) => {
     e.preventDefault()
 
@@ -21,6 +24,7 @@ const NewsLetter = ({ message = '' }) => {
     })
 
     if (response.ok) {
+      toast.success(success)
       setEmail('')
       router.push('/')
     }
