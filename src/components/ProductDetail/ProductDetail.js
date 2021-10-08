@@ -35,22 +35,21 @@ const ProductDetail = ({ data }) => {
         <ProductDescription description={data.description} />
         <ButtonContainer>
           <div>
-            <CustomButton
-              disable={!currentProduct.quantityAvailable}
-              onClick={() => {
-                toast.success(message)
-                dispatch({ type: 'ADD_PRODUCT_TO_BAG', payload: currentProduct })
-              }}
-            >
-              {currentProduct.quantityAvailable ? (
+            {currentProduct.quantityAvailable ? (
+              <CustomButton
+                onClick={() => {
+                  toast.success(message)
+                  dispatch({ type: 'ADD_PRODUCT_TO_BAG', payload: currentProduct })
+                }}
+              >
                 <ButtonWrapper>
                   <AiOutlineShoppingCart />
                   {t(`add-to-bag`)}
                 </ButtonWrapper>
-              ) : (
-                t(`out-of-stock`)
-              )}
-            </CustomButton>
+              </CustomButton>
+            ) : (
+              <CustomButton disable>{t(`out-of-stock`)}</CustomButton>
+            )}
           </div>
           <div>
             <CustomButton inverted onClick={() => router.push('/checkout')}>
