@@ -5,8 +5,6 @@
 - Server Side Rendering
 - Internationalization
 - Spring Animations
-- Firebase OAuth
-- Firestore Database
 
 ## Tech Stack
 
