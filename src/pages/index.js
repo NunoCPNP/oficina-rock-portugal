@@ -1,12 +1,12 @@
-import useTranslation from 'next-translate/useTranslation'
 import { firestore } from '@/services/firebase'
+import useTranslation from 'next-translate/useTranslation'
 
-import SEO from '@/components/SEO'
 import CTA from '@/components/CTA'
+import NewsLetterWrapper from '@/components/NewsLetterWrapper'
 import ProductList from '@/components/ProductList'
+import SEO from '@/components/SEO'
 import SectionTitle from '@/components/SectionTitle'
 import TopBanner from '@/components/TopBanner'
-import NewsLetterWrapper from '@/components/NewsLetterWrapper'
 
 const Home = ({ collection }) => {
   const { t } = useTranslation('common')

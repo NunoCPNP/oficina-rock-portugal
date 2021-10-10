@@ -1,7 +1,7 @@
 import { Toaster } from 'react-hot-toast'
 
-import styled from '@emotion/styled'
 import dynamic from 'next/dynamic'
+import styled from '@emotion/styled'
 
 const DynamicSlot = dynamic(() => import('@/components/Slot'))
 const DynamicHeader = dynamic(() => import('@/components/Header'))

@@ -1,4 +1,4 @@
-import { GroupContainer, FormInputContainer, FormInputLabel } from './FormInput.styles'
+import { FormInputContainer, FormInputLabel, GroupContainer } from './FormInput.styles'
 
 const FormInput = ({ handleChange, label, ...props }) => {
   return (

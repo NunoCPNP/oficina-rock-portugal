@@ -1,6 +1,6 @@
 import useTranslation from 'next-translate/useTranslation'
 
-import { Container, Title, Measures, Measure } from './Measurements.styles'
+import { Container, Measure, Measures, Title } from './Measurements.styles'
 
 const Measurements = () => {
   const { t } = useTranslation('common')

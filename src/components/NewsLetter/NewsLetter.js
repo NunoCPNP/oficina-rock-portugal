@@ -1,12 +1,12 @@
-import { useState } from 'react'
-import { useRouter } from 'next/router'
 import toast from 'react-hot-toast'
+import { useRouter } from 'next/router'
+import { useState } from 'react'
 import useTranslation from 'next-translate/useTranslation'
 
 import CustomButton from '@/components/CustomButton'
 import FormInput from '@/components/FormInput'
 
-import { Container, FormContainer, InputContainer, MessageContainer } from './NewsLetter.styles'
+import { FormContainer, InputContainer, MessageContainer } from './NewsLetter.styles'
 
 const NewsLetter = ({ message = '' }) => {
   const { t } = useTranslation('common')

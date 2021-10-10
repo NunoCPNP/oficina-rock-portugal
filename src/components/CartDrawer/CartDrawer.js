@@ -1,16 +1,16 @@
-import useTranslation from 'next-translate/useTranslation'
-import { useRouter } from 'next/router'
 import { AnimatePresence } from 'framer-motion'
+import { useRouter } from 'next/router'
+import useTranslation from 'next-translate/useTranslation'
 
-import CustomButton from '@/components/CustomButton'
 import CartItem from '@/components/CartItem'
+import CustomButton from '@/components/CustomButton'
 
-import useSettings from '@/hooks/useSettings'
 import { useProductState } from '@/hooks/useProduct'
+import useSettings from '@/hooks/useSettings'
 
 import { total } from '@/utils/total'
 
-import { Container, CartContainer, ButtonContainer, TotalContainer } from './CartDrawer.styles'
+import { ButtonContainer, CartContainer, Container, TotalContainer } from './CartDrawer.styles'
 
 const CartDrawer = () => {
   const router = useRouter()

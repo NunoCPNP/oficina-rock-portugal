@@ -1,9 +1,9 @@
 import { useRouter } from 'next/router'
 import useTranslation from 'next-translate/useTranslation'
 
+import ProductList from '@/components/ProductList'
 import SEO from '@/components/SEO'
 import SectionTitle from '@/components/SectionTitle'
-import ProductList from '@/components/ProductList'
 
 import { firestore } from '@/services/firebase'
 

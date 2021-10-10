@@ -1,9 +1,9 @@
-import useTranslation from 'next-translate/useTranslation'
 import { useRouter } from 'next/router'
+import useTranslation from 'next-translate/useTranslation'
 
-import SectionTitle from '../SectionTitle'
 import CustomButton from '../CustomButton'
 import Payment from '../Payment'
+import SectionTitle from '../SectionTitle'
 
 import { total } from '@/utils/total'
 

@@ -1,8 +1,8 @@
-import Link from 'next/link'
 import Image from 'next/image'
+import Link from 'next/link'
 import cookieCutter from 'cookie-cutter'
-import useTranslation from 'next-translate/useTranslation'
 import { useRouter } from 'next/router'
+import useTranslation from 'next-translate/useTranslation'
 
 import { Container } from './LanguageSelector.styles'
 

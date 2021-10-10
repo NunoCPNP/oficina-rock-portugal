@@ -1,3 +1,15 @@
 {
-  "extends": ["plugin:prettier/recommended", "next", "next/core-web-vitals"]
+  "extends": ["plugin:prettier/recommended", "next", "next/core-web-vitals"],
+  "rules": {
+    "sort-imports": [
+      "error",
+      {
+        "ignoreCase": false,
+        "ignoreDeclarationSort": false,
+        "ignoreMemberSort": false,
+        "memberSyntaxSortOrder": ["none", "all", "multiple", "single"],
+        "allowSeparatedGroups": true
+      }
+    ]
+  }
 }

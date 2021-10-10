@@ -3,11 +3,11 @@ import { useRouter } from 'next/router'
 
 import DefaultLayout from '../Layout/Default'
 
-import Maintenece from '@/components/Maintenance/Maintenance'
+import Maintenance from '@/components/Maintenance/Maintenance'
 
 import { AuthProvider } from '@/context/AuthContext'
-import { SettingsProvider } from '@/context/SettingsContext'
 import { ProductProvider } from '@/context/ProductContext'
+import { SettingsProvider } from '@/context/SettingsContext'
 
 import { toBoolean } from '@/utils/toBoolean'
 
@@ -42,7 +42,7 @@ function MyApp({ Component, pageProps }) {
   if (toBoolean(process.env.NEXT_PUBLIC_MAINTENANCE)) {
     return (
       <>
-        <Maintenece />
+        <Maintenance />
         <GlobalStyles />
       </>
     )

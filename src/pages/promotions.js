@@ -1,8 +1,8 @@
 import useTranslation from 'next-translate/useTranslation'
 
+import ProductList from '@/components/ProductList'
 import SEO from '@/components/SEO'
 import SectionTitle from '@/components/SectionTitle'
-import ProductList from '@/components/ProductList'
 
 import NewsLetter from '@/components/NewsLetter'
 

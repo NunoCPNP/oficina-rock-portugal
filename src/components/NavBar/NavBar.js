@@ -1,14 +1,14 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import useTranslation from 'next-translate/useTranslation'
 import { useRouter } from 'next/router'
+import useTranslation from 'next-translate/useTranslation'
 
 import CartIcon from '@/components/CartIcon'
 
 import useAuth from '@/hooks/useAuth'
 import { useSettingsDispatch } from '@/hooks/useSettings'
 
-import { HeaderContainer, LogoContainer, LinkContainer } from './NavBar.styles'
+import { HeaderContainer, LinkContainer, LogoContainer } from './NavBar.styles'
 
 const NavBar = () => {
   const router = useRouter()

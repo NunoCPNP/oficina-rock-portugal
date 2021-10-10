@@ -1,10 +1,11 @@
 import Link from 'next/link'
 import Trans from 'next-translate/Trans'
-import useTranslation from 'next-translate/useTranslation'
 import { useRouter } from 'next/router'
+import useTranslation from 'next-translate/useTranslation'
 
-import { Container, Header, Warnings, ButtonContainer } from './CheckOutWarnings.styles'
-import CustomButton from '../CustomButton'
+import CustomButton from '@/components/CustomButton'
+
+import { ButtonContainer, Container, Header, Warnings } from './CheckOutWarnings.styles'
 
 const CheckOutWarnings = ({ user }) => {
   const router = useRouter()

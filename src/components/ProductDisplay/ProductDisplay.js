@@ -1,6 +1,6 @@
-import { useState } from 'react'
 import Image from 'next/image'
 import PropTypes from 'prop-types'
+import { useState } from 'react'
 
 import { Container, ImageSelector, ImageThumb, SelectedImage } from './ProductDisplay.styles'
 

@@ -1,10 +1,10 @@
-import toast from 'react-hot-toast'
 import Router from 'next/router'
-import useTranslation from 'next-translate/useTranslation'
+import toast from 'react-hot-toast'
 import { useState } from 'react'
+import useTranslation from 'next-translate/useTranslation'
 
-import FormInput from '@/components/FormInput'
 import CustomButton from '@/components/CustomButton'
+import FormInput from '@/components/FormInput'
 
 import Loader from '@/components/Loader'
 
@@ -12,7 +12,7 @@ import useAuth from '@/hooks/useAuth'
 
 import { auth } from '@/services/firebase'
 
-import { ButtonsBarContainer, SignInContainer, SignInTitle, LoaderContainer } from './SignIn.styles'
+import { ButtonsBarContainer, LoaderContainer, SignInContainer, SignInTitle } from './SignIn.styles'
 
 const SignIn = () => {
   const { t } = useTranslation('common')

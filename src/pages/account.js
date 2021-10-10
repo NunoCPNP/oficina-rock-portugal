@@ -1,18 +1,18 @@
-import { useRouter } from 'next/router'
-import toast from 'react-hot-toast'
 import styled from '@emotion/styled'
+import toast from 'react-hot-toast'
+import { useRouter } from 'next/router'
 import useTranslation from 'next-translate/useTranslation'
 
-import SEO from '@/components/SEO'
-import FormInput from '@/components/FormInput'
-import SectionTitle from '@/components/SectionTitle'
-import FormCheckBox from '@/components/FormCheckBox'
 import CustomButton from '@/components/CustomButton'
+import FormCheckBox from '@/components/FormCheckBox'
+import FormInput from '@/components/FormInput'
+import SEO from '@/components/SEO'
+import SectionTitle from '@/components/SectionTitle'
 
 import { firestore } from '@/services/firebase'
 
-import useAuth from '@/hooks/useAuth'
 import NoUser from '@/components/NoUser'
+import useAuth from '@/hooks/useAuth'
 
 const AccountContainer = styled.div`
   display: grid;

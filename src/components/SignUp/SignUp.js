@@ -1,14 +1,14 @@
 import Router from 'next/router'
-import useTranslation from 'next-translate/useTranslation'
 import { useState } from 'react'
+import useTranslation from 'next-translate/useTranslation'
 
-import FormInput from '@/components/FormInput'
 import CustomButton from '@/components/CustomButton'
+import FormInput from '@/components/FormInput'
 import Loader from '@/components/Loader'
 
 import { auth } from '@/services/firebase'
 
-import { SignUpContainer, SignUpTitle, LoaderContainer } from './SignUp.styles'
+import { LoaderContainer, SignUpContainer, SignUpTitle } from './SignUp.styles'
 
 const SignUp = () => {
   const { t } = useTranslation('common')

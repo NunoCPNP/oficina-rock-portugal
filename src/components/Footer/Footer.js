@@ -1,11 +1,11 @@
+import { AiFillFacebook, AiFillInstagram, AiFillPhone, AiOutlineWhatsApp, AiTwotoneMail } from 'react-icons/ai'
 import Image from 'next/image'
-import useTranslation from 'next-translate/useTranslation'
-import { AiFillPhone, AiTwotoneMail, AiFillFacebook, AiFillInstagram, AiOutlineWhatsApp } from 'react-icons/ai'
 import { SiTiktok } from 'react-icons/si'
+import useTranslation from 'next-translate/useTranslation'
 
 import Copyright from '../Copyright'
 
-import { StyledFooter, GridContainer, GridItem, ContactsContainer, MethodsContainer, Spacer } from './Footer.styles'
+import { ContactsContainer, GridContainer, GridItem, MethodsContainer, Spacer, StyledFooter } from './Footer.styles'
 
 const Footer = () => {
   const { t } = useTranslation('common')

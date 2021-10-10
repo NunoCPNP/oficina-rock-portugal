@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 
-import { SettingsStateContext, SettingsDispatchContext } from '@/context/SettingsContext'
+import { SettingsDispatchContext, SettingsStateContext } from '@/context/SettingsContext'
 
 export const useSettingsState = () => {
   const context = useContext(SettingsStateContext)

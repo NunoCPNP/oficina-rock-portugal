@@ -1,14 +1,14 @@
-import { useState } from 'react'
-import { loadStripe } from '@stripe/stripe-js'
 import { AiOutlineCheck } from 'react-icons/ai'
+import { loadStripe } from '@stripe/stripe-js'
+import { useState } from 'react'
 import useTranslation from 'next-translate/useTranslation'
 
-import SectionTitle from '@/components/SectionTitle'
 import CustomButton from '@/components/CustomButton'
-import Modal from '@/components/Modal'
 import MBWay from '@/components/MBWay'
+import Modal from '@/components/Modal'
+import SectionTitle from '@/components/SectionTitle'
 
-import { Test, Container, Form, ButtonContainer } from './Payment.styles'
+import { ButtonContainer, Container, Form, Test } from './Payment.styles'
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY)
 

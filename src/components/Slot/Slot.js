@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import useTranslation from 'next-translate/useTranslation'
 
 import { Container, Section } from './Slot.styles'

@@ -5,7 +5,7 @@ import LanguageSelector from '../LanguageSelector'
 
 import useAuth from '@/hooks/useAuth'
 
-import { StyledNavigation, UserName, LinkContainer } from './BottomNavBar.styles'
+import { LinkContainer, StyledNavigation, UserName } from './BottomNavBar.styles'
 
 const BottomNavBar = () => {
   const { t } = useTranslation('common')

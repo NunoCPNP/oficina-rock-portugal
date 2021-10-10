@@ -1,13 +1,13 @@
-import useTranslation from 'next-translate/useTranslation'
+import { AnimatePresence } from 'framer-motion'
 import cookie from 'cookie-cutter'
 import { useEffect } from 'react'
-import { AnimatePresence } from 'framer-motion'
+import useTranslation from 'next-translate/useTranslation'
 
 import CustomButton from '@/components/CustomButton'
 
 import useSettings from '@/hooks/useSettings'
 
-import { Container, TextContainer, ButtonContainer } from './GDPR.style'
+import { ButtonContainer, Container, TextContainer } from './GDPR.style'
 
 const GDPR = () => {
   const { t } = useTranslation('common')

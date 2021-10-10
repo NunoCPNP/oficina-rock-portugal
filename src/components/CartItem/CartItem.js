@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import { Container, ImageContainer, DetailsContainer } from './CartItem.styles'
+import { Container, DetailsContainer, ImageContainer } from './CartItem.styles'
 
 const CartItem = ({ item = {} }) => {
   return (

@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 
+import CheckOutConfirmation from '@/components/CheckOutConfirmation'
 import CheckOutItems from '@/components/CheckOutItems'
-import NoUser from '@/components/NoUser'
 import CheckOutWarnings from '@/components/CheckOutWarnings'
 import CheckOutWrapper from '@/components/CheckOutWrapper'
-import CheckOutConfirmation from '@/components/CheckOutConfirmation'
+import NoUser from '@/components/NoUser'
 
 import useAuth from '@/hooks/useAuth'
 

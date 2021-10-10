@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import useTranslation from 'next-translate/useTranslation'
 import PropTypes from 'prop-types'
+import useTranslation from 'next-translate/useTranslation'
 
 import CustomButton from '@/components/CustomButton'
 
-import { Container, ImageContainer, DescriptionContainer } from './ProductCard.styles'
+import { Container, DescriptionContainer, ImageContainer } from './ProductCard.styles'
 
 const ProductCard = ({ type, title, band, images, category, id }) => {
   const { t } = useTranslation('common')

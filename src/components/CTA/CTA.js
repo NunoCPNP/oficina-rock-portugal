@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import useTranslation from 'next-translate/useTranslation'
 
-import { StyledSection, GridContainer, ItemContainer, TextContainer } from './CTA.styles'
+import { GridContainer, ItemContainer, StyledSection, TextContainer } from './CTA.styles'
 
 const CTA = () => {
   const router = useRouter()
