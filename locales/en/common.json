@@ -21,8 +21,8 @@
   "description-line-2": "Shoulder to shoulder internal reinforcement",
   "description-line-3": "High quality Silk Screen stamping",
   "description-line-4": "All t-shirts have a label on the inside with the correct washing procedure",
-  "size-selector": "Size selector",
-  "quantity-selector": "Quantity selector",
+  "size-selector": "Select Size",
+  "quantity-selector": "Select Quantity",
   "vat-included": "( VAT Included )",
   "price": "Price",
   "hi": "Hi",
@@ -97,5 +97,8 @@
   "proceed-to-payment": "Proceed to Payment",
   "back-to-shop": "Go back to the Shop",
   "checkout-confirmation": "Checkout Confirmation",
-  "thanks-subscribing": "Thanks for subscribing !"
+  "thanks-subscribing": "Thanks for subscribing !",
+  "size-guide": "Size Guide",
+  "first-to-know": "Be the first to know",
+  "subscribe-newsletter": "<a>Subscribe to get <b>Oficina Rock</b> news, promotions and more</a>"
 }

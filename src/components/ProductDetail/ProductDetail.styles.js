@@ -21,8 +21,3 @@ export const ButtonWrapper = styled.div`
     margin-right: 1rem;
   }
 `
-
-export const SizeGuide = styled.div`
-  display: flex;
-  margin: 4rem 0;
-`

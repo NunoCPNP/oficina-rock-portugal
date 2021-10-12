@@ -1,13 +1,25 @@
+import Trans from 'next-translate/Trans'
+import useTranslation from 'next-translate/useTranslation'
+
 import NewsLetter from '@/components/NewsLetter'
 
-import { Container, Title } from './NewsLetterWrapper.styles'
+import { Container, SubTitle, Title } from './NewsLetterWrapper.styles'
 
 const NewsLetterWrapper = () => {
+  const { t } = useTranslation('common')
+
   return (
     <Container>
-      <Title>
-        Subscribe to get <span>Oficina Rock</span> news & promotions
-      </Title>
+      <Title>{t(`first-to-know`)}</Title>
+      <SubTitle>
+        <Trans
+          i18nKey="common:subscribe-newsletter"
+          components={{
+            a: <div />,
+            b: <span />,
+          }}
+        />
+      </SubTitle>
       <NewsLetter />
     </Container>
   )

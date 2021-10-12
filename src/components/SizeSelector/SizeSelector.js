@@ -1,9 +1,11 @@
 import { useEffect } from 'react'
 import useTranslation from 'next-translate/useTranslation'
 
+import SizeGuide from '../SizeGuide'
+
 import useProduct from '@/hooks/useProduct'
 
-import { Container, SizesContainer, Title, Size } from './SizeSelector.styles'
+import { Container, Size, SizesContainer, Title } from './SizeSelector.styles'
 
 const SizeSelector = ({ product }) => {
   const [state, dispatch] = useProduct()
@@ -58,6 +60,7 @@ const SizeSelector = ({ product }) => {
             </Size>
           )
         })}
+        <SizeGuide />
       </SizesContainer>
     </Container>
   )

@@ -1,5 +1,4 @@
 import { Toaster } from 'react-hot-toast'
-
 import dynamic from 'next/dynamic'
 import styled from '@emotion/styled'
 
