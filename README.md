@@ -5,6 +5,7 @@
 - Server Side Rendering
 - Internationalization
 - Spring Animations
+- Firebase OAuth and Database Integration
 
 ## Tech Stack
 
@@ -13,3 +14,4 @@
 - Emotion
 - Framer-Motion
 - Firebase
+- Firestore
