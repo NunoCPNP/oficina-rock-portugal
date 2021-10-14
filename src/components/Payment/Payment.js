@@ -11,7 +11,7 @@ import { useProductState } from '@/hooks/useProduct'
 
 import { getStripe } from '@/utils/getStripe'
 
-import { ButtonContainer, Confirmation, Container } from './Payment.styles'
+import { ButtonContainer, Container } from './Payment.styles'
 
 const Payment = () => {
   const [paymentModal, setPaymentModal] = useState(false)
@@ -48,10 +48,6 @@ const Payment = () => {
   return (
     <>
       <Container>
-        <Confirmation>
-          <span>Checkout Information Confirmed</span>
-          <AiOutlineCheck />
-        </Confirmation>
         <SectionTitle title={t(`payment-options`)} />
         <form onSubmit={handleCheckout}>
           <ButtonContainer>

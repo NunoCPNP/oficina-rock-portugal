@@ -1,5 +1,5 @@
-import styled from '@emotion/styled'
 import { css } from '@emotion/react'
+import styled from '@emotion/styled'
 
 const buttonStyles = css`
   background-color: var(--richBlack);
@@ -7,7 +7,7 @@ const buttonStyles = css`
   border: none;
 
   &:hover {
-    background-color: var(--snow);
+    background-color: var(--ghostWhite);
     color: var(--richBlack);
     border: 1px solid var(--richBlack);
   }
@@ -19,9 +19,9 @@ const invertedButtonStyles = css`
   border: 1px solid var(--richBlack);
 
   &:hover {
-    background-color: var(--richBlack);
-    color: var(--snow);
-    border: none;
+    background-color: var(--ghostWhite);
+    color: var(--richBlack);
+    border: 1px solid var(--richBlack);
   }
 `
 

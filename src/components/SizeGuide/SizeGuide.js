@@ -1,3 +1,4 @@
+import { AnimatePresence, motion } from 'framer-motion'
 import { useRef, useState } from 'react'
 import { GiResize } from 'react-icons/gi'
 import useTranslation from 'next-translate/useTranslation'
@@ -24,13 +25,15 @@ const SizeGuide = () => {
           <a onClick={() => setOpenSizeGuide(true)}>{t(`size-guide`)}</a>
         </div>
       </Container>
-      {openSizeGuide && (
-        <div ref={ref}>
-          <Modal>
-            <Measurements />
-          </Modal>
-        </div>
-      )}
+      <AnimatePresence>
+        {openSizeGuide && (
+          <motion.div ref={ref} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+            <Modal>
+              <Measurements />
+            </Modal>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   )
 }

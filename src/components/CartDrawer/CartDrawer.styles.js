@@ -1,5 +1,5 @@
-import styled from '@emotion/styled'
 import { motion } from 'framer-motion'
+import styled from '@emotion/styled'
 
 export const Container = styled(motion.div)`
   background-color: var(--darkLiver);
