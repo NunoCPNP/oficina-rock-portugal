@@ -1,5 +1,4 @@
 import { AiOutlineCheck } from 'react-icons/ai'
-import { loadStripe } from '@stripe/stripe-js'
 import { useState } from 'react'
 import useTranslation from 'next-translate/useTranslation'
 
@@ -8,35 +7,60 @@ import MBWay from '@/components/MBWay'
 import Modal from '@/components/Modal'
 import SectionTitle from '@/components/SectionTitle'
 
-import { ButtonContainer, Container, Form, Test } from './Payment.styles'
+import { useProductState } from '@/hooks/useProduct'
 
-const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY)
+import { getStripe } from '@/utils/getStripe'
 
-const Payment = ({ total }) => {
+import { ButtonContainer, Confirmation, Container } from './Payment.styles'
+
+const Payment = () => {
   const [paymentModal, setPaymentModal] = useState(false)
+  const { shoppingBag } = useProductState()
   const { t } = useTranslation('common')
+
+  const handleCheckout = async (event) => {
+    event.preventDefault()
+
+    const session = await fetch('/api/checkout/session', {
+      method: 'POST',
+      mode: 'no-cors',
+      cache: 'no-cache',
+      credentials: 'same-origin',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      redirect: 'follow',
+      referrerPolicy: 'no-referrer',
+      body: JSON.stringify(shoppingBag || {}),
+    })
+
+    const response = await session.json()
+
+    const stripe = await getStripe()
+    await stripe.redirectToCheckout({ sessionId: response.id })
+
+    if (response.statusCode === 500) {
+      console.error(response.message)
+      return
+    }
+  }
 
   return (
     <>
       <Container>
-        <Test>
+        <Confirmation>
           <span>Checkout Information Confirmed</span>
           <AiOutlineCheck />
-        </Test>
+        </Confirmation>
         <SectionTitle title={t(`payment-options`)} />
-        <ButtonContainer>
-          <Form action="/api/checkout" method="POST">
-            <div>
-              <input name="price" type="number" value={total} readOnly />
-              <CustomButton type="submit" role="link">
-                {t(`cc-pay`)}
-              </CustomButton>
-            </div>
-          </Form>
-          <CustomButton inverted onClick={() => setPaymentModal(true)}>
-            {t(`mbway-pay`)}
-          </CustomButton>
-        </ButtonContainer>
+        <form onSubmit={handleCheckout}>
+          <ButtonContainer>
+            <CustomButton type="submit">{t(`cc-pay`)}</CustomButton>
+            <CustomButton inverted onClick={() => setPaymentModal(true)}>
+              {t(`mbway-pay`)}
+            </CustomButton>
+          </ButtonContainer>
+        </form>
       </Container>
       {paymentModal && (
         <Modal>

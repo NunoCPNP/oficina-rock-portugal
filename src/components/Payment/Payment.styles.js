@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 
-export const Test = styled.div`
+export const Confirmation = styled.div`
   display: flex;
   justify-content: center;
   margin: 4rem;
