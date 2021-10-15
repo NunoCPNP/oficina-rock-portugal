@@ -23,9 +23,15 @@ export const ItemContainer = styled.div`
   position: relative;
   border: 1px solid var(--darkLiver);
   height: 30rem;
+  background-image: ${({ imageUrl }) => `url(${imageUrl})`};
   background-size: cover;
   background-repeat: no-repeat;
   cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+    transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  }
 
   ${mq('s')} {
     height: 16rem;

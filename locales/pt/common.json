@@ -74,6 +74,7 @@
   "faq": "TODO",
   "contacts": "TODO",
   "payment-methods": "TODO",
+  "payment-method": "TODO",
   "newsletter": "TODO",
   "cc-pay": "TODO",
   "payment-options": "TODO",
@@ -97,5 +98,10 @@
   "proceed-to-payment": "TODO",
   "back-to-shop": "TODO",
   "checkout-confirmation": "TODO",
-  "thanks-subscribing": "TODO"
+  "thanks-subscribing": "TODO",
+  "size-guide": "TODO",
+  "first-to-know": "TODO",
+  "subscribe-newsletter": "TODO",
+  "yes": "Sim",
+  "no": "Não"
 }

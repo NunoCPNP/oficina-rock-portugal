@@ -77,6 +77,7 @@
   "newsletter": "Newsletter",
   "cc-pay": "Pay with Credit Card",
   "payment-options": "Payment Options",
+  "payment-method": "Select your preferred method of payment",
   "description": "Description",
   "quantity": "Quantity",
   "size": "Size",
@@ -100,5 +101,7 @@
   "thanks-subscribing": "Thanks for subscribing !",
   "size-guide": "Size Guide",
   "first-to-know": "Be the first to know",
-  "subscribe-newsletter": "<a>Subscribe to get <b>Oficina Rock</b> news, promotions and more</a>"
+  "subscribe-newsletter": "<a>Subscribe to get <b>Oficina Rock</b> news, promotions and more</a>",
+  "yes": "Yes",
+  "no": "No"
 }

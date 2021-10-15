@@ -1,17 +1,17 @@
-import { AiOutlineCheck } from 'react-icons/ai'
+import { AiOutlineCreditCard } from 'react-icons/ai'
+import { BsPhone } from 'react-icons/bs'
 import { useState } from 'react'
 import useTranslation from 'next-translate/useTranslation'
 
 import CustomButton from '@/components/CustomButton'
 import MBWay from '@/components/MBWay'
 import Modal from '@/components/Modal'
-import SectionTitle from '@/components/SectionTitle'
 
 import { useProductState } from '@/hooks/useProduct'
 
 import { getStripe } from '@/utils/getStripe'
 
-import { ButtonContainer, Container } from './Payment.styles'
+import { ButtonContainer, ButtonLabel, Container } from './Payment.styles'
 
 const Payment = () => {
   const [paymentModal, setPaymentModal] = useState(false)
@@ -48,12 +48,21 @@ const Payment = () => {
   return (
     <>
       <Container>
-        <SectionTitle title={t(`payment-options`)} />
+        <h2>{t(`payment-options`)}</h2>
+        <p>{t(`payment-method`)}</p>
         <form onSubmit={handleCheckout}>
           <ButtonContainer>
-            <CustomButton type="submit">{t(`cc-pay`)}</CustomButton>
+            <CustomButton type="submit">
+              <ButtonLabel>
+                <AiOutlineCreditCard />
+                {t(`cc-pay`)}
+              </ButtonLabel>
+            </CustomButton>
             <CustomButton inverted onClick={() => setPaymentModal(true)}>
-              {t(`mbway-pay`)}
+              <ButtonLabel>
+                <BsPhone />
+                {t(`mbway-pay`)}
+              </ButtonLabel>
             </CustomButton>
           </ButtonContainer>
         </form>

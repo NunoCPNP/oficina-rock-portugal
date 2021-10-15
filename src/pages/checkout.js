@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 import CheckOutConfirmation from '@/components/CheckOutConfirmation'
 import CheckOutItems from '@/components/CheckOutItems'
@@ -7,17 +7,9 @@ import CheckOutWrapper from '@/components/CheckOutWrapper'
 import NoUser from '@/components/NoUser'
 
 import useAuth from '@/hooks/useAuth'
-import useLocalStorage from '@/hooks/useLocalStorage'
-import { useProductState } from '@/hooks/useProduct'
 
 const CheckOut = () => {
-  const { shoppingBag } = useProductState()
   const [confirmation, setConfirmation] = useState(false)
-  const [name, setName] = useLocalStorage('bag', {})
-
-  useEffect(() => {
-    setName(shoppingBag)
-  }, [])
 
   const { user } = useAuth()
 

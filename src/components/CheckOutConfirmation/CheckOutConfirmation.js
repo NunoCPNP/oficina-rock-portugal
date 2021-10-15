@@ -8,8 +8,7 @@ import Modal from '@/components/Modal'
 import Payment from '@/components/Payment'
 import SectionTitle from '@/components/SectionTitle'
 
-import { total } from '@/utils/total'
-
+import useLocalStorage from '@/hooks/useLocalStorage'
 import useOnClickOutside from '@/hooks/useOnClickOutside'
 import { useProductState } from '@/hooks/useProduct'
 
@@ -21,13 +20,13 @@ const CheckOutConfirmation = ({ confirmation, setConfirmation }) => {
   const { t } = useTranslation('common')
   const { shoppingBag } = useProductState()
   const [openConfirmation, setOpenConfirmation] = useState(false)
+  const [lStorage, setLStorage] = useLocalStorage('bag')
 
-  const calculatedTotal = total(shoppingBag)
   useOnClickOutside(ref, () => setOpenConfirmation(false))
 
   if (shoppingBag.length === 0) return null
 
-  if ((confirmation === true) & (shoppingBag.length > 0)) return <Payment total={calculatedTotal} />
+  if ((confirmation === true) & (shoppingBag.length > 0)) return <Payment />
 
   if (confirmation === true) return null
 
@@ -48,10 +47,18 @@ const CheckOutConfirmation = ({ confirmation, setConfirmation }) => {
         {openConfirmation && (
           <motion.div ref={ref} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
             <Modal>
+              <div>#############</div>
               <ButtonContainer>
-                <CustomButton onClick={() => setConfirmation(true)}>Yes</CustomButton>
+                <CustomButton
+                  onClick={() => {
+                    setLStorage(shoppingBag)
+                    setConfirmation(true)
+                  }}
+                >
+                  {t(`yes`)}
+                </CustomButton>
                 <CustomButton inverted onClick={() => setOpenConfirmation(false)}>
-                  No
+                  {t(`no`)}
                 </CustomButton>
               </ButtonContainer>
             </Modal>

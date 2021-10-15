@@ -10,27 +10,17 @@ const CTA = () => {
   return (
     <StyledSection>
       <GridContainer>
-        <ItemContainer
-          style={{
-            backgroundImage: "url('men.webp')",
-          }}
-          onClick={() => router.push('/men')}
-        >
+        <ItemContainer imageUrl="men.webp" onClick={() => router.push('/men')}>
           <TextContainer>
             <h2>{t(`common:men`)}</h2>
           </TextContainer>
         </ItemContainer>
-        <ItemContainer style={{ backgroundImage: "url('women.webp')" }} onClick={() => router.push('/women')}>
+        <ItemContainer imageUrl="women.webp" onClick={() => router.push('/women')}>
           <TextContainer>
             <h2>{t(`common:women`)}</h2>
           </TextContainer>
         </ItemContainer>
-        <ItemContainer
-          style={{
-            backgroundImage: "url('accessories.webp')",
-          }}
-          onClick={() => router.push('/accessories')}
-        >
+        <ItemContainer imageUrl="accessories.webp" onClick={() => router.push('/accessories')}>
           <TextContainer>
             <h2>{t(`common:accessories`)}</h2>
           </TextContainer>
