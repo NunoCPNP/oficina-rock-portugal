@@ -1,25 +1,9 @@
+import { buildStripePayload } from '@/utils/buildStripePayload'
+
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
 
 export default async function handler(req, res) {
-  const a = JSON.parse(req.body)
-
-  const line_items = []
-
-  a.forEach((element) => {
-    const item = {
-      price_data: {
-        currency: 'EUR',
-        unit_amount: element.price * 100,
-        product_data: {
-          name: `${element.band} ${element.title}`,
-          description: `${element.type} size ${element.size}`,
-        },
-      },
-      quantity: element.quantitySelected,
-    }
-
-    line_items.push(item)
-  })
+  const line_items = buildStripePayload(req.body)
 
   if (req.method === 'POST') {
     try {
