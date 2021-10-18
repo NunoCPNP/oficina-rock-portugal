@@ -7,8 +7,8 @@ const buttonStyles = css`
   border: none;
 
   &:hover {
-    background-color: var(--ghostWhite);
-    color: var(--richBlack);
+    background-color: var(--independence);
+    color: var(--snow);
     border: 1px solid var(--richBlack);
   }
 `
@@ -19,8 +19,8 @@ const invertedButtonStyles = css`
   border: 1px solid var(--richBlack);
 
   &:hover {
-    background-color: var(--ghostWhite);
-    color: var(--richBlack);
+    background-color: var(--independence);
+    color: var(--snow);
     border: 1px solid var(--richBlack);
   }
 `

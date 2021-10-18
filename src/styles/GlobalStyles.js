@@ -7,6 +7,7 @@ const GlobalStyles = () => {
         :root {
           /* Colors */
           --darkLiver: #3e3e4d;
+          --independence: #545454;
           --ghostWhite: #e9e9f0;
           --richBlack: #00171f;
           --snow: #fffcff;
