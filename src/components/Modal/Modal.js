@@ -1,7 +1,16 @@
-import { Container } from './Modal.styles'
+import { AiOutlineClose } from 'react-icons/ai'
 
-const Modal = ({ children }) => {
-  return <Container>{children}</Container>
+import { Container, InnerContainer, Wrapper } from './Modal.styles'
+
+const Modal = ({ children, close }) => {
+  return (
+    <Container>
+      <Wrapper>
+        <AiOutlineClose onClick={() => close()} />
+      </Wrapper>
+      <InnerContainer>{children}</InnerContainer>
+    </Container>
+  )
 }
 
 export default Modal

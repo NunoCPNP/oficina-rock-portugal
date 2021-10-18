@@ -12,17 +12,17 @@ const CTA = () => {
       <GridContainer>
         <ItemContainer imageUrl="men.webp" onClick={() => router.push('/men')}>
           <TextContainer>
-            <h2>{t(`common:men`)}</h2>
+            <h2>{t(`men`)}</h2>
           </TextContainer>
         </ItemContainer>
         <ItemContainer imageUrl="women.webp" onClick={() => router.push('/women')}>
           <TextContainer>
-            <h2>{t(`common:women`)}</h2>
+            <h2>{t(`women`)}</h2>
           </TextContainer>
         </ItemContainer>
         <ItemContainer imageUrl="accessories.webp" onClick={() => router.push('/accessories')}>
           <TextContainer>
-            <h2>{t(`common:accessories`)}</h2>
+            <h2>{t(`accessories`)}</h2>
           </TextContainer>
         </ItemContainer>
       </GridContainer>

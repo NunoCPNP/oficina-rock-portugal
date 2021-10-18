@@ -2,6 +2,10 @@ import { useState } from 'react'
 
 const useLocalStorage = (key, initialValue) => {
   const [storedValue, setStoredValue] = useState(() => {
+    if (typeof window === 'undefined') {
+      return initialValue
+    }
+
     try {
       const item = window.localStorage.getItem(key)
 

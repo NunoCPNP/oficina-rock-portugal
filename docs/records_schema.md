@@ -1,5 +1,6 @@
 {
   "uid": "1020418548",
+  "type: "Vinyl",
   "band": "U2",
   "album": "October",
   "format": "Vinyl LP",
@@ -22,5 +23,8 @@
     "B5. Scarlet",
     "B6. Is That All?"
   ],
-  "price": 12.5
+  "price": 12.5,
+  "promo": false,
+  "promoPrice": null,
+  "featured": false
 }

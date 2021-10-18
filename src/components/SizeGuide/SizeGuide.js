@@ -28,7 +28,7 @@ const SizeGuide = () => {
       <AnimatePresence>
         {openSizeGuide && (
           <motion.div ref={ref} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-            <Modal>
+            <Modal close={setOpenSizeGuide}>
               <Measurements />
             </Modal>
           </motion.div>
