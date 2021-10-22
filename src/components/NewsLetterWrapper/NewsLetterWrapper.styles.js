@@ -13,6 +13,7 @@ export const Title = styled.div`
   padding-top: 4rem;
   font-weight: 700;
   font-size: var(--heading-3);
+  padding-bottom: 1rem;
 `
 
 export const SubTitle = styled.div`

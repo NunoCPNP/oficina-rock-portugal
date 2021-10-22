@@ -62,6 +62,13 @@ export const reducer = (state, action) => {
       }
     }
 
+    case 'RESTORE_FROM_STORAGE': {
+      return {
+        ...state,
+        shoppingBag: action.payload,
+      }
+    }
+
     default: {
       return state
     }

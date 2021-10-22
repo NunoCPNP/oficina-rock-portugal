@@ -5,3 +5,5 @@ export const ButtonContainer = styled.div`
   justify-content: center;
   grid-gap: 4rem;
 `
+
+export const Container = styled.div``

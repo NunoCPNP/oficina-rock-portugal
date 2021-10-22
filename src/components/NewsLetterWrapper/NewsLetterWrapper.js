@@ -13,7 +13,7 @@ const NewsLetterWrapper = () => {
       <Title>{t(`first-to-know`)}</Title>
       <SubTitle>
         <Trans
-          i18nKey="subscribe-newsletter"
+          i18nKey="common:subscribe-newsletter"
           components={{
             a: <div />,
             b: <span />,

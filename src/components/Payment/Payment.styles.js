@@ -1,7 +1,6 @@
 import styled from '@emotion/styled'
 
 export const Container = styled.div`
-  margin: 4rem;
   text-align: center;
 
   div {
@@ -21,9 +20,9 @@ export const Form = styled.form`
 `
 
 export const ButtonContainer = styled.div`
-  display: grid;
-  justify-content: center;
-  grid-gap: 4rem;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 2rem;
 `
 
 export const ButtonLabel = styled.div`

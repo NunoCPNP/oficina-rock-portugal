@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import useSWR from 'swr'
 
 import Loader from '@/components/Loader'
+import Success from '@/components/Success'
 
 const Container = styled.div`
   display: flex;
@@ -33,10 +34,7 @@ const Order = () => {
           <Loader />
         </div>
       ) : (
-        <div>
-          <h2>Thanks for your order !</h2>
-          <p>Check your inbox for the receipt</p>
-        </div>
+        <Success />
       )}
     </Container>
   )

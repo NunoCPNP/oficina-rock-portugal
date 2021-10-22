@@ -6,12 +6,12 @@ import useTranslation from 'next-translate/useTranslation'
 import CustomButton from '@/components/CustomButton'
 import FormCheckBox from '@/components/FormCheckBox'
 import FormInput from '@/components/FormInput'
+import NoUser from '@/components/NoUser'
 import SEO from '@/components/SEO'
 import SectionTitle from '@/components/SectionTitle'
 
 import { firestore } from '@/services/firebase'
 
-import NoUser from '@/components/NoUser'
 import useAuth from '@/hooks/useAuth'
 
 const AccountContainer = styled.div`
