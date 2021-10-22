@@ -1,8 +1,8 @@
 import styled from '@emotion/styled'
 
-export const Container = styled.div`
-  margin: 6rem;
-  padding: 2rem 0;
+export const Container = styled.section`
+  margin: 4rem;
+  padding: 4rem 0;
   border-top: 1px solid var(--ghostWhite);
   border-bottom: 1px solid var(--ghostWhite);
 
