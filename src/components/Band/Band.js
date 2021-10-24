@@ -7,7 +7,7 @@ import { Container, ImageContainer, InfoContainer, TextContainer } from './Band.
 const Band = ({ band }) => {
   const { t } = useTranslation('bands')
 
-  const lcBand = band.toLowerCase()
+  const lcBand = band.toLowerCase().replace(' ', '-')
 
   return (
     <Container>

@@ -1,10 +1,10 @@
-import styled from '@emotion/styled'
 import mq from '@/styles/mediaQueries'
+import styled from '@emotion/styled'
 
 export const HeaderContainer = styled.div`
   display: grid;
   grid-template-columns: auto 1fr;
-  padding: 0 3rem 0 3rem;
+  padding: 0 3rem;
 
   ${mq('s')} {
     grid-template-columns: 1fr;

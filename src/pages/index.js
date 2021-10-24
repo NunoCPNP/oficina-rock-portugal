@@ -14,7 +14,7 @@ const Home = ({ collection }) => {
   return (
     <>
       <SEO title="Oficina Rock Portugal" description="Oficina Rock Portugal" />
-      <TopBanner />
+      {/* <TopBanner /> */}
       <CTA />
       <SectionTitle title={t(`news`)} />
       <ProductList collection={collection} />
