@@ -3,10 +3,11 @@ import useTranslation from 'next-translate/useTranslation'
 
 import ProductCard from '@/components/ProductCard'
 
-import { Container, GridContainer, Empty } from './ProductList.styles'
+import { Container, Empty, GridContainer } from './ProductList.styles'
 
 const ProductList = ({ collection, promotion }) => {
   const { t } = useTranslation('common')
+
   return (
     <Container>
       <GridContainer>

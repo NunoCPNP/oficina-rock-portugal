@@ -1,5 +1,5 @@
-import styled from '@emotion/styled'
 import mq from '@/styles/mediaQueries'
+import styled from '@emotion/styled'
 
 export const StyledSection = styled.section`
   margin: 4rem;
@@ -11,7 +11,7 @@ export const StyledSection = styled.section`
 
 export const GridContainer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 2rem;
 
   ${mq('s')} {
@@ -29,7 +29,7 @@ export const ItemContainer = styled.div`
   cursor: pointer;
 
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
   }
 

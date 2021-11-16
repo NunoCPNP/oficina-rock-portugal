@@ -16,7 +16,7 @@ const ProductDisplay = ({ images = [] }) => {
             <Image
               src={image}
               alt=""
-              width="80"
+              width="60"
               height="80"
               onClick={() => {
                 index === 1 ? setClicked(true) : setClicked(false)
@@ -31,7 +31,7 @@ const ProductDisplay = ({ images = [] }) => {
         <Image
           src={images[selectedImage]}
           alt=""
-          width="395"
+          width="315"
           height="410"
           quality="75"
           onMouseOver={() => {

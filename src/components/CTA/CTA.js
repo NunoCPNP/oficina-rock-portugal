@@ -20,11 +20,14 @@ const CTA = () => {
             <h2>{t(`women`)}</h2>
           </TextContainer>
         </ItemContainer>
+        {/*
+        TODO 
         <ItemContainer imageUrl="accessories.webp" onClick={() => router.push('/accessories')}>
           <TextContainer>
             <h2>{t(`accessories`)}</h2>
           </TextContainer>
-        </ItemContainer>
+        </ItemContainer> 
+        */}
       </GridContainer>
     </StyledSection>
   )

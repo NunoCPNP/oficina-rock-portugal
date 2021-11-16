@@ -13,7 +13,7 @@ const ProductCard = ({ type, title, band, images, category, id }) => {
   return (
     <Container>
       <ImageContainer>
-        <Image src={images[0]} alt={`${type} ${band} ${title}`} width="234" height="245" quality="75" />
+        <Image src={images[0]} alt={`${type} ${band} ${title}`} width="200" height="245" quality="75" />
       </ImageContainer>
       <DescriptionContainer>
         <span>{type}</span>

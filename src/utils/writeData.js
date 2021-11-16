@@ -11,7 +11,7 @@ export const writeData = (data = []) => {
     if (!snapShot.exists) {
       try {
         await collectionRef.set({
-          ...data,
+          ...item,
         })
 
         console.log(`✅ Item ${index} added with success !`)

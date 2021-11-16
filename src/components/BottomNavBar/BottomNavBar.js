@@ -24,12 +24,17 @@ const BottomNavBar = () => {
           <li>
             <Link href="/women">{t(`women`)}</Link>
           </li>
-          <li>
+          {/* 
+          TODO : Add accessories category
+          <li> 
             <Link href="/accessories">{t(`accessories`)}</Link>
-          </li>
+          </li> 
+          
+          TODO : Add promotions category
           <li>
             <Link href="/promotions">{t(`promotions`)}</Link>
           </li>
+          */}
           <li>
             <LanguageSelector />
           </li>

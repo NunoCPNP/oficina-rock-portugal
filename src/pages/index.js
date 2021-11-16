@@ -14,7 +14,7 @@ const Home = ({ collection }) => {
   return (
     <>
       <SEO title="Oficina Rock Portugal" description="Oficina Rock Portugal" />
-      {/* <TopBanner /> */}
+      <TopBanner />
       <CTA />
       <SectionTitle title={t(`news`)} />
       <ProductList collection={collection} />
@@ -26,7 +26,7 @@ const Home = ({ collection }) => {
 export async function getServerSideProps() {
   const collection = []
 
-  const collectionRef = firestore.collection(`collection`).where('featured', '==', true)
+  const collectionRef = firestore.collection(`collection`)
 
   const snapShot = await collectionRef.get()
 
