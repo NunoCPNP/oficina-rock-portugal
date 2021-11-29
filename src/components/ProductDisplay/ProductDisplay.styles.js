@@ -24,3 +24,18 @@ export const SelectedImage = styled.div`
     border-radius: 0.5rem;
   }
 `
+export const Collection = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 2rem;
+
+  span:last-child {
+    margin-top: 0.5rem;
+    color: var(--snow);
+    background-color: var(--darkLiver);
+    padding: 0.2rem 1rem;
+  }
+`

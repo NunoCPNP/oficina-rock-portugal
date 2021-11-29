@@ -25,7 +25,7 @@ const ProductDetail = ({ data }) => {
   return (
     <Container>
       <div>
-        <ProductDisplay images={data.images} />
+        <ProductDisplay images={data.images} collection={data.collection} />
       </div>
       <div>
         <SizeSelector product={data} />

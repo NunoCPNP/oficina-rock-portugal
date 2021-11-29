@@ -1,12 +1,16 @@
 import Image from 'next/image'
 import PropTypes from 'prop-types'
 import { useState } from 'react'
+import useTranslation from 'next-translate/useTranslation'
 
-import { Container, ImageSelector, ImageThumb, SelectedImage } from './ProductDisplay.styles'
+import { Collection, Container, ImageSelector, ImageThumb, SelectedImage } from './ProductDisplay.styles'
 
-const ProductDisplay = ({ images = [] }) => {
+const ProductDisplay = ({ images = [], collection }) => {
   const [selectedImage, setSelectedImage] = useState(0)
   const [clicked, setClicked] = useState(false)
+  const { t } = useTranslation('common')
+
+  const collectionTitle = `${t(`collection`)}: ${collection}`
 
   return (
     <Container>
@@ -41,6 +45,10 @@ const ProductDisplay = ({ images = [] }) => {
           }}
           onMouseOut={() => !clicked && setSelectedImage(0)}
         />
+        <Collection>
+          <span>{t(`collection`)}</span>
+          <span>{collection}</span>
+        </Collection>
       </SelectedImage>
     </Container>
   )
