@@ -8,10 +8,12 @@ import SectionTitle from '@/components/SectionTitle'
 const DynamicBand = dynamic(() => import('@/components/Band'))
 
 const Product = ({ data }) => {
+  console.log(data)
   return (
     <>
       <SEO title="Oficina Rock Portugal" description="" />
       <SectionTitle title={`${data.band} - ${data.title}`} section={`${data.type}`} offset="4rem" />
+      <div>{data.collection}</div>
       <ProductDetail data={data} />
       <DynamicBand band={data.band} />
     </>
