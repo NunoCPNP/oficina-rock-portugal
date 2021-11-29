@@ -27,7 +27,7 @@ describe('<BottomNavBar /> spec', () => {
     expect(container.firstChild).toHaveStyle(`
       display: grid;
       grid-template-columns: auto 1fr;
-      padding: 1rem 4rem;
+      padding: 1.4rem 4rem;
       background: var(--darkLiver);
       color: var(--snow);
       box-shadow: 0 0 10px 0 rgb(0 0 0 / 30%);
@@ -45,7 +45,6 @@ describe('<BottomNavBar /> spec', () => {
 
     expect(getByText('common:men')).toBeInTheDocument()
     expect(getByText('common:women')).toBeInTheDocument()
-    expect(getByText('common:promotions')).toBeInTheDocument()
   })
 
   it('Should render LanguageSelector Component', () => {
