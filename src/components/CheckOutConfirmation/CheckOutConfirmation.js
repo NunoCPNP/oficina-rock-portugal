@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 import useTranslation from 'next-translate/useTranslation'
 
 import CustomButton from '@/components/CustomButton'
+import MBWay from '@/components/MBWay'
 import Modal from '@/components/Modal'
 import Payment from '@/components/Payment'
 
@@ -11,7 +12,7 @@ import useLocalStorage from '@/hooks/useLocalStorage'
 import useOnClickOutside from '@/hooks/useOnClickOutside'
 import { useProductState } from '@/hooks/useProduct'
 
-import { ButtonContainer, Container } from './CheckOutConfirmation.styles'
+import { ButtonContainer } from './CheckOutConfirmation.styles'
 
 const CheckOutConfirmation = () => {
   const ref = useRef()
@@ -19,6 +20,7 @@ const CheckOutConfirmation = () => {
   const { t } = useTranslation('common')
   const { shoppingBag } = useProductState()
   const [openConfirmation, setOpenConfirmation] = useState(false)
+  const [mbWayPayment, setMbWayPayment] = useState(false)
   const [lStorage, setLStorage] = useLocalStorage('bag')
 
   useOnClickOutside(ref, () => setOpenConfirmation(false))
@@ -47,8 +49,17 @@ const CheckOutConfirmation = () => {
       <AnimatePresence>
         {openConfirmation && (
           <motion.div ref={ref} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-            <Modal close={() => setOpenConfirmation(false)}>
-              <Payment />
+            <Modal
+              close={() => {
+                setOpenConfirmation(false)
+                setMbWayPayment(false)
+              }}
+            >
+              {!mbWayPayment ? (
+                <Payment setMbWay={() => setMbWayPayment(true)} />
+              ) : (
+                <MBWay unsetMbWay={() => setMbWayPayment(false)} />
+              )}
             </Modal>
           </motion.div>
         )}

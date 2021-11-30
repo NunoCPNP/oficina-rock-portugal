@@ -10,7 +10,7 @@ const ProductDisplay = ({ images = [], collection }) => {
   const [clicked, setClicked] = useState(false)
   const { t } = useTranslation('common')
 
-  const collectionTitle = `${t(`collection`)}: ${collection}`
+  const collectionTitle = `${t(collection)}`
 
   return (
     <Container>
@@ -47,7 +47,7 @@ const ProductDisplay = ({ images = [], collection }) => {
         />
         <Collection>
           <span>{t(`collection`)}</span>
-          <span>{collection}</span>
+          <span>{collectionTitle}</span>
         </Collection>
       </SelectedImage>
     </Container>

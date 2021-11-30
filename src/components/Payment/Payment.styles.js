@@ -1,5 +1,7 @@
 import styled from '@emotion/styled'
 
+import CustomButton from '@/components/CustomButton'
+
 export const Container = styled.div`
   text-align: center;
 
@@ -33,4 +35,8 @@ export const ButtonLabel = styled.div`
   svg {
     padding-right: 1rem;
   }
+`
+
+export const StyledCustomButton = styled(CustomButton)`
+  width: 100%;
 `

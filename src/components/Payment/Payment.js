@@ -1,20 +1,16 @@
 import { AiOutlineCreditCard } from 'react-icons/ai'
 import { BsPhone } from 'react-icons/bs'
-import { useState } from 'react'
 import useTranslation from 'next-translate/useTranslation'
 
 import CustomButton from '@/components/CustomButton'
-import MBWay from '@/components/MBWay'
-import Modal from '@/components/Modal'
 
 import { useProductState } from '@/hooks/useProduct'
 
 import { getStripe } from '@/utils/getStripe'
 
-import { ButtonContainer, ButtonLabel, Container } from './Payment.styles'
+import { ButtonContainer, ButtonLabel, Container, StyledCustomButton } from './Payment.styles'
 
-const Payment = () => {
-  const [paymentModal, setPaymentModal] = useState(false)
+const Payment = ({ setMbWay }) => {
   const { shoppingBag } = useProductState()
   const { t } = useTranslation('common')
 
@@ -50,28 +46,23 @@ const Payment = () => {
       <Container>
         <h2>{t(`payment-options`)}</h2>
         <p>{t(`payment-method`)}</p>
-        <form onSubmit={handleCheckout}>
-          <ButtonContainer>
-            <CustomButton type="submit">
+        <ButtonContainer>
+          <form onSubmit={handleCheckout}>
+            <StyledCustomButton type="submit">
               <ButtonLabel>
                 <AiOutlineCreditCard />
                 {t(`cc-pay`)}
               </ButtonLabel>
-            </CustomButton>
-            <CustomButton inverted onClick={() => setPaymentModal(true)}>
-              <ButtonLabel>
-                <BsPhone />
-                {t(`mbway-pay`)}
-              </ButtonLabel>
-            </CustomButton>
-          </ButtonContainer>
-        </form>
+            </StyledCustomButton>
+          </form>
+          <CustomButton inverted onClick={() => setMbWay()}>
+            <ButtonLabel>
+              <BsPhone />
+              {t(`mbway-pay`)}
+            </ButtonLabel>
+          </CustomButton>
+        </ButtonContainer>
       </Container>
-      {paymentModal && (
-        <Modal>
-          <MBWay />
-        </Modal>
-      )}
     </>
   )
 }

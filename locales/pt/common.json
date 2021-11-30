@@ -82,7 +82,7 @@
   "quantity": "Quantidade",
   "size": "Tamanho",
   "remove": "Remover",
-  "added-to-bag": "{{item}} adicionado ao carrinho!",
+  "added-to-bag": "{{item}} adicionada ao carrinho!",
   "success-login": "Login efetuado com sucesso !",
   "success-logout": "Logout efetuado com sucesso !",
   "go-back": "Voltar",
@@ -104,5 +104,6 @@
   "subscribe-newsletter": "<a>Subscreva para receber as ultimas notícias da <b>Oficina Rock</b>, promoções e muito mais</a>",
   "yes": "Sim",
   "no": "Não",
-  "collection": "Colecção"
+  "collection": "Colecção",
+  "rock-gallery": "Galeria do Rock"
 }
