@@ -105,5 +105,7 @@
   "yes": "Yes",
   "no": "No",
   "collection": "Collection",
-  "rock-gallery": "Rock Gallery"
+  "rock-gallery": "Rock Gallery",
+  "mb-way-payment": "Pay with MB Way",
+  "mb-way-unavailable": "We are sorry, but payments with MB Way are not yet available."
 }

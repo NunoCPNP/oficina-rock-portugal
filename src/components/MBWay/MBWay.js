@@ -9,8 +9,8 @@ const MBWay = ({ unsetMbWay }) => {
 
   return (
     <Container>
-      <Title>Pagamento com MB Way</Title>
-      <Info>Lamentamos mas ainda não é possivel o pagamento com MBWay.</Info>
+      <Title>{t(`mb-way-payment`)}</Title>
+      <Info>{t(`mb-way-unavailable`)}</Info>
       <ButtonContainer>
         <CustomButton onClick={() => unsetMbWay()}>Voltar</CustomButton>
       </ButtonContainer>
