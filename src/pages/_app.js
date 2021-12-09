@@ -3,9 +3,13 @@ import { useRouter } from 'next/router'
 
 import DefaultLayout from '../Layout/Default'
 
+import Maintenance from '@/components/Maintenance'
+
 import { AuthProvider } from '@/context/AuthContext'
 import { ProductProvider } from '@/context/ProductContext'
 import { SettingsProvider } from '@/context/SettingsContext'
+
+import { toBoolean } from '@/utils/toBoolean'
 
 import GlobalStyles from '@/styles/GlobalStyles'
 
@@ -34,6 +38,15 @@ function MyApp({ Component, pageProps }) {
       router.events.off('routeChangeComplete', handleRouteChange)
     }
   }, [router.events])
+
+  if (toBoolean(process.env.NEXT_PUBLIC_MAINTENANCE)) {
+    return (
+      <>
+        <Maintenance />
+        <GlobalStyles />
+      </>
+    )
+  }
 
   return (
     <SettingsProvider>
