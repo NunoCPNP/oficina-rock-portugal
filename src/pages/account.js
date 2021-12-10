@@ -124,16 +124,17 @@ const Account = () => {
                 <FormInput
                   name="country"
                   type="text"
-                  value={user.deliveryAddress.country}
-                  onChange={(e) => {
-                    setUser({
-                      ...user,
-                      deliveryAddress: {
-                        ...user.deliveryAddress,
-                        country: e.target.value,
-                      },
-                    })
-                  }}
+                  value="Portugal"
+                  // value={user.deliveryAddress.country}
+                  // onChange={(e) => {
+                  //   setUser({
+                  //     ...user,
+                  //     deliveryAddress: {
+                  //       ...user.deliveryAddress,
+                  //       country: e.target.value,
+                  //     },
+                  //   })
+                  // }}
                   label={t(`country`)}
                 />
               </div>

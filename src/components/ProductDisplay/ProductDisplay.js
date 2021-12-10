@@ -10,7 +10,7 @@ const ProductDisplay = ({ images = [], collection }) => {
   const [clicked, setClicked] = useState(false)
   const { t } = useTranslation('common')
 
-  const collectionTitle = `${t(collection)}`
+  const collectionTitle = `${t(collection.replaceAll(' ', '-').toLowerCase())}`
 
   return (
     <Container>
