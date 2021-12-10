@@ -17,7 +17,7 @@
   "product": "Product",
   "out-of-stock": "Out of Stock",
   "product-description": "Product description",
-  "description-line-1": "Combed knit, 100% cotton",
+  "description-line-1": "100% cotton",
   "description-line-2": "Shoulder to shoulder internal reinforcement",
   "description-line-3": "High quality Silk Screen stamping",
   "description-line-4": "All t-shirts have a label on the inside with the correct washing procedure",
@@ -108,5 +108,6 @@
   "rock-gallery": "Rock Gallery",
   "mb-way-payment": "Pay with MB Way",
   "mb-way-unavailable": "We are sorry, but payments with MB Way are not yet available.",
-  "galeria-do-rock": "Rock Gallery"
+  "galeria-do-rock": "Rock Gallery",
+  "free-shipping": "Free Shipping"
 }

@@ -17,7 +17,7 @@
   "product": "Artigo",
   "out-of-stock": "Esgotado",
   "product-description": "Descrição do produto",
-  "description-line-1": "Malha penteada, 100% algodão",
+  "description-line-1": "100% algodão",
   "description-line-2": "Reforço interno de ombro a ombro",
   "description-line-3": "Estampagem de alta qualidade em Silk Screen",
   "description-line-4": "Todas as t-shirts possuem de uma etiqueta, na parte interior com o procedimento correto da lavagem",
@@ -108,5 +108,6 @@
   "rock-gallery": "Galeria do Rock",
   "mb-way-payment": "Pagamento com MB Way",
   "mb-way-unavailable": "Lamentamos mas ainda não é possivel o pagamento por MB Way.",
-  "galeria-do-rock": "Galeria do Rock"
+  "galeria-do-rock": "Galeria do Rock",
+  "free-shipping": "Portes Grátis"
 }

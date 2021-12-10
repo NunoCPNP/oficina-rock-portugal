@@ -1,3 +1,4 @@
+import mq from '@/styles/mediaQueries'
 import styled from '@emotion/styled'
 
 export const Container = styled.div`
@@ -10,6 +11,11 @@ export const Container = styled.div`
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   border: 1px solid var(--ghostWhite);
   padding: 3rem;
+
+  ${mq('s')} {
+    padding: 1rem;
+    min-width: 70%;
+  }
 `
 
 export const Wrapper = styled.div`
@@ -24,4 +30,8 @@ export const Wrapper = styled.div`
 
 export const InnerContainer = styled.div`
   padding: 3rem;
+
+  ${mq('s')} {
+    padding: 1rem;
+  }
 `

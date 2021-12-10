@@ -1,3 +1,4 @@
+import mq from '@/styles/mediaQueries'
 import styled from '@emotion/styled'
 
 export const Container = styled.div``
@@ -12,6 +13,10 @@ export const EmptyBag = styled.div`
 
 export const Bag = styled.div`
   margin: 4rem;
+
+  ${mq('s')} {
+    margin: 1rem;
+  }
 `
 
 export const BagItem = styled.div`
@@ -50,6 +55,10 @@ export const BagItem = styled.div`
     justify-self: center;
     cursor: pointer;
   }
+
+  ${mq('s')} {
+    grid-template-columns: 0rem 1fr 6rem 6rem 6rem 6rem;
+  }
 `
 
 export const BagItemHeader = styled.div`
@@ -61,4 +70,8 @@ export const BagItemHeader = styled.div`
   color: var(--snow);
   padding: 0.5rem 0;
   margin-bottom: 1rem;
+
+  ${mq('s')} {
+    grid-template-columns: 0rem 1fr 6rem 6rem 6rem 6rem;
+  }
 `

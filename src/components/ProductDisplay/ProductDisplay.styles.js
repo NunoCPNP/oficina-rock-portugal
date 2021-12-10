@@ -35,6 +35,10 @@ export const SelectedImage = styled.div`
   img {
     border-radius: 0.5rem;
   }
+
+  ${mq('s')} {
+    margin: 0 auto;
+  }
 `
 export const Collection = styled.div`
   display: flex;
