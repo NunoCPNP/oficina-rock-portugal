@@ -11,7 +11,8 @@ const DynamicBand = dynamic(() => import('@/components/Band'))
 const Product = ({ data }) => {
   const { t } = useTranslation('common')
 
-  const section = `${data.type} - ${t(data.collection)}`
+  const collectionTitle = data.collection.replaceAll(' ', '-').toLowerCase()
+  const section = `${data.type} - ${t(collectionTitle)}`
 
   return (
     <>

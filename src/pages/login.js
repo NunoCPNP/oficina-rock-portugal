@@ -4,11 +4,17 @@ import SEO from '@/components/SEO'
 import SignIn from '@/components/SignIn'
 import SignUp from '@/components/SignUp'
 
+import mq from '@/styles/mediaQueries'
+
 const SignInAndSignUpContainer = styled.div`
-  width: 85rem;
-  display: flex;
-  justify-content: space-between;
-  margin: 3rem auto;
+  margin: 3rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3rem;
+
+  ${mq('m')} {
+    grid-template-columns: 1fr;
+  }
 `
 
 const Login = () => {

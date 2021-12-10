@@ -1,11 +1,12 @@
-import styled from '@emotion/styled'
 import { css } from '@emotion/react'
+import mq from '@/styles/mediaQueries'
+import styled from '@emotion/styled'
 
 const subColor = 'grey'
 
 const shrinkLabelStyles = css`
-  top: -14px;
-  font-size: 12px;
+  top: -1.4rem;
+  font-size: 1.2rem;
   color: var(--richBlack);
 `
 
@@ -23,7 +24,7 @@ export const FormInputContainer = styled.input`
   background-color: white;
   color: ${subColor};
   font-size: 18px;
-  padding: 10px 10px 10px 5px;
+  padding: 1rem 1rem 1rem 0.5rem;
   display: block;
   width: 100%;
   border: none;
@@ -37,6 +38,10 @@ export const FormInputContainer = styled.input`
 
   &:focus ~ label {
     ${shrinkLabelStyles}
+  }
+
+  ${mq('s')} {
+    width: 95%;
   }
 `
 

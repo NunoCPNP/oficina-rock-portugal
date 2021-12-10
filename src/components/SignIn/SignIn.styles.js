@@ -1,22 +1,29 @@
+import mq from '@/styles/mediaQueries'
 import styled from '@emotion/styled'
 
 export const SignInContainer = styled.div`
-  width: 380px;
   display: flex;
   flex-direction: column;
+  padding: 0 1rem;
 `
 
 export const SignInTitle = styled.h2`
-  margin: 10px 0;
+  margin: 1rem 0;
 `
 
 export const ButtonsBarContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 4rem;
+
+  ${mq('s')} {
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
 `
 
 export const LoaderContainer = styled.div`
-  width: 380px;
+  width: 38rem;
   display: flex;
   justify-content: center;
   align-items: center;

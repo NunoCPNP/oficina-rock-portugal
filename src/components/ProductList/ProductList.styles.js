@@ -1,5 +1,5 @@
-import styled from '@emotion/styled'
 import mq from '@/styles/mediaQueries'
+import styled from '@emotion/styled'
 
 export const Container = styled.section`
   margin: 4rem;

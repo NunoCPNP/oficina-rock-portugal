@@ -12,5 +12,6 @@ export const Container = styled.div`
 
   a {
     cursor: pointer;
+    text-decoration: underline;
   }
 `

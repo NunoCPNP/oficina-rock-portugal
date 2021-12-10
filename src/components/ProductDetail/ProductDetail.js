@@ -33,7 +33,7 @@ const ProductDetail = ({ data }) => {
         <Price />
         <ProductDescription description={data.description} />
         <ButtonContainer>
-          <div>
+          <>
             {currentProduct.quantityAvailable ? (
               <CustomButton
                 onClick={() => {
@@ -49,12 +49,10 @@ const ProductDetail = ({ data }) => {
             ) : (
               <CustomButton disable>{t(`out-of-stock`)}</CustomButton>
             )}
-          </div>
-          <div>
-            <CustomButton inverted onClick={() => router.push('/checkout')}>
-              {t(`go-to-bag`)}
-            </CustomButton>
-          </div>
+          </>
+          <CustomButton inverted onClick={() => router.push('/checkout')}>
+            {t(`go-to-bag`)}
+          </CustomButton>
         </ButtonContainer>
       </div>
     </Container>

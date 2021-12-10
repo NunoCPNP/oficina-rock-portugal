@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import mq from '@/styles/mediaQueries'
 import styled from '@emotion/styled'
 
 export const Container = styled(motion.div)`
@@ -15,9 +16,13 @@ export const Container = styled(motion.div)`
 `
 
 export const CartContainer = styled.div`
-  padding-top: 12rem;
+  padding-top: 14rem;
   display: inherit;
   justify-content: center;
+
+  ${mq('s')} {
+    padding-top: 22rem;
+  }
 `
 
 export const ButtonContainer = styled.div`

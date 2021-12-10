@@ -14,10 +14,17 @@ import { firestore } from '@/services/firebase'
 
 import useAuth from '@/hooks/useAuth'
 
+import mq from '@/styles/mediaQueries'
+
 const AccountContainer = styled.div`
+  margin: 3rem 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 2rem;
+  grid-gap: 3rem;
+
+  ${mq('m')} {
+    grid-template-columns: 1fr;
+  }
 `
 
 const ButtonContainer = styled.div`
@@ -28,6 +35,19 @@ const ButtonContainer = styled.div`
   button:last-child {
     margin-left: 2rem;
   }
+
+  ${mq('m')} {
+    flex-direction: column;
+    gap: 1rem;
+
+    button:last-child {
+      margin-left: 0;
+    }
+  }
+`
+
+const Wrapper = styled.div`
+  padding: 0 1rem;
 `
 
 const Account = () => {
@@ -45,7 +65,7 @@ const Account = () => {
       {user ? (
         <>
           <AccountContainer>
-            <div>
+            <Wrapper>
               <SectionTitle title={t(`personal-details`)} sub />
               <FormInput
                 name="name"
@@ -72,8 +92,8 @@ const Account = () => {
                 }
                 label={t(`phone-number`)}
               />
-            </div>
-            <div>
+            </Wrapper>
+            <Wrapper>
               <div>
                 <SectionTitle title={t(`delivery-address`)} sub />
                 <FormInput
@@ -122,6 +142,7 @@ const Account = () => {
                   label={t(`city`)}
                 />
                 <FormInput
+                  readOnly
                   name="country"
                   type="text"
                   value="Portugal"
@@ -215,7 +236,7 @@ const Account = () => {
                   />
                 </>
               )}
-            </div>
+            </Wrapper>
           </AccountContainer>
           <ButtonContainer>
             <CustomButton onClick={() => router.push('/')} inverted>

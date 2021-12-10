@@ -1,16 +1,28 @@
+import mq from '@/styles/mediaQueries'
 import styled from '@emotion/styled'
 
 export const Container = styled.div`
   display: flex;
+
+  ${mq('m')} {
+    flex-direction: column;
+  }
 `
 
 export const ImageSelector = styled.div`
   display: flex;
   flex-direction: column;
+
+  ${mq('m')} {
+    padding-bottom: 2rem;
+    margin: 0 auto;
+    flex-direction: row;
+  }
 `
 
 export const ImageThumb = styled.div`
   margin-bottom: 1rem;
+  cursor: pointer;
 
   img {
     border-radius: 0.5rem;
