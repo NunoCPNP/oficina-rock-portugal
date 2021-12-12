@@ -58,6 +58,8 @@ const Account = () => {
   const updateSuccess = t(`update-success`)
   const updateError = t(`update-error`)
 
+  console.log(user)
+
   return (
     <>
       <SEO title="Oficina Rock Portugal" description="" />

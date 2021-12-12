@@ -1,5 +1,5 @@
-import styled from '@emotion/styled'
 import mq from '@/styles/mediaQueries'
+import styled from '@emotion/styled'
 
 export const StyledFooter = styled.footer`
   background-color: var(--ghostWhite);
@@ -68,4 +68,8 @@ export const Spacer = styled.div`
   ${mq('s')} {
     display: block;
   }
+`
+
+export const Item = styled.div`
+  cursor: pointer;
 `

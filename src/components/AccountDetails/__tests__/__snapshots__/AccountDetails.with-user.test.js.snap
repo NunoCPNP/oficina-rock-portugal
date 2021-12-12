@@ -1,0 +1,147 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AccountDetails /> Should match snapshot 1`] = `
+.emotion-0 {
+  margin: 4rem;
+}
+
+@media only screen and (max-width: 480px) {
+  .emotion-0 {
+    margin: 4rem 1rem;
+  }
+}
+
+.emotion-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media only screen and (max-width: 480px) {
+  .emotion-1 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.emotion-2 {
+  padding-bottom: 4rem;
+}
+
+.emotion-3 {
+  margin-bottom: 3rem;
+}
+
+.emotion-3 h2 {
+  font-size: var(--heading-3);
+}
+
+.emotion-4 {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.emotion-4 span {
+  font-weight: 700;
+  padding-right: 0.6rem;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <div
+      class="emotion-2"
+    >
+      <div
+        class="emotion-3"
+      >
+        <h2>
+          common:personal-details
+        </h2>
+      </div>
+      <div
+        class="emotion-4"
+      >
+        <span>
+          common:name
+           : 
+        </span>
+        Semple User
+      </div>
+      <div
+        class="emotion-4"
+      >
+        <span>
+          common:email
+           : 
+        </span>
+        sample@sample.com
+      </div>
+      <div
+        class="emotion-4"
+      >
+        <span>
+          common:phone-number
+           : 
+        </span>
+        112223344
+      </div>
+    </div>
+    <div
+      class="emotion-2"
+    >
+      <div
+        class="emotion-3"
+      >
+        <h2>
+          common:delivery-address
+        </h2>
+      </div>
+      <div
+        class="emotion-4"
+      >
+        <span>
+          common:street
+           : 
+        </span>
+        Sample Street
+      </div>
+      <div
+        class="emotion-4"
+      >
+        <span>
+          common:postal-code
+           : 
+        </span>
+        1234-555
+      </div>
+      <div
+        class="emotion-4"
+      >
+        <span>
+          common:city
+           : 
+        </span>
+        Porto
+      </div>
+      <div
+        class="emotion-4"
+      >
+        <span>
+          common:country
+           : 
+        </span>
+        Portugal
+      </div>
+    </div>
+    <div
+      class="emotion-2"
+    >
+      <div>
+        common:same-address
+      </div>
+    </div>
+  </div>
+</div>
+`;

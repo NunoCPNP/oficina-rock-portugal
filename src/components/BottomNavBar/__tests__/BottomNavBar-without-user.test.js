@@ -2,17 +2,13 @@ import { render } from '@testing-library/react'
 
 import BottomNavBar from '../BottomNavBar'
 
-let mockIsLoggedIn
-
 jest.mock('@/hooks/useAuth', () => {
   return jest.fn(() => ({
-    user: mockIsLoggedIn,
+    user: false,
   }))
 })
 
 describe('<BottomNavBar /> spec', () => {
-  mockIsLoggedIn = false
-
   it('Should match snapshot', () => {
     const { container } = render(<BottomNavBar />)
 

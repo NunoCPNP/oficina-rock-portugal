@@ -12,7 +12,7 @@ jest.mock('@/hooks/useAuth', () => {
 
 describe('<BottomNavBar /> spec', () => {
   mockIsLoggedIn = {
-    displayName: 'Semple User',
+    displayName: 'Sample User',
   }
 
   it('Should match snapshot', () => {
@@ -37,7 +37,7 @@ describe('<BottomNavBar /> spec', () => {
   it('Should render user translation key', () => {
     const { getByText } = render(<BottomNavBar />)
 
-    expect(getByText('common:hi, Semple User !')).toBeInTheDocument()
+    expect(getByText('common:hi, Sample User !')).toBeInTheDocument()
   })
 
   it('Should render translations keys', () => {
