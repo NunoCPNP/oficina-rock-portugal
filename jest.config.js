@@ -15,6 +15,7 @@ module.exports = {
     '^@/components(.*)$': '<rootDir>/src/components$1',
     '^@/context(.*)$': '<rootDir>/src/context$1',
     '^@/hooks(.*)$': '<rootDir>/src/hooks$1',
+    '^@/reviews(.*)$': '<rootDir>/src/modules$1',
     '^@/services(.*)$': '<rootDir>/src/services$1',
     '^@/styles(.*)$': '<rootDir>/src/styles$1',
     '^@/utils(.*)$': '<rootDir>/src/utils$1',

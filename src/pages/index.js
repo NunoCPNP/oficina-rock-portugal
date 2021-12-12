@@ -6,7 +6,7 @@ import NewsLetterWrapper from '@/components/NewsLetterWrapper'
 import ProductList from '@/components/ProductList'
 import SEO from '@/components/SEO'
 import SectionTitle from '@/components/SectionTitle'
-// import TopBanner from '@/components/TopBanner'
+import TopBanner from '@/components/TopBanner'
 
 const Home = ({ collection }) => {
   const { t } = useTranslation('common')
@@ -14,7 +14,7 @@ const Home = ({ collection }) => {
   return (
     <>
       <SEO title="Oficina Rock Portugal" description="Oficina Rock Portugal" />
-      {/* <TopBanner /> // TODO */}
+      <TopBanner />
       <CTA />
       <SectionTitle title={t(`news`)} />
       <ProductList collection={collection} />

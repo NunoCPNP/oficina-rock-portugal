@@ -5,6 +5,7 @@
       "@/context/*": ["src/context/*"],
       "@/hooks/*": ["src/hooks/*"],
       "@/components/*": ["src/components/*"],
+      "@/modules/*": ["src/modules/*"],
       "@/services/*": ["src/services/*"],
       "@/styles/*": ["src/styles/*"],
       "@/utils/*": ["src/utils/*"]

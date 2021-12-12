@@ -7,6 +7,7 @@ const Success = () => {
 
   useEffect(() => {
     setLStorage([])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
