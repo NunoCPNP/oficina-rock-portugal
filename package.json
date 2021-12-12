@@ -1,11 +1,10 @@
 {
   "name": "oficina-rock-portugal",
   "description": "Oficina Rock Portugal Web Application",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "author": {
     "name": "Nuno Pereira",
-    "email": "hello@nunopereira.tech",
-    "url": "http://www.nunopereira.tech"
+    "email": "nunocpereira@outlook.com"
   },
   "private": true,
   "scripts": {

@@ -7,15 +7,14 @@ jest.mock('@/hooks/useAuth', () => {
     user: {
       displayName: 'Semple User',
       deliveryAddress: {
-        city: 'Matosinhos',
+        city: 'Porto',
         country: 'Portugal',
-        postalCode: '4450-120',
-        street: 'Av Comendador Ferreira de Matos, 312, 2º Esq',
+        postalCode: '1234-555',
+        street: 'Sample Street',
       },
       deliverySameAsBilling: true,
-      displayName: 'Nuno de Carvalho Pinheiro Nunes Pereira',
-      email: 'hello@nunopereira.tech',
-      phoneNumber: '968143844',
+      email: 'sample@sample.com',
+      phoneNumber: '112223344',
     },
   }))
 })

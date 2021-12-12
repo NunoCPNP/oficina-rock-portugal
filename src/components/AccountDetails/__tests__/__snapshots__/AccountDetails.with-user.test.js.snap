@@ -57,32 +57,35 @@ exports[`<AccountDetails /> Should match snapshot 1`] = `
         class="emotion-3"
       >
         <h2>
-          Dados Pessoais
+          common:personal-details
         </h2>
       </div>
       <div
         class="emotion-4"
       >
         <span>
-          Nome : 
+          common:name
+           : 
         </span>
-        Nuno de Carvalho Pinheiro Nunes Pereira
+        Semple User
       </div>
       <div
         class="emotion-4"
       >
         <span>
-          E-Mail : 
+          common:email
+           : 
         </span>
-        hello@nunopereira.tech
+        sample@sample.com
       </div>
       <div
         class="emotion-4"
       >
         <span>
-          Telefone : 
+          common:phone-number
+           : 
         </span>
-        968143844
+        112223344
       </div>
     </div>
     <div
@@ -92,38 +95,42 @@ exports[`<AccountDetails /> Should match snapshot 1`] = `
         class="emotion-3"
       >
         <h2>
-          Morada de Envio
+          common:delivery-address
         </h2>
       </div>
       <div
         class="emotion-4"
       >
         <span>
-          Rua : 
+          common:street
+           : 
         </span>
-        Av Comendador Ferreira de Matos, 312, 2º Esq
+        Sample Street
       </div>
       <div
         class="emotion-4"
       >
         <span>
-          Código Postal : 
+          common:postal-code
+           : 
         </span>
-        4450-120
+        1234-555
       </div>
       <div
         class="emotion-4"
       >
         <span>
-          Localidade : 
+          common:city
+           : 
         </span>
-        Matosinhos
+        Porto
       </div>
       <div
         class="emotion-4"
       >
         <span>
-          País : 
+          common:country
+           : 
         </span>
         Portugal
       </div>
@@ -131,44 +138,8 @@ exports[`<AccountDetails /> Should match snapshot 1`] = `
     <div
       class="emotion-2"
     >
-      <div
-        class="emotion-3"
-      >
-        <h2>
-          Morada de Faturação
-        </h2>
-      </div>
-      <div
-        class="emotion-4"
-      >
-        <span>
-          Rua : 
-        </span>
-        Av Comendador Ferreira de Matos, 312, 2º Esq
-      </div>
-      <div
-        class="emotion-4"
-      >
-        <span>
-          Código Postal : 
-        </span>
-        4450-120
-      </div>
-      <div
-        class="emotion-4"
-      >
-        <span>
-          Localidade : 
-        </span>
-        Matosinhos
-      </div>
-      <div
-        class="emotion-4"
-      >
-        <span>
-          País : 
-        </span>
-        Portugal
+      <div>
+        common:same-address
       </div>
     </div>
   </div>
