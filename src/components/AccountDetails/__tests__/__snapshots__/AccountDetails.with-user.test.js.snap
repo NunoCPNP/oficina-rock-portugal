@@ -1,0 +1,176 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AccountDetails /> Should match snapshot 1`] = `
+.emotion-0 {
+  margin: 4rem;
+}
+
+@media only screen and (max-width: 480px) {
+  .emotion-0 {
+    margin: 4rem 1rem;
+  }
+}
+
+.emotion-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media only screen and (max-width: 480px) {
+  .emotion-1 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.emotion-2 {
+  padding-bottom: 4rem;
+}
+
+.emotion-3 {
+  margin-bottom: 3rem;
+}
+
+.emotion-3 h2 {
+  font-size: var(--heading-3);
+}
+
+.emotion-4 {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.emotion-4 span {
+  font-weight: 700;
+  padding-right: 0.6rem;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <div
+      class="emotion-2"
+    >
+      <div
+        class="emotion-3"
+      >
+        <h2>
+          Dados Pessoais
+        </h2>
+      </div>
+      <div
+        class="emotion-4"
+      >
+        <span>
+          Nome : 
+        </span>
+        Nuno de Carvalho Pinheiro Nunes Pereira
+      </div>
+      <div
+        class="emotion-4"
+      >
+        <span>
+          E-Mail : 
+        </span>
+        hello@nunopereira.tech
+      </div>
+      <div
+        class="emotion-4"
+      >
+        <span>
+          Telefone : 
+        </span>
+        968143844
+      </div>
+    </div>
+    <div
+      class="emotion-2"
+    >
+      <div
+        class="emotion-3"
+      >
+        <h2>
+          Morada de Envio
+        </h2>
+      </div>
+      <div
+        class="emotion-4"
+      >
+        <span>
+          Rua : 
+        </span>
+        Av Comendador Ferreira de Matos, 312, 2º Esq
+      </div>
+      <div
+        class="emotion-4"
+      >
+        <span>
+          Código Postal : 
+        </span>
+        4450-120
+      </div>
+      <div
+        class="emotion-4"
+      >
+        <span>
+          Localidade : 
+        </span>
+        Matosinhos
+      </div>
+      <div
+        class="emotion-4"
+      >
+        <span>
+          País : 
+        </span>
+        Portugal
+      </div>
+    </div>
+    <div
+      class="emotion-2"
+    >
+      <div
+        class="emotion-3"
+      >
+        <h2>
+          Morada de Faturação
+        </h2>
+      </div>
+      <div
+        class="emotion-4"
+      >
+        <span>
+          Rua : 
+        </span>
+        Av Comendador Ferreira de Matos, 312, 2º Esq
+      </div>
+      <div
+        class="emotion-4"
+      >
+        <span>
+          Código Postal : 
+        </span>
+        4450-120
+      </div>
+      <div
+        class="emotion-4"
+      >
+        <span>
+          Localidade : 
+        </span>
+        Matosinhos
+      </div>
+      <div
+        class="emotion-4"
+      >
+        <span>
+          País : 
+        </span>
+        Portugal
+      </div>
+    </div>
+  </div>
+</div>
+`;

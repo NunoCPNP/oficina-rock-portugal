@@ -1,7 +1,7 @@
 {
   "name": "oficina-rock-portugal",
   "description": "Oficina Rock Portugal Web Application",
-  "version": "0.6.0",
+  "version": "1.0.1",
   "author": {
     "name": "Nuno Pereira",
     "email": "hello@nunopereira.tech",
@@ -30,7 +30,7 @@
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
     "@sendgrid/mail": "^7.4.6",
-    "@sentry/nextjs": "^6.12.0",
+    "@sentry/nextjs": "^6.16.1",
     "@stripe/stripe-js": "^1.17.1",
     "cookie-cutter": "^0.2.0",
     "firebase": "^8.8.1",

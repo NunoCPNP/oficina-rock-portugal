@@ -40,6 +40,10 @@ exports[`<Footer /> spec Should match snapshot 1`] = `
 }
 
 .emotion-3 {
+  cursor: pointer;
+}
+
+.emotion-7 {
   display: none;
   border-bottom: 1px solid var(--darkLiver);
   margin-top: 2rem;
@@ -47,16 +51,16 @@ exports[`<Footer /> spec Should match snapshot 1`] = `
 }
 
 @media only screen and (max-width: 480px) {
-  .emotion-3 {
+  .emotion-7 {
     display: block;
   }
 }
 
-.emotion-5 {
+.emotion-9 {
   padding-top: 1rem;
 }
 
-.emotion-5 div {
+.emotion-9 div {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -68,17 +72,17 @@ exports[`<Footer /> spec Should match snapshot 1`] = `
   margin-bottom: 0.4rem;
 }
 
-.emotion-5 div svg {
+.emotion-9 div svg {
   width: 2.2rem;
   height: 2.2rem;
   margin-right: 0.6rem;
 }
 
-.emotion-8 {
+.emotion-12 {
   padding-top: 1rem;
 }
 
-.emotion-8 div {
+.emotion-12 div {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -89,7 +93,7 @@ exports[`<Footer /> spec Should match snapshot 1`] = `
   align-items: center;
 }
 
-.emotion-12 {
+.emotion-16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -111,28 +115,44 @@ exports[`<Footer /> spec Should match snapshot 1`] = `
     <div
       class="emotion-2"
     >
-      <div>
-        <h4>
+      <div
+        class="emotion-3"
+      >
+        <h4
+          href="/whoweare"
+        >
           common:who-we-are
-        </h4>
-      </div>
-      <div>
-        <h4>
-          common:privacy-policies
-        </h4>
-      </div>
-      <div>
-        <h4>
-          common:return-and-refund
-        </h4>
-      </div>
-      <div>
-        <h4>
-          common:faq
         </h4>
       </div>
       <div
         class="emotion-3"
+      >
+        <h4
+          href="/privacypolicy"
+        >
+          common:privacy-policies
+        </h4>
+      </div>
+      <div
+        class="emotion-3"
+      >
+        <h4
+          href="/returnpolicy"
+        >
+          common:return-and-refund
+        </h4>
+      </div>
+      <div
+        class="emotion-3"
+      >
+        <h4
+          href="/faq"
+        >
+          common:faq
+        </h4>
+      </div>
+      <div
+        class="emotion-7"
       />
     </div>
     <div
@@ -142,7 +162,7 @@ exports[`<Footer /> spec Should match snapshot 1`] = `
         common:contacts
       </h3>
       <div
-        class="emotion-5"
+        class="emotion-9"
       >
         <div>
           <svg
@@ -264,7 +284,7 @@ exports[`<Footer /> spec Should match snapshot 1`] = `
         </div>
       </div>
       <div
-        class="emotion-3"
+        class="emotion-7"
       />
     </div>
     <div
@@ -274,7 +294,7 @@ exports[`<Footer /> spec Should match snapshot 1`] = `
         common:payment-methods
       </h3>
       <div
-        class="emotion-8"
+        class="emotion-12"
       >
         <div>
           <div
@@ -302,7 +322,7 @@ exports[`<Footer /> spec Should match snapshot 1`] = `
         </div>
       </div>
       <div
-        class="emotion-3"
+        class="emotion-7"
       />
     </div>
     <div
@@ -312,12 +332,12 @@ exports[`<Footer /> spec Should match snapshot 1`] = `
         common:newsletter
       </h3>
       <div
-        class="emotion-3"
+        class="emotion-7"
       />
     </div>
   </div>
   <div
-    class="emotion-12"
+    class="emotion-16"
     data-testid="copyright"
   >
     <div>

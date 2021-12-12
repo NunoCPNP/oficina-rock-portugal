@@ -1,11 +1,20 @@
 import { AiFillFacebook, AiFillInstagram, AiFillPhone, AiOutlineWhatsApp, AiTwotoneMail } from 'react-icons/ai'
 import Image from 'next/image'
+import Link from 'next/link'
 import { SiTiktok } from 'react-icons/si'
 import useTranslation from 'next-translate/useTranslation'
 
-import Copyright from '../Copyright'
+import Copyright from '@/components/Copyright'
 
-import { ContactsContainer, GridContainer, GridItem, MethodsContainer, Spacer, StyledFooter } from './Footer.styles'
+import {
+  ContactsContainer,
+  GridContainer,
+  GridItem,
+  Item,
+  MethodsContainer,
+  Spacer,
+  StyledFooter,
+} from './Footer.styles'
 
 const Footer = () => {
   const { t } = useTranslation('common')
@@ -14,18 +23,26 @@ const Footer = () => {
     <StyledFooter data-testid="footer">
       <GridContainer>
         <GridItem>
-          <div>
-            <h4>{t(`who-we-are`)}</h4>
-          </div>
-          <div>
-            <h4>{t(`privacy-policies`)}</h4>
-          </div>
-          <div>
-            <h4>{t(`return-and-refund`)}</h4>
-          </div>
-          <div>
-            <h4>{t(`faq`)}</h4>
-          </div>
+          <Item>
+            <Link href="/whoweare" passHref>
+              <h4>{t(`who-we-are`)}</h4>
+            </Link>
+          </Item>
+          <Item>
+            <Link href="/privacypolicy" passHref>
+              <h4>{t(`privacy-policies`)}</h4>
+            </Link>
+          </Item>
+          <Item>
+            <Link href="/returnpolicy" passHref>
+              <h4>{t(`return-and-refund`)}</h4>
+            </Link>
+          </Item>
+          <Item>
+            <Link href="/faq" passHref>
+              <h4>{t(`faq`)}</h4>
+            </Link>
+          </Item>
           <Spacer />
         </GridItem>
         <GridItem>

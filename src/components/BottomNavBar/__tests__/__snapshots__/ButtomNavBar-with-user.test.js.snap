@@ -84,7 +84,7 @@ exports[`<BottomNavBar /> spec Should match snapshot 1`] = `
   <div
     class="emotion-1"
   >
-    common:hi, Semple User !
+    common:hi, Sample User !
   </div>
   <div
     class="emotion-2"
