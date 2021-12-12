@@ -5,6 +5,9 @@ import useTranslation from 'next-translate/useTranslation'
 
 import CustomButton from '@/components/CustomButton'
 
+import { shimmer } from '@/utils/shimmer'
+import { toBase64 } from '@/utils/toBase64'
+
 import { Container, DescriptionContainer, ImageContainer } from './ProductCard.styles'
 
 const ProductCard = ({ type, title, band, images, category, id }) => {
@@ -13,7 +16,15 @@ const ProductCard = ({ type, title, band, images, category, id }) => {
   return (
     <Container>
       <ImageContainer>
-        <Image src={images[0]} alt={`${type} ${band} ${title}`} width="200" height="245" quality="75" />
+        <Image
+          src={images[0]}
+          placeholder="blur"
+          blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(200, 245))}`}
+          alt={`${type} ${band} ${title}`}
+          width="200"
+          height="245"
+          quality="75"
+        />
       </ImageContainer>
       <DescriptionContainer>
         <span>{type}</span>
