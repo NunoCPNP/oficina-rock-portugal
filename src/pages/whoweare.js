@@ -13,9 +13,21 @@ const WhoWeAre = () => {
 
   return (
     <>
-      <SEO title="Oficina Rock Portugal" description="" />
+      <SEO title="Oficina Rock Portugal" />
       <Wrapper>
         <SectionTitle title={t(`who-we-are`)} />
+        {/* <div>
+          <p>A Oficina Rock é uma marca de roupas criada no intuito de agregar estilo ao vestuário rock.</p>
+          <p>Atuamos no mercado há mais de 20 anos, oferecendo e entregando qualidade em todos os aspectos.</p>
+          <p>
+            Todas as nossas camisetas, passam por um rigoroso processo de fabricação, desde a a arte da camiseta até a
+            confecção da mesma. Trazendo assim exclusividade ao seu produto.
+          </p>
+          <p>
+            O nosso diferencial é a sua experiência de comprar em nossa loja, pois a excelência no atendimento e
+            qualidade dos produtos já é nossa obrigação e comprometimento com você.
+          </p>
+        </div> */}
       </Wrapper>
     </>
   )

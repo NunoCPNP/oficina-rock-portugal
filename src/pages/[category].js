@@ -13,7 +13,7 @@ const Category = ({ collection }) => {
 
   return (
     <>
-      <SEO title="Oficina Rock Portugal" description="" />
+      <SEO title="Oficina Rock Portugal" />
       <SectionTitle title={t(`${query.category}`)} offset="4rem" />
       <ProductList collection={collection} />
     </>

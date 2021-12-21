@@ -13,7 +13,7 @@ const Home = ({ collection }) => {
 
   return (
     <>
-      <SEO title="Oficina Rock Portugal" description="Oficina Rock Portugal" />
+      <SEO title="Oficina Rock Portugal" />
       <TopBanner />
       <CTA />
       <SectionTitle title={t(`news`)} />

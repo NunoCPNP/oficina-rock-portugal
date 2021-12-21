@@ -62,7 +62,7 @@ const Account = () => {
 
   return (
     <>
-      <SEO title="Oficina Rock Portugal" description="" />
+      <SEO title="Oficina Rock Portugal" />
       <SectionTitle title={t(`account-settings`)} offset="4rem" />
       {user ? (
         <>

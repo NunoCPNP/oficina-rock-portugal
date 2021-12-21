@@ -16,7 +16,7 @@ const Product = ({ data }) => {
 
   return (
     <>
-      <SEO title="Oficina Rock Portugal" description="" />
+      <SEO title="Oficina Rock Portugal" description={`T-Shirt ${data.band} - ${data.title}`} />
       <SectionTitle title={`${data.band} - ${data.title}`} section={section} offset="4rem" />
       <ProductDetail data={data} />
       {data.bandDescription && <DynamicBand band={data.band} />}

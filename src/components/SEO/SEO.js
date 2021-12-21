@@ -1,6 +1,9 @@
 import NextHead from 'next/head'
 
-const Head = ({ title, description, children }) => {
+const defaultDescription =
+  'T-Shirts de Rock, T-Shirts de Bandas, Modelos Femininos, Infantis e muito mais. Grande variedade de estampas e material de alta qualidade'
+
+const Head = ({ title, description = defaultDescription, children }) => {
   return (
     <>
       <NextHead>

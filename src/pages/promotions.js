@@ -13,7 +13,7 @@ const Promotions = ({ collection }) => {
 
   return (
     <>
-      <SEO title="Oficina Rock Portugal" description="" />
+      <SEO title="Oficina Rock Portugal" />
       <SectionTitle title={t(`promotions`)} offset="4rem" />
       <ProductList collection={collection} promotion />
       <NewsLetter message={t(`no-promotion-newsletter-message`)} />

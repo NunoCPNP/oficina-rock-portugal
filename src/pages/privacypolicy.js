@@ -13,7 +13,7 @@ const PrivacyPolice = () => {
 
   return (
     <>
-      <SEO title="Oficina Rock Portugal" description="" />
+      <SEO title="Oficina Rock Portugal" />
       <Wrapper>
         <SectionTitle title={t(`privacy-policies`)} />
       </Wrapper>

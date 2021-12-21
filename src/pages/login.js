@@ -20,7 +20,7 @@ const SignInAndSignUpContainer = styled.div`
 const Login = () => {
   return (
     <>
-      <SEO title="Oficina Rock Portugal" description="" />
+      <SEO title="Oficina Rock Portugal" />
       <SignInAndSignUpContainer>
         <SignIn />
         <SignUp />

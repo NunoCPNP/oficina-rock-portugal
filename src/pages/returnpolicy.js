@@ -13,7 +13,7 @@ const ReturnPolicy = () => {
 
   return (
     <>
-      <SEO title="Oficina Rock Portugal" description="" />
+      <SEO title="Oficina Rock Portugal" />
       <Wrapper>
         <SectionTitle title={t(`return-and-refund`)} />
       </Wrapper>
