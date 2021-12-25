@@ -139,7 +139,7 @@ exports[`<Footer /> spec Should match snapshot 1`] = `
         <h4
           href="/returnpolicy"
         >
-          common:return-and-refund
+          common:shipping-and-exchanges
         </h4>
       </div>
       <div

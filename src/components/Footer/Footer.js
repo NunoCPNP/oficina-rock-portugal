@@ -35,7 +35,7 @@ const Footer = () => {
           </Item>
           <Item>
             <Link href="/returnpolicy" passHref>
-              <h4>{t(`return-and-refund`)}</h4>
+              <h4>{t(`shipping-and-exchanges`)}</h4>
             </Link>
           </Item>
           <Item>
