@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { Content, Title } from './Privacy.styles'
 
 const Privacy = () => (
