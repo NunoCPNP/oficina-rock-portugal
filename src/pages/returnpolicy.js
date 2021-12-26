@@ -9,6 +9,10 @@ const Wrapper = styled.div`
   margin: 3rem 0;
 `
 
+const StyledSectionTitle = styled(SectionTitle)`
+  text-align: center;
+`
+
 const ReturnPolicy = () => {
   const { t } = useTranslation('common')
 
@@ -16,7 +20,7 @@ const ReturnPolicy = () => {
     <>
       <SEO title="Oficina Rock Portugal" />
       <Wrapper>
-        <SectionTitle title={t(`shipping-and-exchanges`)} />
+        <StyledSectionTitle title={t(`shipping-and-exchanges`)} />
         <Return />
       </Wrapper>
     </>

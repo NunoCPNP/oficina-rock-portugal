@@ -1,8 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
-import { Content, Title } from './Privacy.styles'
+import { Container, Content, Title } from './Privacy.styles'
 
 const Privacy = () => (
-  <>
+  <Container>
     <div>
       <Title>Informação e consentimento</Title>
       <Content>
@@ -198,7 +198,7 @@ const Privacy = () => (
         </p>
       </Content>
     </div>
-  </>
+  </Container>
 )
 
 export default Privacy

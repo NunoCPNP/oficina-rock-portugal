@@ -9,6 +9,10 @@ const Wrapper = styled.div`
   margin: 3rem 0;
 `
 
+const StyledSectionTitle = styled(SectionTitle)`
+  text-align: center;
+`
+
 const PrivacyPolice = () => {
   const { t } = useTranslation('common')
 
@@ -16,7 +20,7 @@ const PrivacyPolice = () => {
     <>
       <SEO title="Oficina Rock Portugal" />
       <Wrapper>
-        <SectionTitle title={t(`privacy-policies`)} />
+        <StyledSectionTitle title={t(`privacy-policies`)} />
         <Privacy />
       </Wrapper>
     </>

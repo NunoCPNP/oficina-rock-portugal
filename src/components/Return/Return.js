@@ -1,8 +1,8 @@
-import { Bold, Content, Title } from './Return.styles'
+import { Bold, Container, Content, Title } from './Return.styles'
 
 const Return = () => {
   return (
-    <>
+    <Container>
       <div>
         <Content>
           <p>
@@ -74,7 +74,7 @@ const Return = () => {
           </Bold>
         </Content>
       </div>
-    </>
+    </Container>
   )
 }
 
