@@ -1,8 +1,10 @@
 import { useEffect } from 'react'
+import useTranslation from 'next-translate/useTranslation'
 
 import useLocalStorage from '@/hooks/useLocalStorage'
 
 const Success = () => {
+  const { t } = useTranslation()
   const [lStorage, setLStorage] = useLocalStorage('bag')
 
   useEffect(() => {
@@ -12,8 +14,8 @@ const Success = () => {
 
   return (
     <div>
-      <h2>Thanks for your order !</h2>
-      <p>Check your inbox for the receipt</p>
+      <h2>{t(`order-thanks`)}</h2>
+      <p>{t(`order-inbox`)}</p>
     </div>
   )
 }

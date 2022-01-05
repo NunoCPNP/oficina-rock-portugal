@@ -9,6 +9,7 @@ const initialState = {
   cartOpen: false,
   gdprOpen: true,
   isLoading: false,
+  topBanner: true,
 }
 
 export const SettingsProvider = ({ children }) => {

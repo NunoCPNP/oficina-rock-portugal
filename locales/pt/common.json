@@ -109,5 +109,8 @@
   "mb-way-payment": "Pagamento com MB Way",
   "mb-way-unavailable": "Lamentamos mas ainda não é possivel o pagamento por MB Way.",
   "galeria-do-rock": "Galeria do Rock",
-  "free-shipping": "Portes Grátis"
+  "free-shipping": "Portes Grátis",
+  "order-thanks": "Obrigado pelo seu pedido !",
+  "order-inbox": "Verifique o recibo na sua caixa de E-Mail",
+  "free-shipping-banner": "<a>Portes <b>Grátis</b> para todas as encomendas em Portugal Continental</a>"
 }

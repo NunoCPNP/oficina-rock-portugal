@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TopBanner /> spec Should match snapshot 1`] = `
+.emotion-0 {
+  margin: 4rem;
+  background-color: var(--darkLiver);
+  padding: 0.6rem;
+  border-radius: 0.8rem;
+}
+
+@media only screen and (max-width: 480px) {
+  .emotion-0 {
+    margin: 2rem;
+  }
+}
+
+.emotion-0 span {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-0 h4 {
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--snow);
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    common:free-shipping-banner
+  </div>
+</div>
+`;
+
+exports[`<TopBanner /> spec Should not render if topBanner is false 1`] = `<div />`;

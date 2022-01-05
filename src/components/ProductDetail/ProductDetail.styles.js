@@ -17,7 +17,7 @@ export const ButtonContainer = styled.div`
   display: flex;
   grid-gap: 4rem;
 
-  ${mq('s')} {
+  ${mq('l')} {
     grid-gap: 1rem;
     flex-direction: column;
   }

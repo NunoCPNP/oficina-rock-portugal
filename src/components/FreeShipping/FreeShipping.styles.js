@@ -4,7 +4,11 @@ export const Container = styled.div`
   display: flex;
   justify-content: flex-end;
 
-  div {
-    padding: 1rem 2rem 0 0;
+  span {
+    margin: 0 2rem;
+    padding: 0.4rem 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--darkLiver);
+    color: var(--snow);
   }
 `

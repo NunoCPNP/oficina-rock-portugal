@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FreeShipping /> spec Should match snapshot 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+.emotion-0 span {
+  margin: 0 2rem;
+  padding: 0.4rem 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--darkLiver);
+  color: var(--snow);
+}
+
+<div>
+  <div
+    class="emotion-0"
+  >
+    <span>
+      common:free-shipping
+    </span>
+  </div>
+</div>
+`;

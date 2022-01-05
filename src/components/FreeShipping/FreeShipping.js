@@ -7,7 +7,7 @@ const FreeShipping = () => {
 
   return (
     <Container>
-      <div>{t(`free-shipping`)}</div>
+      <span>{t(`free-shipping`)}</span>
     </Container>
   )
 }
