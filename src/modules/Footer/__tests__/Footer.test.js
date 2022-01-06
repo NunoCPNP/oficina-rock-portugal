@@ -23,7 +23,7 @@ describe('<Footer /> spec', () => {
     expect(getByText('common:who-we-are')).toBeInTheDocument()
     expect(getByText('common:privacy-policies')).toBeInTheDocument()
     expect(getByText('common:shipping-and-exchanges')).toBeInTheDocument()
-    expect(getByText('common:faq')).toBeInTheDocument()
+    // expect(getByText('common:faq')).toBeInTheDocument()
     expect(getByText('common:contacts')).toBeInTheDocument()
     expect(getByText('common:payment-methods')).toBeInTheDocument()
     expect(getByText('common:newsletter')).toBeInTheDocument()

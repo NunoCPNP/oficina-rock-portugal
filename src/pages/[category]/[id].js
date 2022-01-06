@@ -6,7 +6,7 @@ import ProductDetail from '@/components/ProductDetail'
 import SEO from '@/components/SEO'
 import SectionTitle from '@/components/SectionTitle'
 
-const DynamicBand = dynamic(() => import('@/components/Band'))
+const DynamicBand = dynamic(() => import('@/modules/Band'))
 
 const Product = ({ data }) => {
   const { t } = useTranslation('common')

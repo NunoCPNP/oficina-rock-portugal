@@ -38,11 +38,11 @@ const Footer = () => {
               <h4>{t(`shipping-and-exchanges`)}</h4>
             </Link>
           </Item>
-          <Item>
+          {/* <Item>
             <Link href="/faq" passHref>
               <h4>{t(`faq`)}</h4>
             </Link>
-          </Item>
+          </Item> */}
           <Spacer />
         </GridItem>
         <GridItem>

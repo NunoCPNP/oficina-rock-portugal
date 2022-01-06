@@ -43,7 +43,7 @@ exports[`<Footer /> spec Should match snapshot 1`] = `
   cursor: pointer;
 }
 
-.emotion-7 {
+.emotion-6 {
   display: none;
   border-bottom: 1px solid var(--darkLiver);
   margin-top: 2rem;
@@ -51,16 +51,16 @@ exports[`<Footer /> spec Should match snapshot 1`] = `
 }
 
 @media only screen and (max-width: 480px) {
-  .emotion-7 {
+  .emotion-6 {
     display: block;
   }
 }
 
-.emotion-9 {
+.emotion-8 {
   padding-top: 1rem;
 }
 
-.emotion-9 div {
+.emotion-8 div {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -72,17 +72,17 @@ exports[`<Footer /> spec Should match snapshot 1`] = `
   margin-bottom: 0.4rem;
 }
 
-.emotion-9 div svg {
+.emotion-8 div svg {
   width: 2.2rem;
   height: 2.2rem;
   margin-right: 0.6rem;
 }
 
-.emotion-12 {
+.emotion-11 {
   padding-top: 1rem;
 }
 
-.emotion-12 div {
+.emotion-11 div {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -93,7 +93,7 @@ exports[`<Footer /> spec Should match snapshot 1`] = `
   align-items: center;
 }
 
-.emotion-16 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -143,16 +143,7 @@ exports[`<Footer /> spec Should match snapshot 1`] = `
         </h4>
       </div>
       <div
-        class="emotion-3"
-      >
-        <h4
-          href="/faq"
-        >
-          common:faq
-        </h4>
-      </div>
-      <div
-        class="emotion-7"
+        class="emotion-6"
       />
     </div>
     <div
@@ -162,7 +153,7 @@ exports[`<Footer /> spec Should match snapshot 1`] = `
         common:contacts
       </h3>
       <div
-        class="emotion-9"
+        class="emotion-8"
       >
         <div>
           <svg
@@ -284,7 +275,7 @@ exports[`<Footer /> spec Should match snapshot 1`] = `
         </div>
       </div>
       <div
-        class="emotion-7"
+        class="emotion-6"
       />
     </div>
     <div
@@ -294,7 +285,7 @@ exports[`<Footer /> spec Should match snapshot 1`] = `
         common:payment-methods
       </h3>
       <div
-        class="emotion-12"
+        class="emotion-11"
       >
         <div>
           <div
@@ -322,7 +313,7 @@ exports[`<Footer /> spec Should match snapshot 1`] = `
         </div>
       </div>
       <div
-        class="emotion-7"
+        class="emotion-6"
       />
     </div>
     <div
@@ -332,12 +323,12 @@ exports[`<Footer /> spec Should match snapshot 1`] = `
         common:newsletter
       </h3>
       <div
-        class="emotion-7"
+        class="emotion-6"
       />
     </div>
   </div>
   <div
-    class="emotion-16"
+    class="emotion-15"
     data-testid="copyright"
   >
     <div>

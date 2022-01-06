@@ -2,9 +2,9 @@ import { Toaster } from 'react-hot-toast'
 import dynamic from 'next/dynamic'
 import styled from '@emotion/styled'
 
-const DynamicSlot = dynamic(() => import('@/components/Slot'))
+const DynamicSlot = dynamic(() => import('@/modules/Slot'))
 const DynamicHeader = dynamic(() => import('@/components/Header'))
-const DynamicFooter = dynamic(() => import('@/components/Footer'))
+const DynamicFooter = dynamic(() => import('@/modules/Footer'))
 const DynamicCartDrawer = dynamic(() => import('@/components/CartDrawer'))
 const DynamicGDPR = dynamic(() => import('@/components/GDPR'))
 

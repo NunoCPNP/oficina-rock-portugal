@@ -6,11 +6,15 @@ const GlobalStyles = () => {
       styles={css`
         :root {
           /* Colors */
+          --richBlack: #00171f;
           --darkLiver: #3e3e4d;
           --independence: #545454;
           --ghostWhite: #e9e9f0;
-          --richBlack: #00171f;
           --snow: #fffcff;
+
+          --carolineBlue: #39a0ed;
+          --indianRed: #da5552;
+          --lavander: #ccc9dc;
 
           /* Typography */
           --headingFont: 'Open Sans Condensed';

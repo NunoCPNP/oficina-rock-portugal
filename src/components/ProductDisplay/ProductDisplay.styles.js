@@ -36,7 +36,7 @@ export const SelectedImage = styled.div`
     border-radius: 0.5rem;
   }
 
-  ${mq('s')} {
+  ${mq('m')} {
     margin: 0 auto;
   }
 `
