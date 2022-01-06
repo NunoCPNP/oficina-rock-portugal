@@ -1,20 +1,39 @@
 /* eslint-disable import/no-anonymous-default-export */
-const mail = require('@sendgrid/mail')
-
-mail.setApiKey(process.env.SEND_GRID)
+const mailjet = require('node-mailjet').connect(process.env.MJ_APIKEY_PUBLIC, process.env.MJ_APIKEY_PRIVATE)
 
 export default (req, res) => {
   if (!req.body) return res.status(400).json({ status: 'Error' })
 
-  const data = {
-    to: process.env.SEND_GRID_TO,
-    from: process.env.SEND_GRID_FROM,
-    subject: 'New newsletter subscriber !',
-    message: `Hey ! ${req.body} just signed the newsletter.`,
-    html: `Hey ! ${req.body} just signed the newsletter.`,
-  }
+  const request = mailjet.post('send', { version: 'v3.1' }).request({
+    Messages: [
+      {
+        From: {
+          Email: 'nunocpereira@outlook.com',
+          Name: 'Nuno',
+        },
+        To: [
+          {
+            Email: 'nunocpereira@outlook.com',
+            Name: 'Nuno',
+          },
+        ],
+        Subject: 'Oficina Rock Portugal.',
+        TextPart: `Hi ${req.body} subscribed newsletter`,
+        HTMLPart: `<div><p>Hi Nuno !</p><h3>${req.body}</h3><p>Subscribed Oficina Rock Newsletter</p></div>`,
+        CustomID: 'ORNewSubscriber',
+      },
+    ],
+  })
 
-  mail.send(data)
+  request
+    .then((result) => {
+      console.log(result.body)
 
-  res.status(200).json({ status: 'Success' })
+      res.status(200).json({ status: 'Success' })
+    })
+    .catch((err) => {
+      console.log(err.statusCode)
+
+      res.status(500).json({ status: 'Error' })
+    })
 }
