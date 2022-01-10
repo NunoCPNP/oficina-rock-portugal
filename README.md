@@ -2,7 +2,7 @@
 
 This repository holds the new Oficina Rock Portugal web app.
 
-It's a Single Page Application built on [Next JS](https://nextjs.org/) using [Firebase](https://firebase.google.com/) for authentication and [FireStore](https://firebase.google.com/products/firestore) as backend
+It's an web application built on [Next JS](https://nextjs.org/) using [Firebase](https://firebase.google.com/) for authentication and [FireStore](https://firebase.google.com/products/firestore) as backend
 
 ## Features
 
@@ -12,7 +12,7 @@ It's a Single Page Application built on [Next JS](https://nextjs.org/) using [Fi
 - Firebase OAuth and Database Integration
 - Serverless Functions
 - Stripe for secure payments
-- SendGrid for sending email notifications
+- MailJet for email notifications
 
 ## Development environment
 
@@ -36,11 +36,10 @@ NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID
 NEXT_PUBLIC_FIREBASE_APP_ID
 NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
 
-// SendGrid keys
+// MailJet Keys
 
-SEND_GRID
-SEND_GRID_TO
-SEND_GRID_FROM
+MJ_APIKEY_PUBLIC
+MJ_APIKEY_PRIVATE
 
 //Stripe Keys
 

@@ -6,13 +6,13 @@ describe('<Footer /> spec', () => {
   it('Should match snapshot', () => {
     const { container } = render(<Footer />)
 
-    expect(container.firstChild).toMatchSnapshot()
+    expect(container).toMatchSnapshot()
   })
 
   it('Should render with correct styling', () => {
     const { container } = render(<Footer />)
 
-    expect(container.firstChild).toHaveStyle(`
+    expect(container).toHaveStyle(`
       background-color: var(--ghostWhite);
     `)
   })

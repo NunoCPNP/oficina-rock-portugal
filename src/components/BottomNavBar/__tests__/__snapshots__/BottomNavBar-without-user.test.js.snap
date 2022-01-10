@@ -78,37 +78,39 @@ exports[`<BottomNavBar /> spec Should match snapshot 1`] = `
   border-bottom: none!important;
 }
 
-<div
-  class="emotion-0"
->
+<div>
   <div
-    class="emotion-1"
-  />
-  <div
-    class="emotion-2"
+    class="emotion-0"
   >
-    <ul>
-      <li>
-        <a
-          href="/men"
-        >
-          common:men
-        </a>
-      </li>
-      <li>
-        <a
-          href="/women"
-        >
-          common:women
-        </a>
-      </li>
-      <li>
-        <div
-          class="emotion-3"
-          data-testid="languageselector"
-        />
-      </li>
-    </ul>
+    <div
+      class="emotion-1"
+    />
+    <div
+      class="emotion-2"
+    >
+      <ul>
+        <li>
+          <a
+            href="/men"
+          >
+            common:men
+          </a>
+        </li>
+        <li>
+          <a
+            href="/women"
+          >
+            common:women
+          </a>
+        </li>
+        <li>
+          <div
+            class="emotion-3"
+            data-testid="languageselector"
+          />
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
 `;

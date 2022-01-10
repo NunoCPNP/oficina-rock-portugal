@@ -14,21 +14,7 @@ describe('<CartIcon /> spec', () => {
   it('Should match snapshot', () => {
     const { container } = render(<CartIcon />)
 
-    expect(container.firstChild).toMatchSnapshot()
-  })
-
-  it('Should render with correct styling', () => {
-    const { container } = render(<CartIcon />)
-
-    expect(container.firstChild).toHaveStyle(`
-      width: 2.5rem;
-      height: 2.5rem;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-    `)
+    expect(container).toMatchSnapshot()
   })
 
   it('Should render cart svg', () => {

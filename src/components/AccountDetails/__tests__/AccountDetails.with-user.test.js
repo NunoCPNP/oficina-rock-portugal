@@ -23,6 +23,6 @@ describe('<AccountDetails />', () => {
   it('Should match snapshot', () => {
     const { container } = render(<AccountDetails />)
 
-    expect(container.firstChild).toMatchSnapshot()
+    expect(container).toMatchSnapshot()
   })
 })

@@ -12,20 +12,7 @@ describe('<BottomNavBar /> spec', () => {
   it('Should match snapshot', () => {
     const { container } = render(<BottomNavBar />)
 
-    expect(container.firstChild).toMatchSnapshot()
-  })
-
-  it('Should render with correct styling', () => {
-    const { container } = render(<BottomNavBar />)
-
-    expect(container.firstChild).toHaveStyle(`
-      display: grid;
-      grid-template-columns: auto 1fr;
-      padding: 1.4rem 4rem;
-      background: var(--darkLiver);
-      color: var(--snow);
-      box-shadow: 0 0 10px 0 rgb(0 0 0 / 30%);
-    `)
+    expect(container).toMatchSnapshot()
   })
 
   it('Should render translations keys', () => {

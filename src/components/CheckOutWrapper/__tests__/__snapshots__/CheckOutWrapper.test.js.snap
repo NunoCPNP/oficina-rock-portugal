@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CheckOutWrapper /> spec Should match snapshot 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-transform: uppercase;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.emotion-0 h3 {
+  padding-left: 0.5rem;
+}
+
+@media only screen and (max-width: 480px) {
+  .emotion-0 {
+    margin-bottom: 2rem;
+  }
+}
+
+<div>
+  <div
+    class="emotion-0"
+    offset="4rem"
+  >
+    <h2>
+      common:checkout
+    </h2>
+  </div>
+</div>
+`;

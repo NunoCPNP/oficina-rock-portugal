@@ -17,7 +17,7 @@ describe('<CartItem /> spec', () => {
   it('Should match snapshot', () => {
     const { container } = render(<CartItem {...props} />)
 
-    expect(container.firstChild).toMatchSnapshot()
+    expect(container).toMatchSnapshot()
   })
 
   it('Should render item image', () => {

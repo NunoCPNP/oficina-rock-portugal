@@ -13,12 +13,14 @@ exports[`<Copyright /> spec Should match spashot 1`] = `
   padding: 2rem;
 }
 
-<div
-  class="emotion-0"
-  data-testid="copyright"
->
-  <div>
-    common:copyright
+<div>
+  <div
+    class="emotion-0"
+    data-testid="copyright"
+  >
+    <div>
+      common:copyright
+    </div>
   </div>
 </div>
 `;
