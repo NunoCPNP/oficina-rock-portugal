@@ -27,7 +27,7 @@ const Product = ({ data }) => {
 export default Product
 
 export async function getServerSideProps(context) {
-  const collectionRef = firestore.collection('collection').doc(`${context.query.id}`)
+  const collectionRef = firestore.collection('collection').doc(`${context.params.id}`)
 
   const snapShot = await collectionRef.get()
 
