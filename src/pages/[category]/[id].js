@@ -30,10 +30,20 @@ export async function getServerSideProps(context) {
   const collectionRef = firestore.collection('collection').doc(`${context.params.id}`)
 
   const snapShot = await collectionRef.get()
+  const data = snapShot.data()
+
+  if (!data) {
+    return {
+      redirect: {
+        destination: '/',
+        permanent: false,
+      },
+    }
+  }
 
   return {
     props: {
-      data: snapShot.data(),
+      data,
     },
   }
 }
