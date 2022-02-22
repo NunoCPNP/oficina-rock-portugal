@@ -34,22 +34,18 @@ export async function getServerSideProps(context) {
   const snapShot = await collectionRef.get()
   const data = snapShot.data()
 
-  // if (!data) {
-  //   return {
-  //     redirect: {
-  //       destination: '/',
-  //       permanent: false,
-  //     },
-  //   }
-  // }
+  if (!data) {
+    return {
+      redirect: {
+        destination: '/',
+        permanent: false,
+      },
+    }
+  }
 
   return {
     props: {
       data,
-      debug: {
-        params: context.params,
-        query: context.query,
-      },
     },
   }
 }
