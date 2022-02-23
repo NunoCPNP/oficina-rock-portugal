@@ -8,9 +8,7 @@ import SectionTitle from '@/components/SectionTitle'
 
 const DynamicBand = dynamic(() => import('@/modules/Band'))
 
-const Product = ({ data, debug }) => {
-  console.log(debug)
-
+const Product = ({ data }) => {
   const { t } = useTranslation('common')
 
   const collectionTitle = data.collection.replaceAll(' ', '-').toLowerCase()
@@ -29,12 +27,11 @@ const Product = ({ data, debug }) => {
 export default Product
 
 export async function getServerSideProps(context) {
-  const collectionRef = firestore.collection('collection').doc(`${context.params.id}`)
+  const collectionRef = firestore.collection('collection').doc(context.params.id)
 
   const snapShot = await collectionRef.get()
-  const data = snapShot.data()
 
-  if (!data) {
+  if (!snapShot) {
     return {
       redirect: {
         destination: '/',
@@ -45,7 +42,7 @@ export async function getServerSideProps(context) {
 
   return {
     props: {
-      data,
+      data: snapShot.data(),
     },
   }
 }

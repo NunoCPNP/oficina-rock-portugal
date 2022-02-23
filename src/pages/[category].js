@@ -23,9 +23,18 @@ const Category = ({ collection }) => {
 export async function getServerSideProps(context) {
   const collection = []
 
-  const collectionRef = firestore.collection(`collection`).where('category', '==', context.query.category)
+  const collectionRef = firestore.collection(`collection`).where('category', '==', context.params.category)
 
   const snapShot = await collectionRef.get()
+
+  if (!snapShot) {
+    return {
+      redirect: {
+        destination: '/',
+        permanent: false,
+      },
+    }
+  }
 
   snapShot.forEach((document) => collection.push(document.data()))
 
