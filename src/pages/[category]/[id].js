@@ -31,7 +31,7 @@ export async function getServerSideProps(context) {
 
   const snapShot = await collectionRef.get()
 
-  if (!snapShot) {
+  if (!snapShot.exists) {
     return {
       redirect: {
         destination: '/',
